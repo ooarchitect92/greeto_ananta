@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
   "source": "repository",
-  "as_of": "2026-09-07",
+  "as_of": "2026-09-08",
   "repository": "ooarchitect92/greeto_ananta",
   "branch": "main",
   "baseline_count": 262,
   "certified_done": 0,
-  "summary": "INC-006 control delivery-status outbox resolver/relay and existing-design acknowledgement panel published on main. Source tests cover scoped fact reads, deterministic event identity, exact transport acknowledgements, revalidated SQL publication markers and bounded recovery sweeps. Real PostgreSQL/Kafka/CDC/canonical-envelope wiring and full frontend/media publication remain incomplete; no parent gate is certified Done.",
-  "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
+  "summary": "INC-007 F07 customer-webhook signing and receiver helpers published on main. Go, Node/TypeScript and Python implement the unchanged exact-byte v1 formula with bounded timestamps, duplicate-header checks and key rotation. 181 local conformance tests passed. Event-body binding, durable replay receipts, live keys/HTTPS delivery and full frontend/media remain incomplete; no parent gate is certified Done.",
+  "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
   "items": [
     {
       "id": "GOV-001",
@@ -135,17 +135,44 @@
     {
       "id": "UX-003",
       "status": "Blocked",
-      "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit. INC-006: Existing Readiness & evidence view now also mounts OutboxStatusPanel. Fifteen presentation tests withhold malformed, cross-scope and expired page counters; no diagnostic execution is enabled.",
-      "remaining": "PLT-001; full frontend/media import, dependencies, React build/browser/accessibility and real authenticated diagnostic API. One scan-page observation is not total backlog or production health.",
-      "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
+      "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit. INC-006: Existing Readiness & evidence view now also mounts OutboxStatusPanel. Fifteen presentation tests withhold malformed, cross-scope and expired page counters; no diagnostic execution is enabled. INC-007: Existing data-driven development/security tables now include customer-webhook signing and receiver-helper evidence; no new theme or browser secret handling.",
+      "remaining": "PLT-001; full frontend/media import, dependencies, React build/browser/accessibility and real authenticated diagnostic API. Source evidence is not live endpoint, backup or production health.",
+      "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
       "previous_contributions": [
         {
           "status": "Blocked",
           "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit.",
           "remaining": "PLT-001; full frontend/media publication, dependency install, React build/browser/accessibility tests and authorized operations API.",
           "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
+        },
+        {
+          "status": "Blocked",
+          "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit. INC-006: Existing Readiness & evidence view now also mounts OutboxStatusPanel. Fifteen presentation tests withhold malformed, cross-scope and expired page counters; no diagnostic execution is enabled.",
+          "remaining": "PLT-001; full frontend/media import, dependencies, React build/browser/accessibility and real authenticated diagnostic API. One scan-page observation is not total backlog or production health.",
+          "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097"
         }
       ]
+    },
+    {
+      "id": "WHK-003",
+      "status": "Blocked",
+      "contribution": "Go dispatcher signing and server-side Node/Python verifiers preserve the exact F07 v1 formula; bounded key rotation/revocation, timestamp and raw-byte checks tested across three languages.",
+      "remaining": "EVT-002, PLT-008; real endpoint/key lifecycle, approved receiver bounds, canonical event ID binding inside signed body, HTTPS integration and independent security review. The event-ID header is not independently signed by v1.",
+      "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
+    },
+    {
+      "id": "WHK-009",
+      "status": "Blocked",
+      "contribution": "TypeScript/Node and Python receiver helpers with six shared independent vectors and negative signature/clock/header tests. Proof intentionally excludes unsigned event-ID authority.",
+      "remaining": "EVT-002, PLT-008; durable endpoint-scoped delivery ledger and atomic effect/queue, repeated-delivery rejection, same-ID/different-body conflicts and full HTTP sandbox. A stateless valid signature is not replay protection.",
+      "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
+    },
+    {
+      "id": "DEV-006",
+      "status": "Blocked",
+      "contribution": "Server-side Node helper with TypeScript declarations and Python helper; conformance against the Go dispatcher. 181 targeted local tests, Go race/vet and strict TypeScript consumer checks passed.",
+      "remaining": "PLT-003, EVT-002; full contract-generated SDKs, authenticated HTTP integration, durable receiver examples, package distribution and compatibility/security acceptance. Go here is backend code, not an additional public SDK.",
+      "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
     }
   ],
   "ingress_stages": [
@@ -240,33 +267,47 @@
       "evidence_required": "CloudTrail/runtime/WAF/DB detectors, protected audit persistence, external anchors and alert exercises."
     },
     {
+      "id": "customer_webhook_signing",
+      "name": "Customer webhook signatures and receiver helpers",
+      "state": "Conformance tested; runtime not connected",
+      "evidence_required": "EVT-002 and PLT-008; approved endpoint keys/profile, signed-body event binding, durable delivery ledger, HTTPS/egress/rotation tests and independent review. Valid HMAC is not replay protection or a durable ACK."
+    },
+    {
       "id": "deployment",
       "name": "Production release",
       "state": "Not deployed",
       "evidence_required": "Unchanged release/security/provider gates; main source push is not release approval."
     }
   ],
-  "previous_evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80",
-  "increment_id": "INC-006-status-outbox",
+  "previous_evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
+  "increment_id": "INC-007-webhook-signatures",
   "local_tests": {
-    "new_outbox": 49,
-    "new_frontend": 15,
-    "tenant_backend_regression": 55,
-    "tenant_frontend_regression": 20,
-    "existing_projection_checks": 3,
-    "total": 142,
+    "increment": "INC-007",
+    "go_leaf_tests": 60,
+    "node_tests": 65,
+    "python_tests": 56,
+    "total": 181,
     "failed": 0,
     "skipped": 0,
     "cancelled": 0,
-    "strict_typescript": "passed",
-    "jsx_syntax_files": 2,
-    "scope": "Local scripted SQL/transport and presentation checks only; not live PostgreSQL/Kafka or browser verification."
+    "go_race": "passed",
+    "go_vet": "passed",
+    "typescript_consumer": "passed",
+    "shared_independent_vectors": 6,
+    "scope": "Real stdlib HMAC conformance, not a running delivery/receiver service or replay ledger.",
+    "not_run": [
+      "full repository regression",
+      "React build/browser",
+      "KMS/DB/Kafka/HTTPS delivery",
+      "durable receiver ledger",
+      "production or provider qualification"
+    ]
   },
   "publication": {
-    "source_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
+    "source_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
     "branch": "main",
-    "changed_source_files": 11,
-    "verified_source_hashes": 11,
+    "changed_source_files": 12,
+    "verified_source_hashes": 12,
     "deployment": "not_performed"
   }
 }

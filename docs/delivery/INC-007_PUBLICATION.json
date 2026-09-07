@@ -1,0 +1,125 @@
+{
+  "increment": "INC-007",
+  "date": "2026-09-08",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "b55342894253b58e5aeb443fb5d28a6ba7624828",
+  "source_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
+  "source_tree": "3d2d6950c05fbe2b53bb6970c9fa8bb973b8a2f7",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/contracts/fixtures/webhook-signature-v1.json",
+      "bytes": 3727,
+      "sha": "e6e57c10623e1bfaa64aa8353ab6274faf392bd6",
+      "sha256": "f79a2abe367037a933b8e88caf3a9f2a0d1fe180b8b2018b4ab739c3a248e7b3"
+    },
+    {
+      "path": "backend/sdk/python/greeto_webhooks/signature.py",
+      "bytes": 7394,
+      "sha": "76f6091701db327b9877b4c40b6dc82eb0858918",
+      "sha256": "aa715eaccd99485d8ada64fe55c1ca7c3f141e381eb374f63ed78fb07cd56ff8"
+    },
+    {
+      "path": "backend/sdk/python/test_signature.py",
+      "bytes": 6213,
+      "sha": "20e0ae15c366a95f15b7fdee1f05249a4efde88f",
+      "sha256": "754be622d33edc0a33e3729216c93364f1c9490aee40b669a32ef1f567be9168"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-signature.d.mts",
+      "bytes": 1838,
+      "sha": "619d1d1dfe74f0d505125febbd360a66a8dc7e0a",
+      "sha256": "58cc6c2b91d8dd686797ffddf3706069841c5c0f47d673824b240c9b3055baa5"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-signature.mjs",
+      "bytes": 7170,
+      "sha": "b2ad1bbbb088a4819e1173fcc342835877e64388",
+      "sha256": "1a7f03e648d91843b65263ca1f0dac0df96895a798a32c7ece0f9b33bc8c5449"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-signature.test.mjs",
+      "bytes": 6492,
+      "sha": "6ee4dd7ad120814f0aa1d8f4e7330fe8fc91340d",
+      "sha256": "e9076f22768d2c088b403c4ac46939637f96caf9eacd3bbed08c8d712cacd3fb"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-signature.types.mts",
+      "bytes": 950,
+      "sha": "50c43c202daf6e78e3401512c085b80ad3495727",
+      "sha256": "ab357af1b9e2cc443cb53bf30b91d256b9e2675a1cdd3f798dc8753b400f01f5"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/signing/signature.go",
+      "bytes": 7600,
+      "sha": "eb1e5fd24a014b8a49ce7b2118832fc110383f07",
+      "sha256": "1ee8658f774afcd778a642302b3fd8ff529499366ae9f18b72268e20f3e4cb99"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/signing/signature_test.go",
+      "bytes": 8563,
+      "sha": "2c467a95de45ab46ef215d40b3df3caf163a1ab4",
+      "sha256": "fe2f019364fbed335a90bce3a821c5ccdf58c32ce61626911c536cd80b4d8f42"
+    },
+    {
+      "path": "docs/delivery/INC-007_VERIFICATION.json",
+      "bytes": 566,
+      "sha": "ec08e9028a35d769668172262e8f6c480f55e63c",
+      "sha256": "c98d89b2ffba11302bd8fb7d415802f54505767e8983adcdaf21c48e6e5fb92f"
+    },
+    {
+      "path": "docs/delivery/INC-007_WEBHOOK_SIGNATURES.md",
+      "bytes": 9988,
+      "sha": "c68ef94c81be02580e40ad3a27a03330c19483fa",
+      "sha256": "beaeb4f329d30a1867a6f3a6bc0ca36d9781415591d3371f76c78acd69c3c695"
+    },
+    {
+      "path": "tools/check_webhook_signing.py",
+      "bytes": 4511,
+      "sha": "37d44b29bd47af872c0fd8546daeef6ff0d0587d",
+      "sha256": "1858e75dbe9532cc4f5635f968309ea158cf5ac54b8969984d894f1812b0cbda"
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 12,
+    "unexpected_changed_paths": 0,
+    "existing_paths_modified_in_source_commit": 0,
+    "local_tests": {
+      "increment": "INC-007",
+      "go_leaf_tests": 60,
+      "node_tests": 65,
+      "python_tests": 56,
+      "total": 181,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "go_race": "passed",
+      "go_vet": "passed",
+      "typescript_consumer": "passed",
+      "shared_independent_vectors": 6,
+      "scope": "Real stdlib HMAC conformance, not a running delivery/receiver service or replay ledger.",
+      "not_run": [
+        "full repository regression",
+        "React build/browser",
+        "KMS/DB/Kafka/HTTPS delivery",
+        "durable receiver ledger",
+        "production or provider qualification"
+      ]
+    },
+    "pipeline_order_change": false,
+    "database_schema_change": false,
+    "dependency_change": false,
+    "production_deployment": false,
+    "certified_parent_tasks": 0
+  },
+  "remaining": [
+    "EVT-002 / PLT-008 and original predecessor acceptance",
+    "Canonical event ID binding inside authenticated body; v1 event-ID header is not independently signed",
+    "Durable endpoint-scoped receiver ledger and atomic effect/queue before 2xx",
+    "Real key lifecycle, HTTPS/egress and receiver profile qualification",
+    "Full TypeScript/Python SDK distribution and authenticated HTTP integration",
+    "Full frontend/media import and browser build; real SQL/Kafka/KMS/backup/security gates"
+  ]
+}
