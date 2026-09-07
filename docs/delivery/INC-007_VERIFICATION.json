@@ -1,0 +1,22 @@
+{
+  "increment": "INC-007",
+  "go_leaf_tests": 60,
+  "node_tests": 65,
+  "python_tests": 56,
+  "total": 181,
+  "failed": 0,
+  "skipped": 0,
+  "cancelled": 0,
+  "go_race": "passed",
+  "go_vet": "passed",
+  "typescript_consumer": "passed",
+  "shared_independent_vectors": 6,
+  "scope": "Real stdlib HMAC conformance, not a running delivery/receiver service or replay ledger.",
+  "not_run": [
+    "full repository regression",
+    "React build/browser",
+    "KMS/DB/Kafka/HTTPS delivery",
+    "durable receiver ledger",
+    "production or provider qualification"
+  ]
+}

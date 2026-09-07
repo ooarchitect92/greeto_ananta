@@ -1,0 +1,71 @@
+{
+  "description": "PUBLIC SYNTHETIC CONFORMANCE VECTORS ONLY. Deterministic test keys, never production credentials. Expected HMACs generated independently with Python stdlib hmac.",
+  "vectors": [
+    {
+      "name": "empty",
+      "body_hex": "",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "key_id": "key_fixture",
+      "event_id": "evt_fixture",
+      "delivery_id": "dlv_empty",
+      "at": 1788825600,
+      "signature": "v1=bf0cedf651bf69858d6942609fb76a91a7c0cd38b8e58bdc3bb07a0103a51db0",
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "json",
+      "body_hex": "7b226576656e745f6964223a226576745f66697874757265222c2264617461223a7b226f6b223a747275657d7d",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "key_id": "key_fixture",
+      "event_id": "evt_fixture",
+      "delivery_id": "dlv_json",
+      "at": 1788825600,
+      "signature": "v1=3d436512132224f91f6e1f3a91045d4c8344a88c9e1aa5d8830a0686aace1adc",
+      "body_sha256": "70805a95c5f4f5962e5eb90ce491d21f8c099039e0447cf7749576b4c59b4d7c"
+    },
+    {
+      "name": "unicode",
+      "body_hex": "7b2274657874223a22e0a4a8e0a4aee0a4b8e0a58de0a4a4e0a58720f09f8c8d20636166c3a9227d",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "key_id": "key_fixture",
+      "event_id": "evt_fixture",
+      "delivery_id": "dlv_unicode",
+      "at": 1788825600,
+      "signature": "v1=0dceb3c2f76fbe4cba6c8dff9075aa7d23cea3b2165eaf18428dd31eb5e71461",
+      "body_sha256": "71db823adb37710320022108c7c73e34c2cb102097540a0d38e269ff6f4cb550"
+    },
+    {
+      "name": "binary",
+      "body_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f808182838485868788898a8b8c8d8e8f909192939495969798999a9b9c9d9e9fa0a1a2a3a4a5a6a7a8a9aaabacadaeafb0b1b2b3b4b5b6b7b8b9babbbcbdbebfc0c1c2c3c4c5c6c7c8c9cacbcccdcecfd0d1d2d3d4d5d6d7d8d9dadbdcdddedfe0e1e2e3e4e5e6e7e8e9eaebecedeeeff0f1f2f3f4f5f6f7f8f9fafbfcfdfeff",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "key_id": "key_fixture",
+      "event_id": "evt_fixture",
+      "delivery_id": "dlv_binary",
+      "at": 1788825600,
+      "signature": "v1=43d06e4ee95b28a6bdf58f36acaf728528d8102a39756f960a8997708b8776dc",
+      "body_sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880"
+    },
+    {
+      "name": "whitespace",
+      "body_hex": "7b0d0a202261223a20312c202262223a20320a7d0a",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "key_id": "key_fixture",
+      "event_id": "evt_fixture",
+      "delivery_id": "dlv_whitespace",
+      "at": 1788825600,
+      "signature": "v1=10d423d22c4e79fd670c45e6f75d7e9324cc9c6b347cb0a3d6852c6d988d7998",
+      "body_sha256": "2785fdb6d5fafcd9bd8e89377b3b961251e706423d1dd292d80c1f88426e4d0e"
+    },
+    {
+      "name": "long_id",
+      "body_hex": "656e64",
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "key_id": "key_fixture",
+      "event_id": "evt_fixture",
+      "delivery_id": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "at": 1788825600,
+      "signature": "v1=9dbd33951ebf69339fc4a8af60ebbb2ffd7ee98602c71a89d7fbbf10e216c494",
+      "body_sha256": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8"
+    }
+  ]
+}
