@@ -1,0 +1,28 @@
+{
+  "increment": "INC-003",
+  "repository": "ooarchitect92/greeto_ananta",
+  "target_branch": "main",
+  "base_commit": "38533a13540fe507416b025f3880bc72acb16485",
+  "publication": "unpublished",
+  "remote_commit": null,
+  "pipeline_change": false,
+  "parent_tasks": [
+    "PLT-001",
+    "PLT-003",
+    "DAT-001",
+    "UX-003"
+  ],
+  "parent_acceptance": "Blocked; original prerequisites and reviewers unchanged",
+  "local_tests": {
+    "backend": 55,
+    "frontend": 20,
+    "failed": 0,
+    "strict_typescript": "passed",
+    "jsx_syntax_files": 2
+  },
+  "live_database_tests": "not_run",
+  "runtime_wiring": "not_connected",
+  "deployment": "not_performed",
+  "historical_local_report": true,
+  "current_publication_reference": "docs/delivery/status.json"
+}
