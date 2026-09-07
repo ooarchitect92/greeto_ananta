@@ -7,7 +7,7 @@
   "baseline_count": 262,
   "certified_done": 0,
   "summary": "Foundation source increment. Full product, frontend publication, production database/backup and provider connectivity remain incomplete. Source work does not advance blocked parent gates.",
-  "evidence_commit": null,
+  "evidence_commit": "4e310417f031937df94f15604d11384f3f2c3261",
   "items": [
     {
       "id": "GOV-001",

@@ -1,0 +1,21 @@
+{
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "source_commit": "4e310417f031937df94f15604d11384f3f2c3261",
+  "source_tree": "60467cfe23556eb92b92db3b4c514370b79772eb",
+  "previous_commit": "da9c78aed3d87086c1064c878ab8c44f53762fda",
+  "source_changed_paths": 43,
+  "source_publication": "remote_main_ref_read_back",
+  "integrity_check": "remote_commit_tree_equals_tested_local_git_tree",
+  "new_branches": 0,
+  "force_push": false,
+  "pipeline_change": false,
+  "production_deployed": false,
+  "full_frontend_import_complete": false,
+  "unresolved_import_issue": 1,
+  "test_report": "docs/delivery/VERIFICATION.md",
+  "plan_register": "docs/architecture/SOURCE_REGISTER.json",
+  "status_snapshot": "docs/delivery/status.json",
+  "tracker_destination": "ChatGPT Library /Greeto_Action_OS/delivery",
+  "note": "This record verifies the source increment only. Runtime health, full frontend import, real infrastructure and release approvals remain independent gates."
+}
