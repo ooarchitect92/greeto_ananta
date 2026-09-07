@@ -6,8 +6,8 @@
   "branch": "main",
   "baseline_count": 262,
   "certified_done": 0,
-  "summary": "INC-005 SQL delivery-status adapter and pending INC-003 tenant-scope source published on main. Local checks cover scope isolation, atomic status/history/outbox orchestration, version/replay identity and ambiguous commit handling. Signed-placement work is preserved. Real PostgreSQL/auth/HTTP/Kafka wiring and full frontend/media publication remain incomplete; no parent gate is certified Done.",
-  "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80",
+  "summary": "INC-006 control delivery-status outbox resolver/relay and existing-design acknowledgement panel published on main. Source tests cover scoped fact reads, deterministic event identity, exact transport acknowledgements, revalidated SQL publication markers and bounded recovery sweeps. Real PostgreSQL/Kafka/CDC/canonical-envelope wiring and full frontend/media publication remain incomplete; no parent gate is certified Done.",
+  "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
   "items": [
     {
       "id": "GOV-001",
@@ -51,9 +51,17 @@
     {
       "id": "DAT-001",
       "status": "Blocked",
-      "contribution": "Existing SQL draft preserved; new PostgresStatusRepository implements scoped serializable status/history/outbox writes with rollback, expected versions and same-key commit recovery.",
-      "remaining": "PLT-001; approved migration, actual driver/SQL/RLS/concurrency/crash-window tests. No database or grants applied.",
-      "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
+      "contribution": "Existing SQL draft preserved; new PostgresStatusRepository implements scoped serializable status/history/outbox writes with rollback, expected versions and same-key commit recovery. INC-006: Guarded read/mark adapter for existing outbox/history tables; parameterized exact-scope queries, microsecond cursors and fact-hash recheck without changing the SQL migration.",
+      "remaining": "PLT-001; approved migration, actual driver/SQL/RLS/query-plan/concurrency/crash tests. No database, grants or index changes applied.",
+      "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
+      "previous_contributions": [
+        {
+          "status": "Blocked",
+          "contribution": "Existing SQL draft preserved; new PostgresStatusRepository implements scoped serializable status/history/outbox writes with rollback, expected versions and same-key commit recovery.",
+          "remaining": "PLT-001; approved migration, actual driver/SQL/RLS/concurrency/crash-window tests. No database or grants applied.",
+          "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
+        }
+      ]
     },
     {
       "id": "DAT-010",
@@ -82,8 +90,16 @@
     {
       "id": "EVT-009",
       "status": "Blocked",
-      "contribution": "Publish/ACK/mark outbox primitive with crash-window tests.",
-      "remaining": "DAT-001, PLT-004; CDC and pending-index recovery integration."
+      "contribution": "Publish/ACK/mark outbox primitive with crash-window tests. INC-006: Scoped delivery-status fact resolver and publish/ACK/mark relay, same-event retry identity and restartable bounded SQL pending sweeps. 49 new backend cases passed using scripted ports.",
+      "remaining": "DAT-001, PLT-004; real SQL driver, approved canonical-envelope/topic adapter, quorum and broker-evidence proof, CDC, bounded sweep scheduling/query plans and consumer deduplication. No production publisher configured.",
+      "previous_contributions": [
+        {
+          "status": "Blocked",
+          "contribution": "Publish/ACK/mark outbox primitive with crash-window tests.",
+          "remaining": "DAT-001, PLT-004; CDC and pending-index recovery integration."
+        }
+      ],
+      "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097"
     },
     {
       "id": "SEC-002",
@@ -119,9 +135,17 @@
     {
       "id": "UX-003",
       "status": "Blocked",
-      "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit.",
-      "remaining": "PLT-001; full frontend/media publication, dependency install, React build/browser/accessibility tests and authorized operations API.",
-      "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
+      "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit. INC-006: Existing Readiness & evidence view now also mounts OutboxStatusPanel. Fifteen presentation tests withhold malformed, cross-scope and expired page counters; no diagnostic execution is enabled.",
+      "remaining": "PLT-001; full frontend/media import, dependencies, React build/browser/accessibility and real authenticated diagnostic API. One scan-page observation is not total backlog or production health.",
+      "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
+      "previous_contributions": [
+        {
+          "status": "Blocked",
+          "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit.",
+          "remaining": "PLT-001; full frontend/media publication, dependency install, React build/browser/accessibility tests and authorized operations API.",
+          "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
+        }
+      ]
     }
   ],
   "ingress_stages": [
@@ -180,6 +204,12 @@
       "evidence_required": "Actual PostgreSQL driver/RLS/locking/commit-loss proof, OIDC/OPA/NestJS wiring, event resolver/CDC and independent review. Scripted SQL is not a live database."
     },
     {
+      "id": "status_outbox",
+      "name": "Control-status outbox relay and acknowledgement inspection",
+      "state": "Source tested; production not configured",
+      "evidence_required": "Actual scoped PostgreSQL/driver/RLS, approved canonical envelope/topic mapping, Kafka quorum ACK, durable broker evidence, CDC/recovery cadence and query-plan testing. A marker is not downstream completion; UI observations cover one page."
+    },
+    {
       "id": "backup",
       "name": "Independent backups + recovery environment",
       "state": "Not provisioned",
@@ -216,25 +246,27 @@
       "evidence_required": "Unchanged release/security/provider gates; main source push is not release approval."
     }
   ],
-  "previous_evidence_commit": "62710cab5e5d90e864181b10e3960b9184d2f069",
-  "increment_id": "INC-005-status-store-and-INC-003-publication",
+  "previous_evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80",
+  "increment_id": "INC-006-status-outbox",
   "local_tests": {
-    "tenant_backend": 55,
-    "tenant_frontend": 20,
-    "status_store": 60,
-    "existing_status_domain": 12,
+    "new_outbox": 49,
+    "new_frontend": 15,
+    "tenant_backend_regression": 55,
+    "tenant_frontend_regression": 20,
     "existing_projection_checks": 3,
-    "total": 150,
+    "total": 142,
     "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
     "strict_typescript": "passed",
     "jsx_syntax_files": 2,
-    "scope": "Local scripted-port/domain/presentation checks, not live database or browser validation."
+    "scope": "Local scripted SQL/transport and presentation checks only; not live PostgreSQL/Kafka or browser verification."
   },
   "publication": {
-    "source_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80",
+    "source_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
     "branch": "main",
-    "changed_source_files": 14,
-    "verified_source_hashes": 14,
+    "changed_source_files": 11,
+    "verified_source_hashes": 11,
     "deployment": "not_performed"
   }
 }

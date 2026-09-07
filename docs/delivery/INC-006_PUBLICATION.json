@@ -1,0 +1,116 @@
+{
+  "increment": "INC-006",
+  "date": "2026-09-07",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "881fe3f242f2a141363bce1b6cb1a1e2f7d09b78",
+  "source_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
+  "source_tree": "2184340a52468ab3e9e8efe742cfe3fbf5e22494",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/services/core/src/delivery/postgres-status-outbox.ts",
+      "bytes": 14034,
+      "sha": "c929f681e92c875dc11fab3c7743570146971ace",
+      "sha256": "4ebf9f413bc98f5ff6f59ba6efb6ed07a3045f93abb3a6102ad0f282a3853768"
+    },
+    {
+      "path": "backend/services/core/src/delivery/status-outbox-contract.ts",
+      "bytes": 8261,
+      "sha": "36bea0e5797e7a92f96a47df6d1c50b761852c06",
+      "sha256": "05e4a516c460be2298df2784b98d3638f4a462aa51d80338941ee0877670f0d9"
+    },
+    {
+      "path": "backend/services/core/src/delivery/status-outbox-relay.ts",
+      "bytes": 10735,
+      "sha": "136e69f4e813845944db37ff71215c39b925f371",
+      "sha256": "cef2566cd2ed36beab44206c16425ae6e34f391508682713ce7bf4851fc8b658"
+    },
+    {
+      "path": "backend/services/core/test/status-outbox.test.mjs",
+      "bytes": 26351,
+      "sha": "e6d03ede8b070217bc1e8cb7e2fca80b0a09c6d0",
+      "sha256": "709671251bc76e01b9dafc55460c1318cb830a0c2fea8e0d134682b17b909e2a"
+    },
+    {
+      "path": "docs/delivery/INC-006_STATUS_OUTBOX.md",
+      "bytes": 12670,
+      "sha": "513ca4392e789e90fac0d765ae370a994be5976e",
+      "sha256": "b9d655000ed69ce61aef54e8c26ce820cd8b8d3dd4b54c5fd7203ca7ec5c1e4f"
+    },
+    {
+      "path": "docs/delivery/INC-006_VERIFICATION.json",
+      "bytes": 985,
+      "sha": "b36d9044cdfc32f8abf4df5f03a09cf98531c95f",
+      "sha256": "b782d20a00b281c656e87b59ff874b225e13e59b5eb667f623e34923adf7e216"
+    },
+    {
+      "path": "front end/src/features/implementation/ImplementationCenter.jsx",
+      "bytes": 10341,
+      "sha": "6778fc260900f2d71d9013df7399f6c66ac7ec45",
+      "sha256": "eab479f2e63b1c77092f1f1e1782319e9cc91c1cc4acdb94b9c07e181bc4cdd7"
+    },
+    {
+      "path": "front end/src/features/implementation/OutboxStatusPanel.jsx",
+      "bytes": 3822,
+      "sha": "4eddca57e152ffcb7bb76a41eaff43aafe05d8cf",
+      "sha256": "57f862ac1e500192b75abdff945b0c568785937f955a34157273833af8b16335"
+    },
+    {
+      "path": "front end/src/features/implementation/outbox-view.mjs",
+      "bytes": 2972,
+      "sha": "7d6aa357335dcf61338b8fae34808ff745eab066",
+      "sha256": "15df9e7ee00d8e24848165a5bf28904b1808df3a9efc685474fe84ec8e058191"
+    },
+    {
+      "path": "front end/tests/outbox-view.test.mjs",
+      "bytes": 3898,
+      "sha": "eb0bd24e41decceded88f345db5f44ffac7c899f",
+      "sha256": "ae68061457ebc4b2f966e0b5234f01521ef391fc3014e0a9242cdf4d1e389574"
+    },
+    {
+      "path": "tools/check_status_outbox.py",
+      "bytes": 5266,
+      "sha": "29350531766dd671f310b89fca1ebfb51cc627bc",
+      "sha256": "673fbc706cb2114b20e49aa03b97f7f08fdda518bd3ecda3ae5b11b348efa57a"
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 11,
+    "unexpected_changed_paths": 0,
+    "local_tests": {
+      "new_outbox": 49,
+      "new_frontend": 15,
+      "tenant_backend_regression": 55,
+      "tenant_frontend_regression": 20,
+      "existing_projection_checks": 3,
+      "total": 142,
+      "failed": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "strict_typescript": "passed",
+      "jsx_syntax_files": 2,
+      "scope": "Local scripted SQL/transport and presentation checks only; not live PostgreSQL/Kafka or browser verification."
+    },
+    "pipeline_order_change": false,
+    "database_schema_change": false,
+    "dependency_change": false,
+    "public_api_change": false,
+    "production_deployment": false,
+    "certified_parent_tasks": 0
+  },
+  "remaining": [
+    "Full frontend/media import, complete React build and browser/accessibility acceptance",
+    "Real PostgreSQL driver, RLS, cancellation, concurrency, crash and query-plan tests",
+    "Certified Kafka transport, canonical envelope/topic mapping, schema registry and broker-evidence retention",
+    "Authenticated workload host, CDC and rate-bounded recovery sweep scheduling",
+    "KMS, independent backups/restore, host/runtime security and production release gates"
+  ],
+  "notes": [
+    "The internal event payload is for the existing delivery.status.changed.v1 event, not a new public API or Kafka topic.",
+    "The current SQL schema records a publication marker/time, not the transport reference; durable broker evidence remains an integration gate.",
+    "New recovery sweeps restart at null; page cursors are not persistent completion watermarks.",
+    "Prior source evidence is retained per item; parent acceptance is unchanged."
+  ]
+}
