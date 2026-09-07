@@ -1,0 +1,7 @@
+.local-build/
+__pycache__/
+*.pyc
+node_modules/
+.env
+.env.*
+!.env.example

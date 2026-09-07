@@ -1,0 +1,128 @@
+{
+  "status": "design_not_provisioned",
+  "source_section": "7.2",
+  "isolation": "cell-scoped tables; authenticated tenant/workspace/environment/object checks on every access",
+  "encryption": "KMS at rest; sensitive bodies encrypted in scoped S3, not copied into indexes",
+  "ttl": "application enforces expiry; unresolved accepted work must not expire silently",
+  "tables": [
+    {
+      "name": "CommandJournal",
+      "PK": "tenant + hash(idempotency_key)",
+      "SK": "command_type/version",
+      "required": [
+        "payload_hash",
+        "message_id",
+        "action_id",
+        "intent_ref",
+        "pending_publication",
+        "expires_at",
+        "source_actor",
+        "scope"
+      ],
+      "write": "conditional create; same key/different hash conflicts",
+      "recovery": "Streams publisher plus durable sparse pending index"
+    },
+    {
+      "name": "MessageTimeline",
+      "PK": "tenant + conversation + UTC time bucket",
+      "SK": "received_at + message_id",
+      "required": [
+        "scope",
+        "content_ref",
+        "event_time",
+        "received_at",
+        "version"
+      ],
+      "read": "bounded cursor; bucket/shard merge for hot conversations"
+    },
+    {
+      "name": "MessageLookup",
+      "PK": "tenant + message_id",
+      "SK": "lookup kind",
+      "required": [
+        "scope",
+        "conversation_ref",
+        "provider_namespace",
+        "provider_id"
+      ],
+      "read": "strong base-table read where authority/correctness needs it"
+    },
+    {
+      "name": "StatusEvidence",
+      "PK": "tenant + message_id",
+      "SK": "provider_status + evidence_id",
+      "required": [
+        "scope",
+        "provider_timestamp",
+        "received_at",
+        "attempt_ref",
+        "evidence_ref"
+      ],
+      "write": "append distinct facts; never regress delivered/read because a late sent arrives"
+    },
+    {
+      "name": "ActionState",
+      "PK": "tenant + action_id",
+      "SK": "state or attempt/evidence identity",
+      "required": [
+        "scope",
+        "intent_hash",
+        "ownership_epoch",
+        "lease",
+        "state",
+        "policy_version",
+        "approval_ref",
+        "budget_ref",
+        "provider_correlation",
+        "reconcile_deadline"
+      ],
+      "write": "conditional claim and expected-version update; UNKNOWN is not a new action"
+    },
+    {
+      "name": "DedupReceipt",
+      "PK": "cell + hash(provider/app/asset/event identity)",
+      "SK": "effect identity",
+      "required": [
+        "scope",
+        "effect_marker",
+        "expiry"
+      ],
+      "write": "effect and dedup marker cross same local durability boundary"
+    },
+    {
+      "name": "ConversationState",
+      "PK": "tenant + conversation",
+      "SK": "state",
+      "required": [
+        "scope",
+        "assignment",
+        "cursor",
+        "version",
+        "ownership_epoch"
+      ],
+      "write": "expected-version updates"
+    },
+    {
+      "name": "WebhookDelivery",
+      "PK": "tenant + endpoint + hash(delivery_id)",
+      "SK": "state or attempt identity",
+      "required": [
+        "scope",
+        "event_id",
+        "delivery_id",
+        "attempt_number",
+        "next_due",
+        "deadline",
+        "last_http_status",
+        "ack_level",
+        "evidence_ref"
+      ],
+      "write": "durable record before POST; retry keeps delivery_id; replay creates new delivery_id"
+    }
+  ],
+  "pending_indexes": [
+    "CommandJournal: cell + pending_shard + due_time_bucket; SK due_at + command_id",
+    "WebhookDelivery: cell + endpoint_hash + due_time_bucket; SK next_due + delivery_id"
+  ],
+  "backup": "PITR and independent permitted-region/account backups; measured restore plus erasure replay required"
+}

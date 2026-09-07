@@ -1,0 +1,1 @@
+{"name":"@greeto/core-domain-foundation","private":true,"type":"module","version":"0.1.0","description":"Framework-neutral domain source for the planned NestJS core; no HTTP service or production dependencies configured."}

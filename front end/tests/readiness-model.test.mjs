@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {evaluateReadiness,validateRuntimeSnapshot} from '../src/features/implementation/readiness-model.mjs';
+const scope={tenant_id:'tenant-a',workspace_id:'workspace-a',environment_id:'sandbox'};
+const now=Date.parse('2026-09-07T07:00:00Z');
+const good=()=>({schema_version:'1.0',source:'runtime',observed_at:'2026-09-07T07:00:00Z',scope,checks:[{id:'kafka',state:'pass',observed_at:'2026-09-07T06:59:59Z',max_age_seconds:10,evidence_ref:'proof-1'}]});
+test('fresh runtime evidence passes only its required dependency',()=>{const s=validateRuntimeSnapshot(good(),scope);assert.equal(evaluateReadiness(['kafka'],s,now).ready,true);assert.equal(evaluateReadiness(['kafka','kms'],s,now).ready,false);});
+test('repository code evidence cannot claim production readiness',()=>{const s={...good(),source:'repository'};assert.equal(evaluateReadiness(['kafka'],s,now).ready,false);assert.throws(()=>validateRuntimeSnapshot(s,scope));});
+test('missing and empty observations fail closed',()=>{assert.equal(evaluateReadiness([],null,now).ready,false);assert.equal(evaluateReadiness(['kafka'],null,now).ready,false);});
+test('tenant workspace and environment mismatch fail closed',()=>{for(const key of Object.keys(scope))assert.throws(()=>validateRuntimeSnapshot(good(),{...scope,[key]:'other'}));});
+test('stale future and unproven checks are not green',()=>{for(const patch of [{observed_at:'2026-09-07T06:00:00Z'},{observed_at:'2026-09-08T07:00:00Z'},{evidence_ref:null},{max_age_seconds:0}]){const s=good();Object.assign(s.checks[0],patch);assert.equal(evaluateReadiness(['kafka'],s,now).ready,false);}});
+test('duplicate IDs and malformed response are rejected',()=>{const s=good();s.checks.push({...s.checks[0]});assert.throws(()=>validateRuntimeSnapshot(s,scope));assert.throws(()=>validateRuntimeSnapshot(null,scope));});
+test('projection does not export unexpected secret-shaped properties',()=>{const s=good();s.headers={authorization:'synthetic'};s.checks[0].raw_body='synthetic';const checked=validateRuntimeSnapshot(s,scope);assert.equal(Object.hasOwn(checked,'headers'),false);assert.equal(Object.hasOwn(checked.checks[0],'raw_body'),false);});

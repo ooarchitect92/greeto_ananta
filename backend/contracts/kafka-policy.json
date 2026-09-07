@@ -1,0 +1,86 @@
+{
+  "status": "contract_not_deployed",
+  "source_section": "8.2",
+  "replication_factor": 3,
+  "min_in_sync_replicas": 2,
+  "acks": "all",
+  "enable_idempotence": true,
+  "unclean_leader_election": false,
+  "consumer_auto_commit": false,
+  "consumer_boundary": "idempotent_effect_and_marker_then_offset",
+  "outbox_boundary": "publish_then_verified_quorum_ack_then_mark",
+  "external_effects": "at_least_once_transport_unknown_external_outcomes_require_reconciliation",
+  "broker_and_topic_config_verification": "required_before_readiness",
+  "topics": [
+    {
+      "suffix": "provider.received.v1",
+      "partition_key": "verified app/asset route or batch ID",
+      "retention": "48h"
+    },
+    {
+      "suffix": "message.fact.v1",
+      "partition_key": "tenant + channel account + conversation",
+      "retention": "48h"
+    },
+    {
+      "suffix": "message.status.v1",
+      "partition_key": "tenant + message identity",
+      "retention": "48h"
+    },
+    {
+      "suffix": "action.command.interactive.v1",
+      "partition_key": "tenant + sender + recipient",
+      "retention": "48h"
+    },
+    {
+      "suffix": "action.command.bulk.v1",
+      "partition_key": "campaign shard / sender scheduling key",
+      "retention": "48h"
+    },
+    {
+      "suffix": "action.result.v1",
+      "partition_key": "tenant + action_id",
+      "retention": "48h"
+    },
+    {
+      "suffix": "customer.change.v1",
+      "partition_key": "tenant + customer_id",
+      "retention": "48h"
+    },
+    {
+      "suffix": "consent.change.v1",
+      "partition_key": "tenant + customer/channel/purpose",
+      "retention": "compacted plus bounded history"
+    },
+    {
+      "suffix": "workflow.signal.v1",
+      "partition_key": "tenant + execution_id",
+      "retention": "48h"
+    },
+    {
+      "suffix": "webhook.dispatch.v1",
+      "partition_key": "tenant + endpoint_id",
+      "retention": "48h"
+    },
+    {
+      "suffix": "usage.fact.v1",
+      "partition_key": "tenant + meter bucket",
+      "retention": "48h plus retained ledger"
+    },
+    {
+      "suffix": "provider.capability.v1",
+      "partition_key": "provider/app/asset",
+      "retention": "compacted"
+    },
+    {
+      "suffix": "retry.<domain>.v1",
+      "partition_key": "business ordering key",
+      "retention": "bounded retry horizon"
+    },
+    {
+      "suffix": "dlq.<domain>.v1",
+      "partition_key": "original event_id",
+      "retention": "7d, policy configurable"
+    }
+  ]
+}

@@ -5,9 +5,15 @@ Owner instruction recorded on 7 September 2026. Applies to human and AI-assisted
 ## Authorized scope
 
 - The owner requested publication of the original frontend import and the structured frontend v1 package in `ooarchitect92/greeto_ananta`.
-- Application changes are restricted to `front end/`. Leave `backend/`, infrastructure and deployment configuration unchanged.
-- Preserve the supplied source assets, existing APIs, route compatibility and the documented frontend-only boundary. Configuration drafts must not be represented as live backend execution.
+- The latest owner instruction authorizes BOTH `front end/` and `backend/` development. Preserve the selected architecture and existing frontend design. Infrastructure provisioning, production deployment and pipeline changes still require their specific approvals.
+- Preserve the supplied source assets, existing APIs, route compatibility and the draft-only boundary of unconnected configuration pages. Configuration drafts must not be represented as live backend execution.
 - Repository-level delivery documentation may record these instructions. It does not authorize application or CI/CD pipeline changes.
+
+## Main-only delivery and persistent baseline
+
+The owner explicitly requested `main` only on 7 September 2026. Do not create another branch or force-push. This is a source-publication instruction, not a waiver of production release review, provider approval, migrations or security gates. Keep the Excel tracker updated with actual evidence.
+
+The source plans and structured frontend are saved in the persistent `/Greeto_Action_OS` Library workspace; exact paths, file IDs and hashes are in `docs/architecture/SOURCE_REGISTER.json`. Retrieve them before asking the owner to re-upload. Read `docs/requirements/OWNER_DIRECTIVES.md` and `docs/delivery/status.json` on continuation.
 
 ## Pipeline approval is mandatory
 

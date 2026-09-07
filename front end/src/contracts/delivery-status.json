@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "source": "repository",
+  "as_of": "2026-09-07",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "baseline_count": 262,
+  "certified_done": 0,
+  "summary": "Foundation source increment. Full product, frontend publication, production database/backup and provider connectivity remain incomplete. Source work does not advance blocked parent gates.",
+  "evidence_commit": null,
+  "items": [
+    {
+      "id": "GOV-001",
+      "status": "In progress",
+      "contribution": "Persistent source register and owner main-only/change-control rules.",
+      "remaining": "Named approval/reviewer and full baseline sign-off remain pending."
+    },
+    {
+      "id": "GOV-004",
+      "status": "In progress",
+      "contribution": "Threat/control matrix and negative unit tests for this increment.",
+      "remaining": "Full threat review, red-team/isolation/integration evidence pending."
+    },
+    {
+      "id": "GOV-005",
+      "status": "In progress",
+      "contribution": "Recovery/log data classification and retention boundaries documented.",
+      "remaining": "Residency, retention and legal owner approvals pending."
+    },
+    {
+      "id": "DAT-001",
+      "status": "Blocked",
+      "contribution": "Additive SQL schema draft for scope, delivery, audit and recovery.",
+      "remaining": "PLT-001; live SQL, runtime grants, migration/RLS integration tests."
+    },
+    {
+      "id": "DAT-010",
+      "status": "Blocked",
+      "contribution": "Per-store backup and erasure-replay contracts.",
+      "remaining": "PLT-001; real protected stores, backup jobs and restore drills."
+    },
+    {
+      "id": "EVT-002",
+      "status": "Blocked",
+      "contribution": "Kafka policy/topic and OpenAPI/schema reference contracts.",
+      "remaining": "DAT-001, PLT-004; schema registry compatibility checks."
+    },
+    {
+      "id": "EVT-003",
+      "status": "Blocked",
+      "contribution": "F03 handler and raw-proof primitives with synthetic crash/negative tests.",
+      "remaining": "DAT-001, PLT-004; real provider parser/binder/Kafka adapters and official fixtures."
+    },
+    {
+      "id": "EVT-006",
+      "status": "Blocked",
+      "contribution": "Durable effect-before-offset consumer primitive.",
+      "remaining": "DAT-001, PLT-004; real DB/Kafka crash and duplicate tests."
+    },
+    {
+      "id": "EVT-009",
+      "status": "Blocked",
+      "contribution": "Publish/ACK/mark outbox primitive with crash-window tests.",
+      "remaining": "DAT-001, PLT-004; CDC and pending-index recovery integration."
+    },
+    {
+      "id": "SEC-002",
+      "status": "Blocked",
+      "contribution": "Scoped AES-256-GCM envelope primitive and negative tests.",
+      "remaining": "GOV-004; KMS IAM, rotation, revocation and recovery integration."
+    },
+    {
+      "id": "SEC-005",
+      "status": "Blocked",
+      "contribution": "Bounded allowlisted operational logger and privileged-audit schema.",
+      "remaining": "GOV-004; durable audit adapter, external integrity anchors and SIEM integration."
+    },
+    {
+      "id": "OPS-005",
+      "status": "Blocked",
+      "contribution": "Freshness-aware readiness evaluator; loopback liveness/readiness host.",
+      "remaining": "GOV-007; real collectors, probes, SLO alerts and operator runbooks validated."
+    },
+    {
+      "id": "OPS-007",
+      "status": "Blocked",
+      "contribution": "Ordered recovery gates and protected-resource evidence schema.",
+      "remaining": "GOV-007; separate recovery resources, restore drills and measured RPO/RTO."
+    },
+    {
+      "id": "DEV-001",
+      "status": "Blocked",
+      "contribution": "Detailed initial OpenAPI contract and status domain service.",
+      "remaining": "PLT-003, EVT-002; NestJS HTTP/database/auth adapters and endpoint tests."
+    },
+    {
+      "id": "UX-003",
+      "status": "Blocked",
+      "contribution": "Existing Implementation Center extended with read-only readiness/evidence panel.",
+      "remaining": "PLT-001; full frontend publication, dependencies, browser build and authorized operations API."
+    }
+  ],
+  "ingress_stages": [
+    {
+      "id": "edge_bounds",
+      "label": "1. TLS/WAF and request bounds",
+      "acknowledgement": "No success yet."
+    },
+    {
+      "id": "expected_credential",
+      "label": "2. Resolve route-owned credential",
+      "acknowledgement": "Unknown app/secret fails closed."
+    },
+    {
+      "id": "raw_proof",
+      "label": "3. Verify exact raw bytes",
+      "acknowledgement": "Authenticity only; no processing completion."
+    },
+    {
+      "id": "bounded_parse",
+      "label": "4. Parse every bounded payload element",
+      "acknowledgement": "Unsupported signed data requires restricted quarantine."
+    },
+    {
+      "id": "authorized_placement",
+      "label": "5. Bind authorized asset/cell/epoch",
+      "acknowledgement": "No caller-supplied tenant authority."
+    },
+    {
+      "id": "durable_append",
+      "label": "6. Commit every required slice to Kafka",
+      "acknowledgement": "Configured in-region quorum evidence required."
+    },
+    {
+      "id": "ack_boundary",
+      "label": "7. Write HTTP 200 only after all commits",
+      "acknowledgement": "Durable acceptance, not delivery or business success."
+    },
+    {
+      "id": "async_consumers",
+      "label": "8. Normalize/project/route asynchronously",
+      "acknowledgement": "Each consumer crosses its own durable boundary."
+    }
+  ],
+  "controls": [
+    {
+      "id": "backup",
+      "name": "Independent backups + recovery environment",
+      "state": "Not provisioned",
+      "evidence_required": "PITR, isolated backup vault, successful restore, keys and erasure replay for each essential store."
+    },
+    {
+      "id": "fencing",
+      "name": "Single-writer recovery fencing",
+      "state": "Guard unit tests only",
+      "evidence_required": "Old-writer fence and ownership-epoch proof; reconcile unknown provider actions."
+    },
+    {
+      "id": "encryption",
+      "name": "Encryption and key lifecycle",
+      "state": "Primitive unit tests only",
+      "evidence_required": "Real KMS authorization, scoped AAD, rotation/revocation and recovery drills."
+    },
+    {
+      "id": "secure_boot",
+      "name": "UEFI Secure Boot / host integrity",
+      "state": "Not observed",
+      "evidence_required": "Supported AMI/host plus verified boot evidence; application code cannot enable firmware trust."
+    },
+    {
+      "id": "security_logging",
+      "name": "Intrusion detection and secure audit",
+      "state": "Telemetry helper + schema only",
+      "evidence_required": "CloudTrail/runtime/WAF/DB detectors, protected audit persistence, external anchors and alert exercises."
+    },
+    {
+      "id": "deployment",
+      "name": "Production release",
+      "state": "Not deployed",
+      "evidence_required": "Unchanged release/security/provider gates; main source push is not release approval."
+    }
+  ]
+}

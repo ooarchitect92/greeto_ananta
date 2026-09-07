@@ -1,0 +1,31 @@
+{
+  "baseline_version": "1.0",
+  "stored_in": "ChatGPT Library /Greeto_Action_OS",
+  "source_precedence": "Uploaded Action OS v1 architecture + original tracker govern; existing source ZIP defines actual legacy files. No silent framework/pipeline migration.",
+  "files": [
+    {
+      "name": "Customer_Action_OS_Architecture_Source_v1.md",
+      "library_path": "/Greeto_Action_OS/architecture/Customer_Action_OS_Architecture_Source_v1.md",
+      "file_id": "file_00000000e9f88211a0bb5c02aa1126f6",
+      "sha256": "409d3b78aedbf8e324e394161ae69f379ea683294ac5a43ea06eabb42d8904d7"
+    },
+    {
+      "name": "Customer_Action_OS_Production_Architecture_v1.docx",
+      "library_path": "/Greeto_Action_OS/architecture/Customer_Action_OS_Production_Architecture_v1.docx",
+      "file_id": "file_000000009a94821198619e7c69e362e9",
+      "sha256": "63195a0674333dd955d5ec389dc3705380350b3d8d85913f23dc1add64c3c70a"
+    },
+    {
+      "name": "Customer_Action_OS_Delivery_Tracker_v1_BASELINE.xlsx",
+      "library_path": "/Greeto_Action_OS/architecture/Customer_Action_OS_Delivery_Tracker_v1_BASELINE.xlsx",
+      "file_id": "file_0000000081a08211ac50cea1f30b862f",
+      "sha256": "648aa879ee8f1ffcce6ff369f7ef08cc193033c8e2160ecf8f3276a8a201da6f"
+    },
+    {
+      "name": "greeto_ananta_frontend_structured_v1.zip",
+      "library_path": "/Greeto_Action_OS/frontend/greeto_ananta_frontend_structured_v1.zip",
+      "file_id": "file_000000002d0c8208880ef2493c988640",
+      "sha256": "9fe4185159b137cd94346265dd3e385b5aa9e3803bffbee9b31591a4f6291c23"
+    }
+  ]
+}
