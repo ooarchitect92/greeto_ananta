@@ -1,0 +1,38 @@
+{
+  "increment": "INC-006",
+  "scope": "local scripted ports and presentation",
+  "production_verified": false,
+  "passed": true,
+  "node": "v22.16.0",
+  "typescript": "Version 5.8.3",
+  "strict_typescript": "passed",
+  "tests": {
+    "tests": 142,
+    "pass": 142,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "jsx_syntax_files": 2,
+  "base_commit": "881fe3f242f2a141363bce1b6cb1a1e2f7d09b78",
+  "test_breakdown": {
+    "new_outbox": 49,
+    "new_frontend": 15,
+    "tenant_backend_regression": 55,
+    "tenant_frontend_regression": 20,
+    "existing_projection_checks": 3
+  },
+  "unchanged": [
+    "F01-F18 order",
+    "0001_foundation.sql",
+    "existing public OpenAPI contract",
+    "dependencies",
+    "CI/CD and release gates"
+  ],
+  "not_verified": [
+    "live PostgreSQL/driver/RLS/query plans",
+    "real Kafka/canonical-envelope/schema-registry/CDC",
+    "full frontend/media import and React browser build",
+    "production security/backups/deployment"
+  ]
+}
