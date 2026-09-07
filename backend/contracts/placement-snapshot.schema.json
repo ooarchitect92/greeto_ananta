@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Greeto internal placement snapshot payload v1",
+  "description": "Initial internal verification profile for PLT-004; not a public API or a deployed control-plane protocol. Schema validation does not verify signature, trust, time, namespace, epoch history or durability. Detached signature is ordinary Ed25519 over the exact UTF-8 payload prefixed with greeto-placement-snapshot/v1 followed by a zero byte. Keys come from trusted configuration, never this document. Duplicate and case-variant JSON keys are rejected by the Go parser. Production activation requires controller/checkpoint/trust-profile review.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "directory_id",
+    "issuer",
+    "audience",
+    "environment_id",
+    "key_id",
+    "version",
+    "issued_at",
+    "expires_at",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "description": "Implementation profile version; no automatic migration."
+    },
+    "directory_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+      "description": "Server-configured checkpoint and routing namespace."
+    },
+    "issuer": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+      "description": "Expected authorized placement controller."
+    },
+    "audience": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+      "description": "Expected consumer group/profile, not a browser input."
+    },
+    "environment_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+      "description": "Exact environment binding for the full snapshot."
+    },
+    "key_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+      "description": "Hint resolving a configured public key; also authenticated inside payload."
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991,
+      "description": "Snapshot generation; rollback or same-generation different digest is rejected."
+    },
+    "issued_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Cannot be in the future or before the public-key validity interval."
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Must remain future at activation and each lookup, within MaxLifetime and key validity."
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "provider",
+          "app_ref",
+          "asset_id",
+          "tenant_id",
+          "workspace_id",
+          "environment_id",
+          "region",
+          "cell_id",
+          "placement_epoch",
+          "state"
+        ],
+        "properties": {
+          "provider": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "description": "Provider namespace; matched to trusted callback-route configuration."
+          },
+          "app_ref": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "description": "Application namespace owned by the configured route."
+          },
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "description": "Provider asset as an opaque string; numeric IDs are not converted."
+          },
+          "tenant_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "description": "Authorized tenant from the placement controller."
+          },
+          "workspace_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "description": "Authorized workspace belonging to that tenant."
+          },
+          "environment_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "description": "Environment must exactly match directory configuration."
+          },
+          "region": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,62}$",
+            "description": "Permitted home region; must be in the trusted local allowlist."
+          },
+          "cell_id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]{0,62}$",
+            "description": "Home cell; changing it requires a higher ownership epoch."
+          },
+          "placement_epoch": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9007199254740991,
+            "description": "Monotonic per-asset epoch; same-epoch ownership/location/state changes are rejected."
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "active",
+              "suspended",
+              "revoked"
+            ],
+            "description": "Only active can resolve. Tombstones cannot be silently omitted from subsequent snapshots."
+          }
+        }
+      },
+      "description": "Full namespace replacement with unique provider/app/asset tuples. Actual MaxEntries and MaxBytes are explicit, lower runtime limits. This initial bounded profile requires at least one entry or tombstone."
+    }
+  },
+  "x-work-package": "PLT-004",
+  "x-production-status": "not_configured",
+  "x-pipeline": "F03 step 5, existing Binder port"
+}

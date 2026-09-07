@@ -1,0 +1,35 @@
+{
+  "increment_id": "PLT-004-signed-placement-01",
+  "as_of": "2026-09-07",
+  "base_commit": "38533a13540fe507416b025f3880bc72acb16485",
+  "scope": "G0 source contribution; no production activation or parent acceptance",
+  "go_test_command": "cd backend && go test -count=1 -race ./internal/placement ./services/ingress",
+  "go_passing_records": 119,
+  "go_leaf_cases": 106,
+  "go_failures": 0,
+  "go_packages": 2,
+  "go_vet": "passed for the same two affected packages",
+  "fuzz": {
+    "target": "FuzzStrictPlacementJSON",
+    "requested_seconds": 3,
+    "executions": 8032,
+    "result": "passed",
+    "scope": "bounded parser robustness only; not a security certification"
+  },
+  "toolchain": "Go 1.23.2 local test observation; production qualification remains GOV-002",
+  "baseline_work_packages": 262,
+  "new_branches": 0,
+  "pipeline_changed": false,
+  "certified_done": 0,
+  "not_verified": [
+    "Full repository-wide regression in this session",
+    "Real checkpoint database adapter and crash durability",
+    "Authoritative placement controller and distribution",
+    "Persistent key revocation and fleet fanout",
+    "Global writer fencing",
+    "Official provider parser/signature fixtures",
+    "Live Kafka and scoped topic authorization",
+    "Full frontend import/build/browser tests",
+    "Production deployment/security/DR qualification"
+  ]
+}
