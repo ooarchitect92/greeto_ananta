@@ -1,0 +1,127 @@
+{
+  "increment": "INC-005",
+  "date": "2026-09-07",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "1ca19a71364cf15cae1a0b71d2196def72dc8840",
+  "source_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80",
+  "source_tree": "9bb0475ca9d7dcbc37968068c445dd447e7ab9e5",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/services/core/src/delivery/postgres-status-repository.ts",
+      "bytes": 19506,
+      "sha": "0eacfa50688e1b2f24362f7aa1e704868291d35b",
+      "sha256": "26088a9243f68c5e02913d23fa85ad152e23004269aa4a78ec1aeec045dbc13d"
+    },
+    {
+      "path": "backend/services/core/src/platform/postgres-scope-reader.ts",
+      "bytes": 6481,
+      "sha": "2b5d572b9f5e6ce1687c707e03ff8f94133a526a",
+      "sha256": "56a8ecde5d68f74a2740312ec05b9dc492ef90b6b0539ae73e7e96bf792b650c"
+    },
+    {
+      "path": "backend/services/core/src/platform/tenant-scope.ts",
+      "bytes": 8438,
+      "sha": "345a11c52405371c10b59f69d4140eb416c72942",
+      "sha256": "717ae6e80f1ee695fa9b3cbe6cf5737340d7af5f7d2aa8950c51d197b44aeba2"
+    },
+    {
+      "path": "backend/services/core/test/postgres-status-repository.test.mjs",
+      "bytes": 17151,
+      "sha": "f5a00922648b9893402f99ab0a743a37418cff82",
+      "sha256": "de36b597f5f0a582dd74d3c060fdc39c7757c6ee198a4fb4a6587d2eca58e3b4"
+    },
+    {
+      "path": "backend/services/core/test/tenant-scope.test.mjs",
+      "bytes": 10967,
+      "sha": "aa344aa9d6807e8014fb86bd89383cb52ff239a6",
+      "sha256": "3198e9912879a0616b86be06581b0f2911b84668d856635a51ab05ccbef3a2f1"
+    },
+    {
+      "path": "docs/delivery/INC-003_STATUS.json",
+      "bytes": 760,
+      "sha": "3e95951ac6984eff628f10a258e8f1a96a1778df",
+      "sha256": "8610e932a72b322dc145723a20935dfa5fa2e175a585739fd98295e5e289ccd0"
+    },
+    {
+      "path": "docs/delivery/INC-003_TENANT_SCOPE.md",
+      "bytes": 8214,
+      "sha": "47ad4ca0bcf207db248fa3112e18abae4129290d",
+      "sha256": "ea0726fa9e17eb4d84bc0614fa18d017ba9b099ffb800b419a0b61782a8a4454"
+    },
+    {
+      "path": "docs/delivery/INC-005_STATUS_STORE.md",
+      "bytes": 8339,
+      "sha": "e31f11afff6f2d0747e8f3345f7d192a9a91394c",
+      "sha256": "13fb0668c6b9192b3ab64325fe6a43cd6f7acb7fb6e0b4fdb6bcd09bc0cfc603"
+    },
+    {
+      "path": "front end/src/features/implementation/ImplementationCenter.jsx",
+      "bytes": 10264,
+      "sha": "7ea750a107f707835948520969aac005d695cc7f",
+      "sha256": "ddb2167a24d664c22d1a3a8b4e2e1fb391225e950bec6ee5be707e4f838c204e"
+    },
+    {
+      "path": "front end/src/features/implementation/TenantScopePanel.jsx",
+      "bytes": 3399,
+      "sha": "c9e71ff96e0c98d5d1bc202b07339d1ed781be63",
+      "sha256": "e6f52363f5739bddabf2e12555cb388bd5ec4a70d4b22a2ac2d44dc60d919cad"
+    },
+    {
+      "path": "front end/src/features/implementation/tenant-scope-model.mjs",
+      "bytes": 4429,
+      "sha": "c4efa0fa0d764d9833f9040012bbe0d00385014f",
+      "sha256": "2d834f6d037c7930ac7b9a1ee5e6ea514343bbbbffed18c11d6b6a2ad26b3d1c"
+    },
+    {
+      "path": "front end/tests/tenant-scope-model.test.mjs",
+      "bytes": 3096,
+      "sha": "2dae15621ebcfa747ed15e40fabd04ac847df6c9",
+      "sha256": "0a035835dc6c54e94b2cc9119b537615c8d05c0c7aacd719a837ca4837b9c828"
+    },
+    {
+      "path": "tools/check_status_store.py",
+      "bytes": 2338,
+      "sha": "f5799cf55408cc982c847f35daf49cb6ed8f5a6e",
+      "sha256": "ac7d5dddf47d856c623e647ee0431a515688b0dbb8478cb65d216cf38e86dc52"
+    },
+    {
+      "path": "tools/check_tenant_scope.py",
+      "bytes": 2465,
+      "sha": "c6814cd4e043002c1cb0624c2c6d8d75c53cf416",
+      "sha256": "8d8fdc8343b3ca495fdbdffbaf52bcc69ce94f88a129d127269465722ec79a45"
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 14,
+    "unexpected_changed_paths": 0,
+    "local_tests": {
+      "tenant_backend": 55,
+      "tenant_frontend": 20,
+      "status_store": 60,
+      "existing_status_domain": 12,
+      "existing_projection_checks": 3,
+      "total": 150,
+      "failed": 0,
+      "strict_typescript": "passed",
+      "jsx_syntax_files": 2,
+      "scope": "Local scripted-port/domain/presentation checks, not live database or browser validation."
+    },
+    "pipeline_order_change": false,
+    "database_schema_change": false,
+    "dependency_change": false,
+    "production_deployment": false,
+    "certified_parent_tasks": 0
+  },
+  "remaining": [
+    "Full frontend/media import and React browser build",
+    "Actual PostgreSQL driver/RLS/concurrency/crash testing",
+    "NestJS OIDC/OPA HTTP wiring",
+    "Kafka event schema/resolver/CDC",
+    "KMS, independent backups and restore drills",
+    "Host/runtime security and production release gates"
+  ],
+  "note": "Source commit contains 147 passing named tests in its report. Three existing projection tests were also rerun for this status-only follow-up (150 total). Historical INC-003 local-only report is not the current publication state."
+}

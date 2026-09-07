@@ -6,8 +6,8 @@
   "branch": "main",
   "baseline_count": 262,
   "certified_done": 0,
-  "summary": "PLT-004 signed-placement source increment published. Exact-byte signature checks, scoped cached routing, anti-rollback checkpoint rules and the existing F03 Binder are implemented and locally tested. Full frontend publication and production controller/database/Kafka/trust integration remain incomplete; no parent gate is certified Done.",
-  "evidence_commit": "62710cab5e5d90e864181b10e3960b9184d2f069",
+  "summary": "INC-005 SQL delivery-status adapter and pending INC-003 tenant-scope source published on main. Local checks cover scope isolation, atomic status/history/outbox orchestration, version/replay identity and ambiguous commit handling. Signed-placement work is preserved. Real PostgreSQL/auth/HTTP/Kafka wiring and full frontend/media publication remain incomplete; no parent gate is certified Done.",
+  "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80",
   "items": [
     {
       "id": "GOV-001",
@@ -28,16 +28,32 @@
       "remaining": "Residency, retention and legal owner approvals pending."
     },
     {
+      "id": "PLT-001",
+      "status": "Blocked",
+      "contribution": "Tenant/workspace/environment domain, guarded read-only PostgreSQL adapter and existing-design scope panel; ownership/lifecycle checked in new status write transaction.",
+      "remaining": "GOV-001 sign-off; real identity/driver/DB wiring, schema review and integration/isolation acceptance.",
+      "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
+    },
+    {
+      "id": "PLT-003",
+      "status": "Blocked",
+      "contribution": "Server scope/actor/baseline checks precede and constrain status persistence. Existing StatusService authorization/evidence ports preserved.",
+      "remaining": "GOV-001 sign-off; real OIDC/OPA/object authorization, negative integration tests and independent review.",
+      "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
+    },
+    {
       "id": "PLT-004",
       "status": "Blocked",
       "contribution": "Signed local placement directory and concrete F03 Binder; signature/scope/expiry/version/epoch/tombstone checks; 106 affected-package leaf cases passed with race detector.",
-      "remaining": "GOV-001 sign-off; real authoritative controller, durable checkpoint DB, approved trust profile/distribution, persistent revocation, restart/restore and runtime integration."
+      "remaining": "GOV-001 sign-off; real authoritative controller, durable checkpoint DB, approved trust profile/distribution, persistent revocation, restart/restore and runtime integration.",
+      "evidence_commit": "62710cab5e5d90e864181b10e3960b9184d2f069"
     },
     {
       "id": "DAT-001",
       "status": "Blocked",
-      "contribution": "Additive SQL schema draft for scope, delivery, audit and recovery.",
-      "remaining": "PLT-001; live SQL, runtime grants, migration/RLS integration tests."
+      "contribution": "Existing SQL draft preserved; new PostgresStatusRepository implements scoped serializable status/history/outbox writes with rollback, expected versions and same-key commit recovery.",
+      "remaining": "PLT-001; approved migration, actual driver/SQL/RLS/concurrency/crash-window tests. No database or grants applied.",
+      "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
     },
     {
       "id": "DAT-010",
@@ -96,14 +112,16 @@
     {
       "id": "DEV-001",
       "status": "Blocked",
-      "contribution": "Detailed initial OpenAPI contract and status domain service.",
-      "remaining": "PLT-003, EVT-002; NestJS HTTP/database/auth adapters and endpoint tests."
+      "contribution": "Initial OpenAPI and existing StatusService retained. Repository adapter now composes with the service under scripted SQL tests; redacted per-stage diagnostics.",
+      "remaining": "PLT-003, EVT-002; actual NestJS HTTP/auth/database adapters, schema registration and endpoint acceptance.",
+      "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
     },
     {
       "id": "UX-003",
       "status": "Blocked",
-      "contribution": "Existing Implementation Center extended with read-only readiness/evidence panel.",
-      "remaining": "PLT-001; full frontend publication, dependencies, browser build and authorized operations API."
+      "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit.",
+      "remaining": "PLT-001; full frontend/media publication, dependency install, React build/browser/accessibility tests and authorized operations API.",
+      "evidence_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80"
     }
   ],
   "ingress_stages": [
@@ -156,6 +174,12 @@
       "evidence_required": "GOV-001 sign-off, authoritative controller, durable checkpoint DB, approved keys/TTL, persistent revocation and fleet/runtime evidence. Local routing readiness is not provider or production health."
     },
     {
+      "id": "status_persistence",
+      "name": "Scoped atomic development-status persistence",
+      "state": "Adapter tested; production not connected",
+      "evidence_required": "Actual PostgreSQL driver/RLS/locking/commit-loss proof, OIDC/OPA/NestJS wiring, event resolver/CDC and independent review. Scripted SQL is not a live database."
+    },
+    {
       "id": "backup",
       "name": "Independent backups + recovery environment",
       "state": "Not provisioned",
@@ -192,6 +216,25 @@
       "evidence_required": "Unchanged release/security/provider gates; main source push is not release approval."
     }
   ],
-  "previous_evidence_commit": "4e310417f031937df94f15604d11384f3f2c3261",
-  "increment_id": "PLT-004-signed-placement-01"
+  "previous_evidence_commit": "62710cab5e5d90e864181b10e3960b9184d2f069",
+  "increment_id": "INC-005-status-store-and-INC-003-publication",
+  "local_tests": {
+    "tenant_backend": 55,
+    "tenant_frontend": 20,
+    "status_store": 60,
+    "existing_status_domain": 12,
+    "existing_projection_checks": 3,
+    "total": 150,
+    "failed": 0,
+    "strict_typescript": "passed",
+    "jsx_syntax_files": 2,
+    "scope": "Local scripted-port/domain/presentation checks, not live database or browser validation."
+  },
+  "publication": {
+    "source_commit": "befd9d18dc3a6914bf2af70b9ef224012c247a80",
+    "branch": "main",
+    "changed_source_files": 14,
+    "verified_source_hashes": 14,
+    "deployment": "not_performed"
+  }
 }
