@@ -6,8 +6,8 @@
   "branch": "main",
   "baseline_count": 262,
   "certified_done": 0,
-  "summary": "Foundation source increment. Full product, frontend publication, production database/backup and provider connectivity remain incomplete. Source work does not advance blocked parent gates.",
-  "evidence_commit": "4e310417f031937df94f15604d11384f3f2c3261",
+  "summary": "PLT-004 signed-placement source increment published. Exact-byte signature checks, scoped cached routing, anti-rollback checkpoint rules and the existing F03 Binder are implemented and locally tested. Full frontend publication and production controller/database/Kafka/trust integration remain incomplete; no parent gate is certified Done.",
+  "evidence_commit": "62710cab5e5d90e864181b10e3960b9184d2f069",
   "items": [
     {
       "id": "GOV-001",
@@ -26,6 +26,12 @@
       "status": "In progress",
       "contribution": "Recovery/log data classification and retention boundaries documented.",
       "remaining": "Residency, retention and legal owner approvals pending."
+    },
+    {
+      "id": "PLT-004",
+      "status": "Blocked",
+      "contribution": "Signed local placement directory and concrete F03 Binder; signature/scope/expiry/version/epoch/tombstone checks; 106 affected-package leaf cases passed with race detector.",
+      "remaining": "GOV-001 sign-off; real authoritative controller, durable checkpoint DB, approved trust profile/distribution, persistent revocation, restart/restore and runtime integration."
     },
     {
       "id": "DAT-001",
@@ -48,7 +54,7 @@
     {
       "id": "EVT-003",
       "status": "Blocked",
-      "contribution": "F03 handler and raw-proof primitives with synthetic crash/negative tests.",
+      "contribution": "F03 handler and raw-proof primitives with synthetic crash/negative tests. Concrete signed-directory Binder now composes with the unchanged F03 handler in local tests.",
       "remaining": "DAT-001, PLT-004; real provider parser/binder/Kafka adapters and official fixtures."
     },
     {
@@ -144,6 +150,12 @@
   ],
   "controls": [
     {
+      "id": "placement",
+      "name": "Signed asset-to-cell placement",
+      "state": "Adapter tested; production not configured",
+      "evidence_required": "GOV-001 sign-off, authoritative controller, durable checkpoint DB, approved keys/TTL, persistent revocation and fleet/runtime evidence. Local routing readiness is not provider or production health."
+    },
+    {
       "id": "backup",
       "name": "Independent backups + recovery environment",
       "state": "Not provisioned",
@@ -179,5 +191,7 @@
       "state": "Not deployed",
       "evidence_required": "Unchanged release/security/provider gates; main source push is not release approval."
     }
-  ]
+  ],
+  "previous_evidence_commit": "4e310417f031937df94f15604d11384f3f2c3261",
+  "increment_id": "PLT-004-signed-placement-01"
 }
