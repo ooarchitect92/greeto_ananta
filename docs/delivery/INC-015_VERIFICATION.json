@@ -1,0 +1,51 @@
+{
+  "increment": "INC-015",
+  "passed": true,
+  "production_verified": false,
+  "publication": "not_determined_by_tests",
+  "node": "v22.16.0",
+  "tests": {
+    "tests": 138,
+    "pass": 138,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "scope": "Node core contracts and synthetic session-storage boundaries only; not React/browser or server integration",
+  "sources": [
+    {
+      "path": "front end/src/shared/state/drafts.js",
+      "sha256": "0ba8557e242204568afa4cd4a0e8af73e4b31aa65328fe5c924f555656385623"
+    },
+    {
+      "path": "front end/tests/drafts-boundary.test.mjs",
+      "sha256": "f8d0ea2edc2d9b9e3d76be74a01ba70e12597fef68f4c4c342be1f12077c7f6d"
+    }
+  ],
+  "base_commit": "37d9831d850b866ee08df45debc86d07349ca857",
+  "test_breakdown": {
+    "existing_core_contracts": 68,
+    "new_draft_boundaries": 70
+  },
+  "before_new_suite": {
+    "passed": 46,
+    "failed": 24
+  },
+  "unchanged_inputs": {
+    "front end/tests/contracts.test.mjs": "ff4928f64eb36a8efa8fdcd2695741bbe296e83f",
+    "front end/src/app/navigation/policy.js": "0ecf9fa29f734ed9cfa91805fe0a083491cf3772",
+    "front end/src/contracts/work-packages.json": "33a6c671fcaddf6ce44b5ec93a8f4fb6b3ad1eaf",
+    "front end/src/contracts/features.json": "b5dca74cc8926db14665770c3aa802aad0c49765",
+    "front end/src/shared/forms/validation.js": "985a60a82aa9f0f7f8ac899962b7fc44fce9d9a4",
+    "front end/src/features/studio/FeatureStudioPage.jsx": "7d865c8541571325359d2184bb31a9355b808d86",
+    "front end/e2e/frontend/frontend.spec.js": "ff4ebcc60d6b4ab24f4dbe3223cbc22f0fd63d42"
+  },
+  "not_verified": [
+    "Full frontend npm install/build/component/Playwright suites in this environment",
+    "Server authorization, durable persistence and live provider operations",
+    "Full backend regression, security review, production recovery and deployment"
+  ],
+  "browser_failure": "Existing INC-014 Mission assertion remains unchanged; fixture fills Appointment follow-up but expects example-ref. Correction requires recorded approval.",
+  "toolchain_note": "Observed Node 22.16.0 for dependency-free tests only; existing frontend engine requires Node 24.15.x within 24.x or 26+. No version/configuration was changed."
+}
