@@ -1,0 +1,68 @@
+{
+  "increment": "INC-015",
+  "date": "2026-09-09",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "37d9831d850b866ee08df45debc86d07349ca857",
+  "source_commit": "8efd08454d245edf01ead4bb9c5da3693c6c7b81",
+  "source_tree": "3eade86eb241e716109f5140e39f2fef026b37ea",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "docs/delivery/INC-015_DRAFT_RESTORE.md",
+      "sha": "5c207ba57bf9f5c268db52edaefc21543b985242",
+      "sha256": "146d2bf1c56ab4eba57aabc7a3ed134e4c9c19f10f04d0dca92168a75d240684",
+      "bytes": 7394
+    },
+    {
+      "path": "docs/delivery/INC-015_BROWSER_ASSERTION_REVIEW.md",
+      "sha": "b3b52a15a8ba2594ef5ca5718d663cbab0976b95",
+      "sha256": "5822690fb865486ea131047c3998f252d57623ab15e48c30c15b7582abd56d84",
+      "bytes": 1985
+    },
+    {
+      "path": "tools/check_frontend_drafts.py",
+      "sha": "97622263ab3e07a9e149cecc0b244895966af8ab",
+      "sha256": "27699a8b8a686913734002c50106e8db63f3a3e31c53a9c894492e5ff3b05e0d",
+      "bytes": 3008
+    },
+    {
+      "path": "docs/delivery/INC-015_VERIFICATION.json",
+      "sha": "8b0c72ba8491c578b73e882e303e04daae82cfd0",
+      "sha256": "70ff54656413c3c11038e1e13590beae39880c53d286157d36fc4701d5e3b1d8",
+      "bytes": 2233
+    },
+    {
+      "path": "front end/src/shared/state/drafts.js",
+      "sha": "54dc006901bcabc18e53c943a6ccfadc9d0fca87",
+      "sha256": "0ba8557e242204568afa4cd4a0e8af73e4b31aa65328fe5c924f555656385623",
+      "bytes": 8782
+    },
+    {
+      "path": "front end/tests/drafts-boundary.test.mjs",
+      "sha": "f4886fe2098a99864b3b01aa5fbd87cc829139e7",
+      "sha256": "f8d0ea2edc2d9b9e3d76be74a01ba70e12597fef68f4c4c342be1f12077c7f6d",
+      "bytes": 10118
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 6,
+    "unexpected_paths": 0,
+    "local_tests": 138,
+    "existing_core_contracts": 68,
+    "new_boundary_tests": 70,
+    "failed": 0,
+    "browser_tests_rerun": false,
+    "backend_changed": false,
+    "pipeline_order_changed": false,
+    "runtime_deployed": false,
+    "parent_tasks_certified": 0
+  },
+  "remaining": [
+    "Pending approval for explicit Mission-name browser fixture input; existing assertions unchanged",
+    "Compatible frontend toolchain and full browser/build rerun",
+    "Runtime authorization/database/Kafka/KMS/recovery/provider acceptance",
+    "INC-010 sender ledger remains unpublished"
+  ]
+}
