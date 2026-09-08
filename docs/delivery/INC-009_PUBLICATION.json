@@ -1,0 +1,111 @@
+{
+  "increment": "INC-009",
+  "date": "2026-09-08",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "70749d9a62417348d7fd3840ecef8d6c20aafcec",
+  "source_commit": "7ab3bbeba92cddd8ff30f9fd7208cd0f520aefcb",
+  "source_tree": "147871434b227b07c469d299eb5534016732bd22",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/services/webhook-dispatcher/lifecycle/planner.go",
+      "bytes": 11793,
+      "sha": "8e72bb3d69d683be2c6e0e0c01122799644e855f",
+      "sha256": "78c2f7f55bc3431611982a782c32ca4b8a0792001c95113a9fc52cd92f86c660"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/lifecycle/planner_test.go",
+      "bytes": 12928,
+      "sha": "87482c02177b58fa6c300361fa329a6634dbafa9",
+      "sha256": "20f58442e9dcd2365d26f15ef84198b22e53d2cb7348bc5c525a8f328f1c8bae"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/lifecycle/recorder.go",
+      "bytes": 5536,
+      "sha": "f8e2c416869eddefb66d7f8fca85132ebb2ce372",
+      "sha256": "fb77027dc5b23ba05851a5ce2c39cda0a69189dac7d1d465e7308f6bbd52aa34"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/lifecycle/recorder_test.go",
+      "bytes": 7941,
+      "sha": "598f881cc49e7331f89ba5aa82e438ac3c76cc47",
+      "sha256": "83f67e6c5eb9fd6e22b869fd77a60fb617b50f3e0bfb3d3570dab4204e13f52d"
+    },
+    {
+      "path": "docs/delivery/INC-009_VERIFICATION.json",
+      "bytes": 460,
+      "sha": "7481f6ad27dccb9a8518883459710c972157b498",
+      "sha256": "c738abfb6271d07394069097d04defd8ecde2cd9b8c98e9dc7b79335d77556ef"
+    },
+    {
+      "path": "docs/delivery/INC-009_WEBHOOK_LIFECYCLE.md",
+      "bytes": 12582,
+      "sha": "d7597301908f2557826e9b25be96895a41f0a378",
+      "sha256": "642ca72513eeeb9687d1bbe6af38fcc51a9a90815252817b924158267018bcd8"
+    },
+    {
+      "path": "front end/src/features/implementation/ImplementationCenter.jsx",
+      "bytes": 10510,
+      "sha": "e9e926d63c0894389a6a17d44f43adefd0195e88",
+      "sha256": "bdcea41a9456b93816383b99b40cb75320726bceaf677a241cd795a1fd4b08ec"
+    },
+    {
+      "path": "front end/src/features/implementation/WebhookDeliveryPanel.jsx",
+      "bytes": 2654,
+      "sha": "92cc9a11547be7d4d860d0754c9feabfa30b18e1",
+      "sha256": "3d280e6ec8327ff977d7a2bcd7f914834622e364206f572a90166ed9cc006611"
+    },
+    {
+      "path": "front end/src/features/implementation/delivery-lifecycle-view.mjs",
+      "bytes": 5367,
+      "sha": "92fd1973345ab1e0b29d921bfe94788e3d0c5018",
+      "sha256": "ac84854246068a3ea13223ba71a67f5e12edc205b4f35ae7159a9f1ddaee836f"
+    },
+    {
+      "path": "front end/tests/delivery-lifecycle-view.test.mjs",
+      "bytes": 4036,
+      "sha": "07dd6eb82e695b8ede0c96f80561f88e34f4bca9",
+      "sha256": "65ec4200164626389d991e3b1b45c6244eba03ad3dfd2ac969e7534a1601ea95"
+    },
+    {
+      "path": "tools/check_webhook_lifecycle.py",
+      "bytes": 5064,
+      "sha": "e43ac8d9db35c32f54ce8476fafbc6e4b6e0167d",
+      "sha256": "0141af07196af85f60970ecff27428c16c611eae779c53aac8a0a45c86221d7d"
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 11,
+    "unexpected_changed_paths": 0,
+    "local_tests": {
+      "increment": "INC-009",
+      "passed": true,
+      "production_verified": false,
+      "go_leaf_tests": 104,
+      "frontend_tests": 26,
+      "total": 130,
+      "failed": 0,
+      "go_race": "passed",
+      "go_vet": "passed",
+      "jsx_syntax_files": 2,
+      "projection_checks": "passed",
+      "coverage": "total:\t\t\t\t\t\t\t\t\t\t\t\t\t(statements)\t96.9%",
+      "scope": "Local deterministic planner, scripted receipt ledger and presentation checks; not live DynamoDB or full regression."
+    },
+    "pipeline_order_change": false,
+    "database_schema_change": false,
+    "public_api_change": false,
+    "dependency_change": false,
+    "production_deployment": false,
+    "certified_parent_tasks": 0
+  },
+  "remaining": [
+    "Actual DynamoDB WebhookDelivery atomic outcome/due/outbox persistence and crash/concurrency tests",
+    "Authenticated worker/Action Gateway/result-recording authority and approved retry policy",
+    "Due-index fair scheduling, endpoint-wide pause controls, replay/reconciliation and retention",
+    "Full frontend/media import, React build, browser/accessibility and complete regression",
+    "KMS, independent backups/restore, runtime security and production release gates"
+  ]
+}
