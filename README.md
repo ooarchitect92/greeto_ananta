@@ -109,7 +109,7 @@ Useful frontend handoff records are [feature ownership/routes](front%20end/docs/
 
 A passing production build and preview smoke do not mean every source screen or full user journey has passed. The original live-integration harness, complete backend/provider environment and independent accessibility/security acceptance remain open. The recorded Windows tooling is not a newly qualified production image.
 
-**Framework position:** the existing React/Vite frontend is retained. The architecture's React/TypeScript/Next.js target is not reported as implemented; **UX-001 remains open**. See the supplied [frontend compatibility ADR](front%20end/docs/ADR-0001.md). No framework migration is authorized by this documentation update.
+**Framework position:** the existing React/Vite frontend is retained. The architecture's React/TypeScript/Next.js target is not reported as implemented; **UX-001 remains open**. See the supplied [frontend compatibility ADR](front%20end/docs/ADR-0001-react-vite-compatibility.md). No framework migration is authorized by this documentation update.
 
 Sources: [INC-014 report](docs/delivery/INC-014_LOCAL_LAUNCH.md), [INC-014 Excel evidence](docs/delivery/INC-014_EVIDENCE.xlsx), [frontend publication update](front%20end/docs/publication/STATUS.md). Earlier source-package guides and INC-013 records may retain historical missing-import/build statements; they do not negate the newer restoration evidence.
 
