@@ -1,22 +1,45 @@
 # Greeto / Customer Action OS
 
-Universal Messaging & Customer Action OS: a Mission-led SaaS for permitted messaging channels, customer operations, governed automation, AI and integrations.
+Mission-led SaaS for permitted messaging channels, customer operations, governed automation, AI and integrations.
 
-**Implementation status through INC-015 — 9 September 2026.** Latest source contribution: `8efd08454d245edf01ead4bb9c5da3693c6c7b81`, based on `37d9831d850b866ee08df45debc86d07349ca857`. Source publication, local tests, integration acceptance and deployment are separate milestones.
+**Implementation through INC-016 — 9 September 2026.** Latest verified source: `b70540cc75fa0f173b7d6dabc07f77bddd0f8bc8` on `main`. Source publication, local tests, integration acceptance and deployment are separate milestones.
 
-> **Current position:** the registered structured frontend and original media were restored in INC-014; its Windows preview and production build passed. Backend foundations and customer-webhook/SDK components through INC-013 are published. INC-015 hardens session-draft restoration in the existing frontend. This is **not yet a connected end-to-end or production-certified SaaS**. The two recorded Mission browser failures remain open, and real infrastructure/provider/authorization integrations are not complete.
+> The registered structured frontend and media are restored; the INC-014 Windows preview and production build passed historically. Backend foundations and customer-webhook/SDK components through INC-013 are published; INC-015 strengthened scoped draft storage. **INC-016 adds the first bounded Meta adoption code: signup configuration preparation and a stepwise Channel Center review panel. Live signup remains disabled.** This is not yet a connected end-to-end or production-certified SaaS.
 
-## Start the frontend on Windows
+## 1. Latest step: Meta signup configuration preparation
 
-Double-click [`start.bat`](start.bat) in the repository root. It checks Node/npm, installs locked dependencies when Vite is missing, and opens:
+Read the [implementation and parameter guide](docs/delivery/INC-016_META_SIGNUP_CONFIGURATION.md), [verification](docs/delivery/INC-016_VERIFICATION.json) and [publication manifest](docs/delivery/INC-016_PUBLICATION.json).
+
+| Step | Implemented now | Not implied |
+|---|---|---|
+| Validate configuration | Pure TypeScript helper checks exact scope/app/profile/revision, input shapes, enabled status and evidence expiry. | No authenticated registry, object authorization or actual provider eligibility is established by a verified string. |
+| Build public login options | Adapts Meta's pinned computeEsConfig payload shape; explicit versions, code response and bounded feature list; deeply frozen result. | No SDK initialization, OAuth attempt, token exchange, number registration or permission grant. |
+| Review in existing UI | Channel Center -> Configure shows MetaSignupSetupPanel, parameters when supplied, original F02 checklist and disabled launch. | Default runtime supplies no profile. No synthetic configuration is injected; prepared is not connected/READY. |
+| Verify | **82 named tests passed: 50 backend + 32 frontend**; strict TypeScript and two JSX syntax checks passed. | No React render/build/browser, actual Meta account, database, Kafka or full-repository regression acceptance. |
+
+The two-line mount in `FeatureStudioPage.jsx` preserves existing forms, navigation and design. Frontend tests run without a backend build. Backend tests additionally compose the real compiled producer with the frontend presentation model. The full MIT notice accompanies the adapted fragment; no sample dependency, theme, host or broker is imported.
+
+To inspect the added panel after starting the preview, select **Channel Center -> Configure**, or open:
 
 ```text
-http://127.0.0.1:5174/frontend-preview
+http://127.0.0.1:5174/frontend-preview?feature=channel-center
 ```
 
-Keep its console open; press **Ctrl+C** to stop. A port conflict fails visibly. The existing manifest requires **Node 24.15.0 or later within 24.x, or Node 26+**, with npm on PATH. First installation needs registry access. This launcher starts only the draft-only frontend, not the backend, Kafka, databases or provider execution.
+Current code paths:
 
-Manual equivalent from the repository root:
+```text
+backend/services/core/src/channels/meta/signup-configuration.ts
+front end/src/features/channels/meta/signup-setup-model.mjs
+front end/src/features/channels/meta/MetaSignupSetupPanel.jsx
+```
+
+**Next bounded step:** the server-owned connection-attempt lifecycle and callback/code correlation, with scope, actor, app, state, expiry, duplicate and concurrent-attempt tests, before token exchange or asset activation. Original WHA-003 prerequisites **PLT-008 and EVT-003**, and UX-005 prerequisite **PLT-001**, remain open. The adoption plan permits pure DTO fixtures and isolated disabled UI; it does not waive runtime activation gates.
+
+## 2. Start the frontend on Windows
+
+Double-click [`start.bat`](start.bat) in the root. It checks Node/npm, installs locked dependencies when Vite is missing, and opens the draft-only frontend on `127.0.0.1:5174`. Keep the console open; Ctrl+C stops it. A port conflict fails visibly. The existing manifest requires Node 24.15.0 or later within 24.x, or Node 26+, with npm on PATH. First installation requires registry access.
+
+Manual equivalent:
 
 ```sh
 cd "front end"
@@ -24,107 +47,93 @@ npm ci
 npm run dev:frontend -- --strictPort
 ```
 
-Run `npm ci` inside `front end/`, not the root. Existing backend-dependent screens are not made operational by opening the isolated preview. See [INC-014 launch evidence](docs/delivery/INC-014_LOCAL_LAUNCH.md) and its [repository Excel workbook](docs/delivery/INC-014_EVIDENCE.xlsx).
+Run npm commands in `front end/`, not the root. The launcher does not start backend services, databases, Kafka or provider operations. Existing backend-dependent screens are not made live by opening the isolated preview. [INC-014 launch evidence](docs/delivery/INC-014_LOCAL_LAUNCH.md) and [its repository workbook](docs/delivery/INC-014_EVIDENCE.xlsx) document the historical Windows run.
 
-## 1. How much is implemented?
+## 3. How much is implemented?
 
 | Measure | Evidence-backed position |
 |---|---|
-| Architecture scope | **262 work packages across 27 domains**; F01–F18 retained. |
-| Frontend restoration | INC-014 restored all **238 archive paths**: 233 matched the archive, five kept newer tracked implementations. Source coverage is not product-completion percentage. |
-| Frontend inventory | **55 workspace entries**: 29 existing screens, 25 configuration pages and one Implementation Center; nine navigation groups and **231 parameters**. |
-| Recorded INC-014 audit | 262 work-package references, 449 imports; zero errors. |
-| Recorded INC-014 build and launch | Production build passed (2,921 modules); actual Windows launcher/browser smoke returned HTTP 200 with Implementation Center visible and no page errors. |
-| Recorded INC-014 tests | **180 contract + 3 component tests passed**. Browser suite: **7 passed / 2 failed / 1 skipped**. These were not rerun in INC-015. |
-| New INC-015 source | Existing scoped draft save/load now checks raw types, embedded JSON, metadata and UTF-8 byte size before restoration. Partial drafts remain supported. |
-| New INC-015 local checks | **138 passed**: 68 existing core contracts + 70 new boundary cases. Synthetic session storage; not React/browser/server acceptance. |
-| Backend | Published domains, primitives and adapters through INC-013; real runtime bindings incomplete. |
-| Current contribution projection | **25 rows**: 3 In progress, 22 Blocked; partial contributions, not 25 completed features or the complete tracker. |
-| Certified parent completion | **0 of 262**. No parent acceptance gate is waived by these increments. |
-| Unpublished work | **INC-010 DynamoDB sender result-ledger candidate** remains outside main. |
-| Production / complete customer Mission | Not established by recorded evidence. |
+| Architecture | **262 work packages across 27 domains**; F01–F18 retained. |
+| Frontend restoration | INC-014 restored **238 archive paths**; 233 matched the archive, five preserved newer files. This is restoration coverage, not product completion. |
+| Registered frontend inventory | 55 workspace entries, nine navigation groups and 231 configuration fields. Additional INC-016 internal setup fields are documented separately, not silently added to this historical inventory count. |
+| Historical INC-014 build and launch | Build passed (2,921 modules); actual Windows preview smoke returned HTTP 200, Implementation Center visible, no page errors. |
+| Historical INC-014 tests | **180 contract + 3 component tests passed**; browser **7 passed / 2 failed / 1 skipped**. Not rerun in INC-016. |
+| INC-015 | Draft save/load type, nested JSON, metadata and UTF-8-size checks; **138** scoped tests (68 existing + 70 new). |
+| INC-016 | **12 source paths** including tests/docs/license and one two-line UI integration; **82 targeted tests**. Partial M02/M03 source adoption, not a completed Meta channel. |
+| Existing contribution rows | The original **25 rows** and their statuses/history remain unchanged: 3 In progress, 22 Blocked. New Meta child evidence is recorded separately in status.meta_adoption_increment and controls. |
+| Certified parent completion | **0 of 262**. No original acceptance gate was waived. |
+| Unpublished candidate | **INC-010 DynamoDB sender result-ledger** remains outside main. |
+| Production / complete customer Mission | Not established by the evidence. |
 
-Zero certified-Done parents does not mean no code exists. Done requires implementation, acceptance tests, security/contract review, documentation and rollout/rollback evidence. No evidence-backed overall coding percentage is available. Overlapping test runs and restored file counts must not be converted into one. The architecture's 10-million-tenant / 10-billion-logical-message-per-day figures remain design targets, not measured capacity.
+Zero certified-Done parents does not mean no code exists. Done requires implementation, automated acceptance, security/contract review, documentation and rollout/rollback evidence. There is no evidence-backed overall coding percentage. Do not add overlapping test totals or convert restored path counts into business-product completion. The architecture's 10-million-tenant / 10-billion-message targets remain unmeasured design targets.
 
-The synchronized [repository status](docs/delivery/status.json) and [frontend status](front%20end/src/contracts/delivery-status.json) now record INC-015 and explicitly carry INC-014 restoration/build evidence. They are commit-based source evidence, **not live runtime health**. Original historical contribution records remain retained.
+The [repository status](docs/delivery/status.json) and [frontend status](front%20end/src/contracts/delivery-status.json) now reference INC-016 with retained previous evidence. They describe source progress, not a live database/provider health feed.
 
-## 2. Latest increment: safe frontend draft restoration
+## 4. Published modules and integration gaps
 
-The existing [draft module](front%20end/src/shared/state/drafts.js) is used by the existing configuration studio; no new design or navigation was introduced.
-
-Save and load now share raw-value/safety checks. Restoration rejects unsafe embedded JSON, malformed envelopes and incompatible control values before they reach React. Unsupported values cannot silently disappear or change under JSON serialization. The existing 64,000-byte limit is enforced as UTF-8 bytes. Storage errors use neutral messages; rejected drafts are not automatically deleted or rewritten.
-
-Valid partial values, blanks, false, zero, editable number strings, v1 envelope structure and tenant/workspace/environment/user keys remain unchanged. A session save is **not** server validation, authorization, a database write or a durable acceptance acknowledgement.
-
-See [implementation and parameters](docs/delivery/INC-015_DRAFT_RESTORE.md), [local verification](docs/delivery/INC-015_VERIFICATION.json) and [publication evidence](docs/delivery/INC-015_PUBLICATION.json).
-
-### Browser failure remains open — proposed correction awaits approval
-
-The INC-014 test fills the documented Mission-name default `Appointment follow-up`, then expects `example-ref` after reload. The reported actual value matches what the test filled. This explains the fixture mismatch; it is not a browser rerun or proof that every draft scenario works.
-
-The proposed correction is to explicitly enter `example-ref` before validating/saving, retaining the existing reload assertion and all validation, no-API, export, disabled-server-action and viewport checks. **It has not been applied.** See the [pending owner review](docs/delivery/INC-015_BROWSER_ASSERTION_REVIEW.md). Existing Playwright tests, feature defaults, dependencies and release gates remain unchanged. No failure has been waived.
-
-## 3. Published modules and remaining integration
-
-| Area | Published contribution | Remaining acceptance |
+| Area | Published contribution | Still required |
 |---|---|---|
-| Governance | Source register, owner directives, baseline IDs/dependencies, evidence manifests. | Named approvals, independent reviews and release evidence. |
-| Frontend | Registered source/media, grouped navigation, parameter contracts, Windows preview, scoped drafts. | Current full browser/accessibility/security acceptance and actual APIs. React/Vite remains; UX-001 Next.js migration is open. |
-| Implementation Center | Readiness, tenant-scope, outbox, egress and delivery-lifecycle panels; missing/stale/unknown observations stay explicit. | Authenticated live observation APIs and runtime evidence. |
-| Tenant isolation | TypeScript scope domain and guarded PostgreSQL read adapter. | Real identity/authorization, driver, RLS and isolation tests. |
-| Signed placement | Signed directory, expiry/version/epoch/tombstone checks, F03 binder. | Controller, durable checkpoints, trust distribution and recovery tests. |
-| Status persistence | Scoped status/history/outbox transaction, expected versions and same-key receipt recovery. | Real PostgreSQL/NestJS/authentication and crash/concurrency evidence. |
-| Status outbox | Scoped fact resolver, bounded pending reads, publish/ACK/mark relay and restartable sweeps. | Kafka mapping/client/quorum, CDC and live recovery scheduling. |
-| Provider ingress | F03 verify/parse/bind/commit-all/ACK ordering, raw-proof and effect-before-offset primitives. | Official provider fixtures, parsers, quarantine/routing and Kafka binding. Not complete Meta/Telegram onboarding. |
-| Operational foundations | Freshness-aware readiness, AES-256-GCM envelope primitive, bounded telemetry and recovery guards. | KMS, collectors, durable audit/SIEM, intrusion monitoring, independent backups, restore drills and Secure Boot evidence. |
-| Customer-webhook signing | Go signing and Node/TypeScript/Python exact-byte verifiers; key/time/rotation checks. | Actual endpoint/key lifecycle, vault and independent review. |
-| Restricted egress | HTTPS/DNS/IP/TLS checks, bounded responses, no redirects or transparent replay. | Deployed restricted proxy/network policy, current Action Gateway permits and sender storage. |
-| Retry/result recording | Versioned retry planner, Retry-After, preserved UNKNOWN/2xx and exact receipt checks. | Sender ledger, scheduler/fairness, reconciliation and worker authority. |
-| Signed-body identity | Go/TypeScript/Python event-ID binding, bounded duplicate-aware parsing and protected bytes. | Full schema, subscription, object/purpose authorization and replay prevention. |
-| Receiver HTTP | Required Keys/Gate/Inbox ports, bounds/deadlines, exact receipt before 204, diagnostics and drain. | Real transactional Inbox, key/schema/authorization bindings and reviewed hosting. |
+| Governance | Baseline/source registers, owner directives, mappings, evidence and controlled changes. | Named approvals, independent reviews and release evidence. |
+| Frontend | Structured source/media, grouped navigation, parameter contracts, Windows preview and scoped draft validation. | Current browser/accessibility/security acceptance and real APIs. React/Vite remains; UX-001 migration is open. |
+| Implementation Center | Readiness, tenant-scope, outbox, egress and delivery-lifecycle views; explicit missing/stale/unknown observations. | Authenticated live observation APIs. |
+| Meta preparation | Explicit scoped signup configuration, evidence checks and existing-design review; pinned sample provenance. | Qualified registry/identity, server attempt/nonce, SDK/callback/exchange/grants/binding and original F02 operations. |
+| Tenant isolation / placement | TypeScript scope domain, guarded PostgreSQL reads, signed directory and F03 binder. | Real identity/OPA, driver/RLS, controller/checkpoints, trust and recovery integration. |
+| Status persistence / outbox | Scoped status/history/outbox transactions, versions/retry receipts, publish/ACK/mark and bounded sweeps. | Actual PostgreSQL/NestJS, Kafka mapping/client/quorum, CDC and crash/concurrency tests. |
+| Provider ingress | F03 proof/parse/bind/commit-all/ACK and effect-before-offset primitives. | Official provider fixtures, complete parsers, quarantine, routing and Kafka binding. |
+| Health/security/recovery | Freshness-aware readiness, AES-256-GCM primitive, bounded telemetry and recovery guards. | KMS, durable audit/SIEM, detectors, independent backups, restore drills and observed Secure Boot. |
+| Customer webhooks / SDKs | Go signing, Node/TypeScript/Python raw-byte and event identity verification; restricted egress; retry/result semantics. | Actual endpoint/key lifecycle, sender ledger/scheduler, permits and live isolation tests. |
+| Receiver HTTP | Required Keys/Gate/Inbox ports, deadlines, exact receipt before 204, diagnostics and draining. | Actual transactional Inbox, current keys, full schema/object authorization and reviewed hosting. |
 
-The sender's WebhookDelivery ledger and customer's receiver Inbox are separate boundaries. Receiver code is not a substitute for unpublished INC-010. Synthetic stores/permissions in tests are not production bindings.
+Sender WebhookDelivery and customer receiver Inbox are separate stores; receiver code does not replace unpublished INC-010. Synthetic test stores/permissions are not runtime persistence or authority. The initial [OpenAPI](backend/contracts/openapi.json) is not proof of running endpoints or hosted Swagger. [SQL migration](backend/db/migrations/0001_foundation.sql) remains an unapplied draft; [DynamoDB](backend/contracts/dynamodb-tables.json) and [Kafka](backend/contracts/kafka-policy.json) contracts require runtime qualification.
 
-OpenAPI/Swagger contracts are in [backend/contracts/openapi.json](backend/contracts/openapi.json); existence is not a running endpoint or hosted Swagger UI. [PostgreSQL schema](backend/db/migrations/0001_foundation.sql) remains an unapplied draft; [DynamoDB access patterns](backend/contracts/dynamodb-tables.json) and [Kafka policy](backend/contracts/kafka-policy.json) remain subject to runtime qualification. A standby alone is not a protected backup, a UI flag is not Secure Boot, and a passing unit test is not security certification.
+End-to-end Missions, Action Gateway execution, Temporal, AI/RAG, CRM, campaigns, commerce/payments, calling, billing, support and marketplace scope remain in the plan, not claimed operational by helpers. See [recovery/security ownership](docs/architecture/RECOVERY_SECURITY.md).
 
-End-to-end Missions, Action Gateway execution, Temporal workflows, AI/RAG, CRM, campaigns, commerce/payments, calling, billing, helpdesk and marketplace are not established as working product features by the source evidence. Their scope remains retained in the baseline. See [recovery/security ownership](docs/architecture/RECOVERY_SECURITY.md) and [owner directives](docs/requirements/OWNER_DIRECTIVES.md).
+## 5. Historical milestones and tests
 
-## 4. Milestones and historical tests
+Separate scoped runs can overlap. Counts below are not a cumulative unique-test total and were not all rerun in INC-016. Full reports retain each limitation.
 
-These are separate scoped runs. Later tests can repeat earlier regressions; do not add them into a unique-test count. Historical results were not all rerun by INC-015.
-
-| Milestone | Evidence |
+| Milestone | Recorded evidence |
 |---|---|
-| Initial foundation | [Primitives, contracts and open gates](docs/delivery/VERIFICATION.md). |
-| Signed placement | [PLT-004 implementation](docs/delivery/PLT-004-IMPLEMENTATION.md) and [verification](docs/delivery/PLT-004-verification.json). |
-| INC-003 + INC-005 | Tenant scope/status store; **150** scoped checks, including projections. [Publication](docs/delivery/INC-005_PUBLICATION.json). |
-| INC-006 | Status outbox; **142** checks including regressions. [Verification](docs/delivery/INC-006_VERIFICATION.json). |
-| INC-007 | Signing/SDKs; **181** tests (Go 60, Node 65, Python 56). [Verification](docs/delivery/INC-007_VERIFICATION.json). |
-| INC-008 | Egress/UI; **184** tests (Go 159, frontend 25). [Verification](docs/delivery/INC-008_VERIFICATION.json). |
-| INC-009 | Retry/receipt/UI; **130** published tests (Go 104, frontend 26). [Verification](docs/delivery/INC-009_VERIFICATION.json). |
-| INC-011 | Go body identity; **66** named tests + four separate seeds, 98.3% package coverage. [Verification](docs/delivery/INC-011_VERIFICATION.json). |
-| INC-012 | SDK conformance; **246 executions** (74 shared cases in three languages + 24 language-specific checks), identical shared results. [Verification](docs/delivery/INC-012_VERIFICATION.json). |
-| INC-013 | Receiver HTTP; **85** named tests including five real local HTTP/TLS cases, 95.7% package coverage. [Verification](docs/delivery/INC-013_VERIFICATION.json). |
-| INC-014 | Registered frontend restoration and launcher; build/audit/smoke and **180 contract + 3 component** tests passed; browser **7 pass / 2 fail / 1 skip**. [Report](docs/delivery/INC-014_LOCAL_LAUNCH.md). |
-| INC-015 | Session-draft safety; **138** Node tests (68 existing + 70 new). New suite before repair: 46 pass / 24 fail. [Verification](docs/delivery/INC-015_VERIFICATION.json). |
+| Foundation | [Primitives, contracts and open gates](docs/delivery/VERIFICATION.md). |
+| Signed placement | [Implementation](docs/delivery/PLT-004-IMPLEMENTATION.md), [verification](docs/delivery/PLT-004-verification.json). |
+| INC-003 + INC-005 | Tenant/status persistence, **150** scoped checks. [Publication](docs/delivery/INC-005_PUBLICATION.json). |
+| INC-006 | Status outbox, **142** including regressions. [Verification](docs/delivery/INC-006_VERIFICATION.json). |
+| INC-007 | Signing/SDKs, **181** (Go 60, Node 65, Python 56). [Verification](docs/delivery/INC-007_VERIFICATION.json). |
+| INC-008 | Egress/UI, **184** (Go 159, frontend 25). [Verification](docs/delivery/INC-008_VERIFICATION.json). |
+| INC-009 | Retry/receipt/UI, **130** in the published report. [Verification](docs/delivery/INC-009_VERIFICATION.json). |
+| INC-011 | Go event identity, **66** named + four separate seeds. [Verification](docs/delivery/INC-011_VERIFICATION.json). |
+| INC-012 | SDK conformance, **246 executions**: 74 common cases x 3 plus 24 language-specific; identical shared outputs. [Verification](docs/delivery/INC-012_VERIFICATION.json). |
+| INC-013 | Receiver HTTP, **85** named including five real local HTTP/TLS cases; synthetic Keys/Gate/Inbox. [Verification](docs/delivery/INC-013_VERIFICATION.json). |
+| INC-014 | Restoration/launcher; audit/build/smoke and **180 + 3** tests passed; browser **7/2/1**. [Report](docs/delivery/INC-014_LOCAL_LAUNCH.md). |
+| INC-015 | Draft boundaries, **138** Node tests. [Verification](docs/delivery/INC-015_VERIFICATION.json). |
+| META-REF-001 | Source reference14703a3 and 22-slice adoption mapping; not an executed integration. [Plan](docs/architecture/META_SAMPLE_ADOPTION_PLAN.md). |
+| INC-016 | Configuration preparation, **82** targeted tests, strict types and two JSX syntax checks. [Verification](docs/delivery/INC-016_VERIFICATION.json). |
 
-INC-013's wire tests use real local HTTP/TLS/signatures but synthetic Keys/Gate/Inbox. INC-014 recorded Node 24.18.0 / npm 11.16.0 on Windows, 263 packages installed without lockfile changes and an esbuild policy warning without changing install policy. INC-015 used Node 22.16.0 for dependency-free tests only; full frontend installation was unavailable (offline ENOTCACHED and engine constraints). No version was changed. Current build/browser acceptance remains open.
+INC-014 used Windows Node24.18.0/npm11.16.0, without lockfile changes. INC-015 and INC-016 used Node22.16.0 for scoped dependency-free tests only; INC-016 used TypeScript5.8.3. These observed tools do not change the frontend's required engine or qualify a production image.
 
-The restored frontend handoff includes [routes/ownership](front%20end/docs/FEATURE_MAP.md), [parameters](front%20end/docs/PARAMETERS.md), [implementation order](front%20end/docs/IMPLEMENTATION_ORDER.md), [API inventory](front%20end/docs/API_INVENTORY.md) and [component inventory](front%20end/docs/COMPONENT_INVENTORY.md). Inventoried server functions are not live endpoints. [ADR-0001](front%20end/docs/ADR-0001-react-vite-compatibility.md) records React/Vite compatibility; no migration is authorized here.
+### Existing browser correction still requires approval
 
-## 5. Pipeline boundaries retained
+The Mission fixture fills `Appointment follow-up` but expects `example-ref` after reload. The proposed change explicitly enters `example-ref` before saving, retaining all assertions. It remains **unapplied**; the two browser failures have not been waived. See [specific pending review](docs/delivery/INC-015_BROWSER_ASSERTION_REVIEW.md). No existing test expectations, feature defaults or dependency versions changed in INC-016.
 
-**F03:** request bounds -> route-owned proof -> bounded parsing -> authorized placement -> durable acceptance of every required slice -> HTTP ACK -> asynchronous processing. No AI, CRM, search or backup round trip is added before ACK.
+## 6. Meta sample adoption and unchanged pipelines
 
-**F07 sender:** subscription match -> durable delivery -> fair scheduling -> exact-byte signing -> restricted HTTPS -> classified result and recorded retry/terminal/unknown state. These components are not yet a fully connected runtime.
+Pinned source: `fbsamples/business-messaging-sample-tech-provider-app` at `14703a3e1fdba9bcf75b2360b00817b6fcc9f79b`. Read the [adoption plan](docs/architecture/META_SAMPLE_ADOPTION_PLAN.md), [targeted source register](docs/architecture/META_SAMPLE_REFERENCE.json) and [22-slice mapping to 53 original work packages](docs/delivery/META_SAMPLE_ADOPTION_MATRIX.csv). That CSV is the original planning snapshot; INC-016's guide and current status record the partial M02/M03 code contribution. No complete adoption slice is certified integrated.
 
-**Customer receiver:** bounds/deadline -> registered keys -> exact bytes -> verification -> required schema/authorization Gate -> atomic Inbox -> exact receipt -> offer 204. Real bindings remain required.
+The source review remains targeted, not a whole-repository audit. No upstream sample build/test run or real Meta account verification occurred. Current implementation/version documentation requests returned HTTP429. The fixture's version strings are test values, not a newly approved production profile. The adapted construction fragment retains [Meta's MIT notice](docs/architecture/licenses/META_SAMPLE_MIT.txt). Auth0/Ably/Neon/Vercel/Next.js sample infrastructure is not adopted over Greeto.
 
-Queue, provider, delivery/read, endpoint and business acknowledgements remain distinct. UNKNOWN is not success or authority to resend a new business action. The frontend preview executes none of these live paths. Existing F01–F18, schemas, permissions, dependencies and release gates were not reordered or waived.
+**F02:** server attempt/state/nonce -> provider consent -> callback validation -> exchange/vault -> verified grants -> asset binding -> subscription -> route-specific number setup -> capability/restriction/billing -> authorized test -> readiness. Configuration preparation neither completes nor reorders these steps.
 
-## 6. Reproduce checks
+**F03:** bounds -> route-owned proof -> parse every required element -> authorized placement -> durable Kafka acceptance of all required slices -> HTTP ACK -> asynchronous processing. No inline reply, AI, CRM, backup or remote health round trip before ACK.
 
-Frontend (locked dependencies and compatible engine required):
+**F05/F10:** durable idempotent command -> approved lane/scheduler -> current Action Gateway checks -> provider request -> persisted result/UNKNOWN -> later delivery and outcome evidence. No direct sample send-route bypass.
+
+**F07:** durable delivery -> fair scheduling -> exact-byte signing -> restricted HTTPS -> classified/recorded result. Receiver bounds/keys/proof/Gate/atomic Inbox/exact receipt precede its offered204. Real bindings remain required. Calling stays at its F15/G3 eligibility gate.
+
+Queue, provider, delivery/read, endpoint and business acknowledgements remain distinct. No existing F01–F18 order, public API, authentication flow, dependency, migration, infrastructure or release gate changed in INC-016.
+
+## 7. Reproduce checks and continue
+
+Frontend, with existing locked dependencies and compatible engine:
 
 ```sh
 cd "front end"
@@ -135,11 +144,12 @@ npm run build
 npm run test:e2e
 ```
 
-Playwright browser binaries are required. The original `test:e2e:legacy` needs its original live integration environment. Do not replace the failing browser suite with the narrower INC-015 tests.
+Playwright binaries are required. `test:e2e:legacy` needs the original live integration environment. Targeted tests are not replacements for failing browser or release gates.
 
-Run relevant dependency-free/domain checks from the repository root; required tools must already exist:
+From the repository root, with the existing required tools:
 
 ```sh
+python tools/check_meta_signup_configuration.py
 python tools/check_frontend_drafts.py
 python tools/check_foundation.py
 python tools/check_tenant_scope.py
@@ -153,49 +163,10 @@ python tools/check_webhook_sdk_events.py
 python tools/check_receiver_http.py
 ```
 
-These commands do not establish deployment or replace independent integration/release gates. The existing diagnostic host is separate from the frontend launcher:
+The separate diagnostic host is `cd backend` then `go run ./cmd/ingress`, documented on `127.0.0.1:8090`; process liveness is not readiness. Its unconnected callback/readiness remain503; no automatic receiver/Meta signup registration. See [backend README](backend/README.md).
 
-```sh
-cd backend
-go run ./cmd/ingress
-```
+Before further implementation read [AGENTS.md](AGENTS.md), [owner directives](docs/requirements/OWNER_DIRECTIVES.md), [source register](docs/architecture/SOURCE_REGISTER.json), [baseline index](docs/delivery/baseline-index.csv), [current status](docs/delivery/status.json) and the current guide. Frontend [routes](front%20end/docs/FEATURE_MAP.md), [parameters](front%20end/docs/PARAMETERS.md), [implementation order](front%20end/docs/IMPLEMENTATION_ORDER.md), [API inventory](front%20end/docs/API_INVENTORY.md), [component inventory](front%20end/docs/COMPONENT_INVENTORY.md) and [React/Vite ADR](front%20end/docs/ADR-0001-react-vite-compatibility.md) retain their defined roles.
 
-It is documented to bind `127.0.0.1:8090`; liveness is process-only, while readiness and the unconnected provider callback return 503. It does not automatically mount the receiver adapter. See [backend instructions](backend/README.md). It was not run in INC-014 or INC-015.
+Original plans and the canonical Excel tracker remain in `/Greeto_Action_OS` Library; tracker path `/Greeto_Action_OS/delivery/Greeto_Action_OS_Delivery_Tracker_Updated.xlsx`. Existing delivery records remain historical evidence. Preserve all262 IDs, statuses, prerequisites, acceptance criteria and prior evidence; append contributions rather than marking a parent Done on mock tests.
 
-## 7. Project records and next gates
-
-Read [AGENTS.md](AGENTS.md), [owner directives](docs/requirements/OWNER_DIRECTIVES.md), [source register](docs/architecture/SOURCE_REGISTER.json), [baseline index](docs/delivery/baseline-index.csv), [current status](docs/delivery/status.json) and [delivery evidence](docs/delivery/) before continuing. Original plans remain in `/Greeto_Action_OS` Library. The canonical tracker is `/Greeto_Action_OS/delivery/Greeto_Action_OS_Delivery_Tracker_Updated.xlsx`; the INC-015 workbook preserves prior increment sheets and adds a cited INC-014 carry-forward summary. The separate repository [INC-014 workbook](docs/delivery/INC-014_EVIDENCE.xlsx) remains unchanged.
-
-Outstanding gates include the reviewed browser-input correction and rerun; current frontend/browser/accessibility acceptance; live status APIs; unpublished sender ledger; reviewed database/Kafka/KMS/identity and receiver bindings; a full permitted customer Mission; provider approval; security, backup/recovery and release certification. Original-import snapshot/history remains separate from the restored structured frontend. **This is a gap summary, not a new implementation order.** Original predecessors and owner approvals govern scheduling.
-
-Use main only, no force-push and no overwritten concurrent work. Record actual changes/tests/exclusions and remote commit/hash readback. Preserve historical evidence and unpublished candidates separately. A pipeline change requires its specific proposal, risks/tests/rollback and explicit owner approval in the [change-request record](front%20end/docs/publication/PIPELINE_CHANGE_REQUEST.md). A passing helper test cannot upgrade a blocked parent or authorize production deployment.
-
-
-## 8. Meta official sample adoption reference
-
-**META-REF-001 — 9 September 2026, planning only.** The owner supplied
-`fbsamples/business-messaging-sample-tech-provider-app`. Its reviewed source is pinned
-to `14703a3e1fdba9bcf75b2360b00817b6fcc9f79b`, rather than an unversioned latest checkout.
-
-Read the [detailed adoption plan](docs/architecture/META_SAMPLE_ADOPTION_PLAN.md),
-[13-file targeted source review and inventory record](docs/architecture/META_SAMPLE_REFERENCE.json)
-and [22-slice work-package mapping](docs/delivery/META_SAMPLE_ADOPTION_MATRIX.csv).
-The mapping covers signup/configuration, WABA/phone operations, subscriptions,
-provider webhooks, text/templates, inbox/diagnostics, shared assets, calling,
-security/host differences, tests and provider qualification. It references 53 existing
-work packages without creating new baseline IDs or marking their acceptance complete.
-
-Use Meta's actual provider request/response shapes and interaction examples inside
-Greeto's existing component and service owners. Do not copy its Next.js/Auth0/Neon/
-Ably/Vercel runtime over the approved stack. In particular, Greeto still commits all
-required provider callback slices to Kafka before success ACK; replies and realtime
-fanout happen after that boundary. All external side effects remain governed by the
-Action Gateway. Credentials remain vault references, not raw browser or asset-table values.
-
-This is a source-backed acceleration plan, **not a copied or running integration**.
-The sample's MIT notices must accompany copied/substantially derived code; account
-permissions, current API/version validation, security/backup checks and provider
-approval remain mandatory. The sample tests were not run here. Current Meta developer
-documentation requests returned HTTP 429, so those contract-verification gates remain open.
-No runtime, dependency, public API, database schema or F01–F18 order changed in this
-planning update. The prior INC-015 browser-fixture approval request is still pending.
+Use main only, no force-push and no overwritten concurrent work. Before changing a pipeline/API/authority/dependency/release gate, submit a [specific change request](front%20end/docs/publication/PIPELINE_CHANGE_REQUEST.md) and obtain the owner's approval. A general continue instruction is not a waiver. Published source is not production deployment.

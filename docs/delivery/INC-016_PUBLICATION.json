@@ -1,0 +1,110 @@
+{
+  "increment": "INC-016",
+  "date": "2026-09-09",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "46f39a844278f144c408918df49ccfb326e23a3f",
+  "source_commit": "b70540cc75fa0f173b7d6dabc07f77bddd0f8bc8",
+  "source_tree": "302beba0c81dc2388bab5a3555edfe5273ea652c",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/services/core/src/channels/meta/signup-configuration.ts",
+      "sha": "46a9e810c28c5998151f8a21f6826bdf599a4060",
+      "sha256": "84648b03d797c48a4636e5cdaa03e2d20302f033d32e8acda1fb5184441c8a75",
+      "bytes": 8897
+    },
+    {
+      "path": "backend/services/core/tests/meta-signup-configuration.test.mjs",
+      "sha": "9d0553919dff798582981e554ad6aabcc69a9df6",
+      "sha256": "d7414056bc059c107f29c4998c5262488ead4b8de88d749d0b08f71daaa16e37",
+      "bytes": 8261
+    },
+    {
+      "path": "backend/services/core/tests/meta-signup-configuration.types.ts",
+      "sha": "dc8669ee7ea841b6ee3a017ab0d44d53adbe6a38",
+      "sha256": "40db19f78b22c243324c9be57458ef0548d38b14d6f634db3a6c8a7b8b8e02b8",
+      "bytes": 759
+    },
+    {
+      "path": "backend/testdata/meta-signup-configuration-v1.json",
+      "sha": "3b786ed03c31bfe6b7cf95c97611863837b9bc4a",
+      "sha256": "e4c077c7e1e2723ba4e3361d6f2dd172f8cc1d4a2439f8e2101d29ac4af8838e",
+      "bytes": 2043
+    },
+    {
+      "path": "front end/src/features/channels/meta/signup-setup-model.mjs",
+      "sha": "b4aa62beab0bc478db1c489eff293bb1394f9591",
+      "sha256": "00cdae58229cd06e8cd66201fd158f8cf00b6fe43dde5534e2e09dc44d6843d5",
+      "bytes": 6799
+    },
+    {
+      "path": "front end/src/features/channels/meta/MetaSignupSetupPanel.jsx",
+      "sha": "1b5cce8ff9d20a8a39afa4da69a0f9d8683c081a",
+      "sha256": "36eca1e729eff5b1444905e439df970831d0469517d83b7f8d8835bd0502c57c",
+      "bytes": 3423
+    },
+    {
+      "path": "front end/src/features/studio/FeatureStudioPage.jsx",
+      "sha": "b2ba7d8a72ca8ea321782e701686d02f5a727278",
+      "sha256": "7476e9d6267871b7e975c81fe59bb3d6d971ff6cdd23bf21f86d4ca3366b0473",
+      "bytes": 9848
+    },
+    {
+      "path": "front end/tests/meta-signup-setup.test.mjs",
+      "sha": "1aaae968e3ddfd6406a34b6693e05d6c9f118102",
+      "sha256": "1505dfe9cc2eb1e40fec76058c93a4ff1fcac4ee322a6ee826d9d2bc30333945",
+      "bytes": 5950
+    },
+    {
+      "path": "tools/check_meta_signup_configuration.py",
+      "sha": "47dfd000e0258f3c7ca01124be67eb786b893cf3",
+      "sha256": "80bbd0b4c562b0ef7ddffe3a556d2d336aa0b7354b50a0d940d0f9cce863cc20",
+      "bytes": 3567
+    },
+    {
+      "path": "docs/architecture/licenses/META_SAMPLE_MIT.txt",
+      "sha": "b93be90515ccd0b9daedaa589e42bf5929693f1f",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "bytes": 1088
+    },
+    {
+      "path": "docs/delivery/INC-016_META_SIGNUP_CONFIGURATION.md",
+      "sha": "5e2570be29bc368a3bd98d68ecced989b3842ef9",
+      "sha256": "688ec29f97334ea9b0ae029ef0d341e4575a52d1463e5bc37f93b49da25c3bb4",
+      "bytes": 11207
+    },
+    {
+      "path": "docs/delivery/INC-016_VERIFICATION.json",
+      "sha": "20e4ed400aa11bb2e93f01e2bfaa148434747d94",
+      "sha256": "a57b416515fc319ede260c06336366f5a25812d05bdd631b9b04b1c8b8d98fd8",
+      "bytes": 2039
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "matching_file_hashes": 12,
+    "unexpected_paths": 0,
+    "named_tests": 82,
+    "backend": 50,
+    "frontend": 32,
+    "strict_types": "passed",
+    "jsx_syntax_files": 2,
+    "pipeline_changed": false,
+    "runtime_connected": false,
+    "parent_tasks_certified": 0
+  },
+  "status_preservation": {
+    "original_item_count": 25,
+    "original_items_and_histories_unchanged": true,
+    "original_F03_stages_unchanged": true,
+    "prior_increment_evidence_retained": true
+  },
+  "remaining": [
+    "qualified registry/identity and current provider evidence",
+    "server connection attempt and callback correlation",
+    "code exchange, grants, binding and downstream original F02 steps",
+    "existing browser failures and current full UI/backend integration acceptance",
+    "INC-010 remains unpublished; no production deployment"
+  ]
+}
