@@ -1,0 +1,15 @@
+{
+  "increment": "INC-009",
+  "passed": true,
+  "production_verified": false,
+  "go_leaf_tests": 104,
+  "frontend_tests": 26,
+  "total": 130,
+  "failed": 0,
+  "go_race": "passed",
+  "go_vet": "passed",
+  "jsx_syntax_files": 2,
+  "projection_checks": "passed",
+  "coverage": "total:\t\t\t\t\t\t\t\t\t\t\t\t\t(statements)\t96.9%",
+  "scope": "Local deterministic planner, scripted receipt ledger and presentation checks; not live DynamoDB or full regression."
+}
