@@ -1,0 +1,77 @@
+{
+  "increment": "INC-013",
+  "date": "2026-09-08",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "882c0a926be3a0d0a80b81293703c40766f07825",
+  "source_commit": "d89d30e36d9d01ca453b622cae48c3379ebb5abf",
+  "source_tree": "95f29339c2af5be5d5ed23b9cf8accde6bbd668d",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/handler.go",
+      "sha": "89b435eb7dba6f0398caa68a7c53b17c5fc9b5f6",
+      "sha256": "1ce9e245bc55374747a7b4c277c4469777549d902e417da9095c4d494d59282c",
+      "bytes": 11447
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/handler_test.go",
+      "sha": "e8d4a12f3858211598e79f95ca02bb629374941f",
+      "sha256": "5f62e830c2e77e91b546610a457eb5252fd8027ddaa6353b3ce45cda79c7806f",
+      "bytes": 19685
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/types.go",
+      "sha": "81f8132796adc8175ae6fbe4c0734f5165996a20",
+      "sha256": "96eb0259eb829402435e696a3dbb8d2978294cd62601887ac9aa85482059e02d",
+      "bytes": 5101
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/wire_test.go",
+      "sha": "55331c9ca199fea4b99ff07728dedb538507ef72",
+      "sha256": "544c40ef3cda6a0eec1902c8ef134103a55c2de725a764699f348231f02d1515",
+      "bytes": 8132
+    },
+    {
+      "path": "docs/delivery/INC-013_VERIFICATION.json",
+      "sha": "ca44d20ff3fe4ec00c8f8ede56446db53e539a85",
+      "sha256": "ad665192a3ad83defd20e1137ac13e2fe6ea9339192f8212e74f0440572e98b7",
+      "bytes": 1827
+    },
+    {
+      "path": "tools/check_receiver_http.py",
+      "sha": "227c93b1a65ea1a52abe6d4964456e0290a2fe07",
+      "sha256": "d615815789ff7b2b55763f01e28cf5b5736d34c521111b630241120e56a708a5",
+      "bytes": 3960
+    },
+    {
+      "path": "docs/delivery/INC-013_RECEIVER_HTTP.md",
+      "sha": "b6d3062a25a07a8a95daa5e87906a88c87927fb7",
+      "sha256": "8da0205ad52dbab83a9cd936739b284cf4d556dfba6d6809583208b36f37db7a",
+      "bytes": 12145
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 7,
+    "unexpected_paths": 0,
+    "named_tests": 85,
+    "real_wire_cases_included": 5,
+    "failed": 0,
+    "race": "passed",
+    "vet": "passed",
+    "formatting": "passed",
+    "coverage": "95.7%",
+    "existing_pipeline_order_changed": false,
+    "runtime_deployed": false,
+    "parent_tasks_certified": 0
+  },
+  "remaining": [
+    "Production Keys/Gate/Inbox bindings and real transactional database",
+    "Full event schema/subscription/tenant/object authorization implementation",
+    "Production TLS/edge/server configuration and HTTP/2 qualification",
+    "Complete frontend/media import and React/browser acceptance",
+    "Full repository regression, independent security review, backup/recovery and deployment"
+  ],
+  "pending_inc010": "Still unpublished; no blocked content retried, included or substituted."
+}
