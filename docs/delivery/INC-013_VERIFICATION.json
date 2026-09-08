@@ -1,0 +1,48 @@
+{
+  "increment": "INC-013",
+  "passed": true,
+  "production_verified": false,
+  "publication": "not_determined_by_tests",
+  "go": "go version go1.23.2 linux/amd64",
+  "named_tests": 85,
+  "failed": 0,
+  "skipped": 0,
+  "go_race": "passed",
+  "go_vet": "passed",
+  "formatting": "passed",
+  "coverage": "95.7%",
+  "real_wire_cases": [
+    "TestTLSResponseWaitsForMatchingCommit",
+    "TestTLSLostACKAndDuplicate",
+    "TestTLSConcurrentDuplicates",
+    "TestSlowBodyHasNoSuccess",
+    "TestChunkedAndIdentityEncoding"
+  ],
+  "scope": "Local HTTP/TLS and real signature composition with test-only Keys/Gate/Inbox; no durable database",
+  "sources": [
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/handler.go",
+      "sha256": "1ce9e245bc55374747a7b4c277c4469777549d902e417da9095c4d494d59282c"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/handler_test.go",
+      "sha256": "5f62e830c2e77e91b546610a457eb5252fd8027ddaa6353b3ce45cda79c7806f"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/types.go",
+      "sha256": "96eb0259eb829402435e696a3dbb8d2978294cd62601887ac9aa85482059e02d"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiverhttp/wire_test.go",
+      "sha256": "544c40ef3cda6a0eec1902c8ef134103a55c2de725a764699f348231f02d1515"
+    }
+  ],
+  "base_commit": "882c0a926be3a0d0a80b81293703c40766f07825",
+  "not_verified": [
+    "Production Keys/Gate/Inbox bindings and real transactional database",
+    "Full event schema/subscription/tenant/object authorization implementation",
+    "Production TLS/edge/server configuration and HTTP/2 qualification",
+    "Complete frontend/media import and React/browser acceptance",
+    "Full repository regression, independent security review, backup/recovery and deployment"
+  ]
+}
