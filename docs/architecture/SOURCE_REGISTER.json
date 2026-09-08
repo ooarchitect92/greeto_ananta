@@ -27,5 +27,23 @@
       "file_id": "file_000000002d0c8208880ef2493c988640",
       "sha256": "9fe4185159b137cd94346265dd3e385b5aa9e3803bffbee9b31591a4f6291c23"
     }
+  ],
+  "implementation_references": [
+    {
+      "id": "META-REF-001",
+      "kind": "official sample code; subordinate implementation reference",
+      "repository": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app",
+      "commit": "14703a3e1fdba9bcf75b2360b00817b6fcc9f79b",
+      "reviewed_at": "2026-09-09",
+      "license": "MIT; retain upstream notices in copied/substantially derived code",
+      "record": "docs/architecture/META_SAMPLE_REFERENCE.json",
+      "adoption_plan": "docs/architecture/META_SAMPLE_ADOPTION_PLAN.md",
+      "work_package_mapping": "docs/delivery/META_SAMPLE_ADOPTION_MATRIX.csv",
+      "status": "source reviewed and adoption planned; not integrated or provider-verified",
+      "baseline_changed": false,
+      "runtime_copied": false,
+      "tests_executed": false,
+      "precedence": "Original architecture, work-package prerequisites, current provider contracts and account evidence remain authoritative. This sample does not replace the pipeline."
+    }
   ]
 }

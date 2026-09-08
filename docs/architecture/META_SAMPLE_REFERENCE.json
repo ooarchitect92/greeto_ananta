@@ -1,0 +1,227 @@
+{
+  "reference_id": "META-REF-001",
+  "review_date": "2026-09-09",
+  "repository": "fbsamples/business-messaging-sample-tech-provider-app",
+  "repository_url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app",
+  "commit": "14703a3e1fdba9bcf75b2360b00817b6fcc9f79b",
+  "license": "MIT",
+  "greeto_base": "3335b1844e5b54e8515e457c4c96e536ef9c8500",
+  "status": "implementation reference registered; integration planned",
+  "runtime_copied": false,
+  "runtime_executed": false,
+  "upstream_tests_executed": false,
+  "provider_verified": false,
+  "pipeline_changed": false,
+  "review_scope": "Targeted source review and capability/directory inventory, not whole-repository security audit",
+  "source_files": [
+    {
+      "id": "R01",
+      "path": "README.md",
+      "blob_sha": "e765309800d94465e765b4026d7dee5a254e67a3",
+      "review_level": "read sections",
+      "source_lines": "1-150;340-end",
+      "notes": "Feature/setup and production prerequisites; schema examined via helpers/web README",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/README.md"
+    },
+    {
+      "id": "R02",
+      "path": "LICENSE",
+      "blob_sha": "b93be90515ccd0b9daedaa589e42bf5929693f1f",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "MIT; notice preservation; no warranty",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/LICENSE"
+    },
+    {
+      "id": "R03a",
+      "path": "app/components/Fbl4bLauncher.tsx",
+      "blob_sha": "13d698a1367d6e4a7e9306d9f0f7af9e210eee02",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "FB SDK launch, code/event pairing, origin suffix check, v24.0",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/components/Fbl4bLauncher.tsx"
+    },
+    {
+      "id": "R03b",
+      "path": "app/components/ClientDashboard.tsx",
+      "blob_sha": "01d7c5c0cbcfdc2b433c2602fe48bf7ad6192b55",
+      "review_level": "read sections",
+      "source_lines": "1-295;425-700",
+      "notes": "Configuration and computeEsConfig; remaining UI not line-audited",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/components/ClientDashboard.tsx"
+    },
+    {
+      "id": "R04",
+      "path": "app/api/webhooks/route.ts",
+      "blob_sha": "118bec1f6d842396baf77da322990a2edb756ee7",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "Challenge/HMAC, Ably raw fanout, first inner item handling and inline AckBot",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/api/webhooks/route.ts"
+    },
+    {
+      "id": "R05",
+      "path": "app/api/token/route.ts",
+      "blob_sha": "323e6029035fcc36eef83cbf95b86d8174b0ac87",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "Code exchange and parallel save/registration/subscription/calling",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/api/token/route.ts"
+    },
+    {
+      "id": "R06",
+      "path": "app/api/beUtils.ts",
+      "blob_sha": "7b35ad922f85468db8a44a53d5d698c5296f22f5",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "Graph operations, token SQL, phone/template/payment/asset/calling helpers",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/api/beUtils.ts"
+    },
+    {
+      "id": "R07",
+      "path": "app/publicConfig.ts",
+      "blob_sha": "3b60ea0c0094abb9a16172c9910e6ebafd82b440",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "ES versions and feature variants; server graph version environment",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/publicConfig.ts"
+    },
+    {
+      "id": "R08",
+      "path": "app/api/ably-auth/route.ts",
+      "blob_sha": "93f64b912ef8f00518b9e1380c46dfe6047dd77f",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "Session email and Ably token request",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/api/ably-auth/route.ts"
+    },
+    {
+      "id": "R09",
+      "path": "package.json",
+      "blob_sha": "352dd536b5ccd3e98f564b4c4bd24da14320ada0",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "Next.js/Auth0/Ably/Vercel dependencies and scripts, not adopted",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/package.json"
+    },
+    {
+      "id": "R10",
+      "path": "tests/unit/beUtils.test.ts",
+      "blob_sha": "b64c305e8100dd2e95842cd4e774d73ac5ad63f0",
+      "review_level": "read sections",
+      "source_lines": "1-210",
+      "notes": "Mocks for SQL/config/fetch; template/payment cases; no test execution",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/tests/unit/beUtils.test.ts"
+    },
+    {
+      "id": "R11",
+      "path": "app/api/send/route.ts",
+      "blob_sha": "bf843ba4e317d36eb13db84165701b28b02a8acc",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "Direct source send path to adapt behind Greeto command/Gateway",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/api/send/route.ts"
+    },
+    {
+      "id": "R12",
+      "path": "app/utils/calling.ts",
+      "blob_sha": "19124b6b0bd74d8a485e7fb2dd41910952c30cc4",
+      "review_level": "read full",
+      "source_lines": "all",
+      "notes": "Duration/permission presentation and ring tone functions",
+      "url": "https://github.com/fbsamples/business-messaging-sample-tech-provider-app/blob/14703a3e1fdba9bcf75b2360b00817b6fcc9f79b/app/utils/calling.ts"
+    }
+  ],
+  "directory_inventory": {
+    "app_api": [
+      "ably-auth",
+      "authWrapper.ts",
+      "beUtils.ts",
+      "calls",
+      "deregister",
+      "paid_messaging",
+      "phones",
+      "register",
+      "request-code",
+      "send",
+      "token",
+      "verify-code",
+      "webhooks"
+    ],
+    "calls": [
+      "accept",
+      "connect",
+      "permissions",
+      "pre-accept",
+      "reject",
+      "request-permission",
+      "settings",
+      "terminate"
+    ],
+    "asset_pages": [
+      "my-wabas",
+      "my-pages",
+      "my-ad-accounts",
+      "my-datasets",
+      "my-catalogs",
+      "my-instagram-accounts"
+    ],
+    "other_pages": [
+      "my-inbox",
+      "my-webhooks",
+      "paid_messaging",
+      "privacy"
+    ],
+    "unit_test_files": [
+      "CallPermissionRibbon.test.tsx",
+      "MessageBubble.test.tsx",
+      "PaidMessagingDashboard.test.tsx",
+      "beUtils.test.ts",
+      "callingUtils.test.ts"
+    ],
+    "e2e_test_files": [
+      "paid-messaging.spec.ts"
+    ]
+  },
+  "inventoried_not_fully_read": [
+    {
+      "path": "package-lock.json",
+      "blob_sha": "ecd599e608306d89d683f815ef36e39771ffe81d",
+      "reason": "Lockfile inventoried; dependency/security/license qualification not performed"
+    },
+    {
+      "path": ".env.example",
+      "blob_sha": "f8f2efbe97e3c9392f62ef103dcb45e699674717",
+      "reason": "Configuration names read from README; file inventory only"
+    },
+    {
+      "path": "app/components/CallingClient.ts",
+      "blob_sha": "414de12355c572c12357e9b1a626e487061e9b39",
+      "reason": "Interoperability candidate, not certified media implementation"
+    }
+  ],
+  "provider_docs": [
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/overview",
+      "retrieval": "HTTP 429; not verified in this review"
+    },
+    {
+      "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/embedded-signup/versions",
+      "retrieval": "HTTP 429; not verified in this review"
+    },
+    {
+      "url": "https://developers.facebook.com/docs/graph-api/webhooks/getting-started",
+      "retrieval": "HTTP 429; not verified in this review"
+    }
+  ],
+  "plan": "docs/architecture/META_SAMPLE_ADOPTION_PLAN.md",
+  "matrix": "docs/delivery/META_SAMPLE_ADOPTION_MATRIX.csv",
+  "copy_rules": [
+    "retain Meta copyright and MIT notice in copied/substantially derived code",
+    "record source commit/blob and adapted diff per module",
+    "do not import framework/cloud/auth/realtime/datastore wholesale",
+    "no auto-sync from upstream main",
+    "provider contracts and account permissions remain mandatory",
+    "baseline and original prerequisites remain authoritative"
+  ]
+}

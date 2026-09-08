@@ -169,3 +169,33 @@ Read [AGENTS.md](AGENTS.md), [owner directives](docs/requirements/OWNER_DIRECTIV
 Outstanding gates include the reviewed browser-input correction and rerun; current frontend/browser/accessibility acceptance; live status APIs; unpublished sender ledger; reviewed database/Kafka/KMS/identity and receiver bindings; a full permitted customer Mission; provider approval; security, backup/recovery and release certification. Original-import snapshot/history remains separate from the restored structured frontend. **This is a gap summary, not a new implementation order.** Original predecessors and owner approvals govern scheduling.
 
 Use main only, no force-push and no overwritten concurrent work. Record actual changes/tests/exclusions and remote commit/hash readback. Preserve historical evidence and unpublished candidates separately. A pipeline change requires its specific proposal, risks/tests/rollback and explicit owner approval in the [change-request record](front%20end/docs/publication/PIPELINE_CHANGE_REQUEST.md). A passing helper test cannot upgrade a blocked parent or authorize production deployment.
+
+
+## 8. Meta official sample adoption reference
+
+**META-REF-001 — 9 September 2026, planning only.** The owner supplied
+`fbsamples/business-messaging-sample-tech-provider-app`. Its reviewed source is pinned
+to `14703a3e1fdba9bcf75b2360b00817b6fcc9f79b`, rather than an unversioned latest checkout.
+
+Read the [detailed adoption plan](docs/architecture/META_SAMPLE_ADOPTION_PLAN.md),
+[13-file targeted source review and inventory record](docs/architecture/META_SAMPLE_REFERENCE.json)
+and [22-slice work-package mapping](docs/delivery/META_SAMPLE_ADOPTION_MATRIX.csv).
+The mapping covers signup/configuration, WABA/phone operations, subscriptions,
+provider webhooks, text/templates, inbox/diagnostics, shared assets, calling,
+security/host differences, tests and provider qualification. It references 53 existing
+work packages without creating new baseline IDs or marking their acceptance complete.
+
+Use Meta's actual provider request/response shapes and interaction examples inside
+Greeto's existing component and service owners. Do not copy its Next.js/Auth0/Neon/
+Ably/Vercel runtime over the approved stack. In particular, Greeto still commits all
+required provider callback slices to Kafka before success ACK; replies and realtime
+fanout happen after that boundary. All external side effects remain governed by the
+Action Gateway. Credentials remain vault references, not raw browser or asset-table values.
+
+This is a source-backed acceleration plan, **not a copied or running integration**.
+The sample's MIT notices must accompany copied/substantially derived code; account
+permissions, current API/version validation, security/backup checks and provider
+approval remain mandatory. The sample tests were not run here. Current Meta developer
+documentation requests returned HTTP 429, so those contract-verification gates remain open.
+No runtime, dependency, public API, database schema or F01–F18 order changed in this
+planning update. The prior INC-015 browser-fixture approval request is still pending.
