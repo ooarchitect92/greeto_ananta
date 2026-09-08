@@ -1,0 +1,121 @@
+/* Shared workspace shell and configuration studio. Existing feature styles stay isolated. */
+.greeto-workspace-shell { --gs-purple:#8b00d4; --gs-dark:#34075a; --gs-ink:#182039; --gs-muted:#64748b; --gs-border:#e8deef; --gs-bg:#f7f3fb; --gs-radius:16px; display:flex; height:100dvh; width:100%; min-width:0; color:var(--gs-ink); background:var(--gs-bg); font-family:Poppins,Inter,system-ui,sans-serif; }
+.greeto-workspace-shell *, .greeto-page * { box-sizing:border-box; }
+.greeto-workspace-main { flex:1; min-width:0; min-height:0; display:flex; position:relative; overflow:auto; outline:none; }
+.greeto-sidebar { width:248px; flex:0 0 248px; display:flex; flex-direction:column; min-height:0; background:linear-gradient(165deg,#9100cd,#34075a 95%); color:white; padding:24px 12px 14px; z-index:50; }
+.greeto-brand { display:flex; align-items:center; justify-content:space-between; padding:0 12px 4px; min-height:38px; }
+.greeto-brand img { width:124px; max-height:34px; filter:brightness(0) invert(1); object-fit:contain; object-position:left; }
+.greeto-nav-caption { font-size:11px; line-height:1.7; color:#eee0ff; padding:4px 12px 12px; margin:0; }
+.greeto-nav-search { padding:0 6px 14px; display:block; }
+.greeto-nav-search input { width:100%; border:1px solid #c993ec; border-radius:10px; padding:10px 12px; background:#ffffff14; color:white; min-height:42px; font:inherit; font-size:12px; }
+.greeto-nav-search input::placeholder { color:#f2e5fb; opacity:1; }
+.greeto-nav-scroll { overflow:auto; min-height:0; flex:1; padding:0 4px 20px; scrollbar-width:thin; scrollbar-color:#b965dc transparent; }
+.greeto-nav-group { margin-bottom:10px; }
+.greeto-group-toggle { display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; text-align:left; font:inherit; color:#ecdbfa; border:0; background:transparent; padding:10px 10px 7px; font-size:10px; text-transform:uppercase; letter-spacing:.065em; font-weight:600; cursor:pointer; }
+.greeto-nav-item { display:flex; align-items:center; justify-content:space-between; gap:9px; width:100%; border:0; border-radius:10px; padding:10px 12px; min-height:40px; margin:2px 0; text-align:left; font:inherit; font-size:12px; line-height:1.5; color:#fff; background:transparent; cursor:pointer; }
+.greeto-nav-item:hover { background:#ffffff17; }
+.greeto-nav-item[aria-current="page"] { color:#6c15a2; background:#fff; font-weight:600; box-shadow:0 4px 14px #25004733; }
+.greeto-nav-dot { display:block; width:5px; height:5px; border-radius:50%; background:currentColor; flex:none; opacity:.65; }
+.greeto-nav-footer { padding:14px 12px 0; border-top:1px solid #ffffff30; display:grid; gap:3px; }
+.greeto-nav-footer strong { font-size:12px; font-weight:600; overflow-wrap:anywhere; }
+.greeto-nav-footer span { font-size:10px; color:#eedcfb; }
+.greeto-nav-footer button { margin-top:7px; text-align:left; padding:7px 0; font:inherit; font-size:12px; background:none; color:white; cursor:pointer; border:0; }
+.greeto-page { padding:32px; width:100%; max-width:1580px; margin:0 auto; min-width:0; align-self:flex-start; font-family:Poppins,Inter,system-ui,sans-serif; font-size:13px; line-height:1.65; }
+.greeto-page-header { display:flex; justify-content:space-between; align-items:flex-start; gap:22px; margin-bottom:24px; }
+.greeto-eyebrow { font-size:10px; font-weight:600; color:#7e329b; text-transform:uppercase; letter-spacing:.1em; margin:0 0 7px; }
+.greeto-page h1 { font-size:28px; line-height:1.3; letter-spacing:-.6px; font-weight:700; margin:0; color:#162039; }
+.greeto-page h2 { font-size:17px; font-weight:600; margin:0 0 15px; line-height:1.45; }
+.greeto-page h3 { font-size:13px; font-weight:600; margin:20px 0 9px; }
+.greeto-page p { margin-top:0; overflow-wrap:anywhere; }
+.greeto-description { color:#596778; font-size:13px; max-width:790px; line-height:1.8; margin:8px 0 0!important; }
+.greeto-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding-top:4px; }
+.greeto-card { background:white; border:1px solid #e8deef; border-radius:16px; padding:24px; margin-bottom:20px; min-width:0; box-shadow:0 3px 12px #2e084403; }
+.greeto-card-heading { display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.greeto-card-heading > p { margin:0 0 10px; color:#64748b; font-size:12px; }
+.greeto-notice { padding:13px 16px; border:1px solid #dfccec; border-left:3px solid #9b4dc1; border-radius:10px; margin:0 0 20px; color:#63337b; background:#f9f3fc; font-size:12px; line-height:1.8; overflow-wrap:anywhere; }
+.greeto-notice.warning { background:#fff9eb; border-color:#ead6ad; color:#855914; }
+.greeto-notice.error { background:#fff2f1; border-color:#e7b6b3; color:#a02b28; }
+.greeto-notice ul { margin:6px 0 0; padding-left:18px; list-style:disc; }
+.greeto-badge { display:inline-flex; width:fit-content; align-items:center; white-space:nowrap; padding:4px 9px; border-radius:6px; color:#743095; background:#f2e7fa; font-size:10px; line-height:1.6; font-weight:600; }
+.greeto-badge.warning { background:#fff0cc; color:#885c15; }
+.greeto-badge.muted { background:#f0f2f5; color:#536071; }
+.greeto-scope-strip { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:20px; }
+.greeto-scope-strip span { border:1px solid #e8deef; border-radius:10px; padding:10px 12px; background:white; font-size:11px; overflow-wrap:anywhere; }
+.greeto-scope-strip strong { display:block; font-weight:500; color:#64748b; font-size:10px; margin-bottom:4px; }
+.greeto-tabs { display:flex; gap:4px; padding:4px; background:#ece4f3; border-radius:10px; margin:8px 0 20px; width:fit-content; max-width:100%; overflow:auto; }
+.greeto-tabs button { border:0; border-radius:7px; background:transparent; font:inherit; font-size:12px; padding:9px 14px; white-space:nowrap; color:#684a7b; cursor:pointer; }
+.greeto-tabs button[aria-pressed="true"] { background:white; color:#770cb2; font-weight:600; box-shadow:0 1px 4px #3c126515; }
+.greeto-studio-grid { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:20px; align-items:start; }
+.greeto-form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:22px; row-gap:20px; }
+.greeto-field { min-width:0; }
+.greeto-field-wide { grid-column:1/-1; }
+.greeto-field-label { display:block; color:#293247; font-size:12px; font-weight:600; margin-bottom:3px; }
+.greeto-field-label span { color:#982ab8; }
+.greeto-field-key { display:block; font-size:10px; color:#6a7686; margin-bottom:7px; }
+.greeto-field input:not([type="checkbox"]),.greeto-field textarea,.greeto-field select,.greeto-filter-bar input,.greeto-filter-bar select { width:100%; border:1px solid #d9d3e4; border-radius:9px; min-height:42px; padding:10px 11px; font:inherit; font-size:12px; line-height:1.6; color:#243048; background:white; transition:border-color .15s; }
+.greeto-field input[aria-invalid="true"],.greeto-field textarea[aria-invalid="true"],.greeto-field select[aria-invalid="true"] { border-color:#c64742; }
+.greeto-field textarea { display:block; resize:vertical; min-height:100px; }
+.greeto-field .greeto-code-input { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:11px; }
+.greeto-checkbox { display:flex; align-items:center; gap:9px; font-size:12px; min-height:40px; cursor:pointer; }
+.greeto-checkbox input { width:16px; height:16px; margin:0; accent-color:#8700ce; }
+.greeto-options { border:1px solid #d9d3e4; padding:7px 12px; margin:0; border-radius:9px; display:flex; gap:2px 15px; flex-wrap:wrap; }
+.greeto-field-hint { color:#687384; font-size:10px; line-height:1.8; margin:6px 0 0!important; }
+.greeto-field-error { color:#af3331; font-size:11px; margin:5px 0 0!important; }
+.greeto-form-actions { display:flex; flex-wrap:wrap; gap:8px; border-top:1px solid #eee6f3; padding-top:20px; margin-top:24px; }
+.greeto-button { display:inline-flex; justify-content:center; align-items:center; min-height:40px; padding:9px 14px; border:1px solid #ddcce9; border-radius:9px; background:white; color:#693987; cursor:pointer; font:inherit; font-size:11px; line-height:1.6; font-weight:600; text-align:center; }
+.greeto-button:hover { background:#f9f4fc; }
+.greeto-button.primary { background:linear-gradient(155deg,#a010db,#7407b2); color:white; border-color:#8809c6; box-shadow:0 3px 8px #8700cc20; }
+.greeto-button.quiet { border-color:transparent; color:#64748b; }
+.greeto-button:disabled { color:#788394; background:#f0f1f5; border-color:#e0e3e8; cursor:not-allowed; box-shadow:none; }
+.greeto-valid { color:#276544; font-size:11px; margin:15px 0 0!important; }
+.greeto-feedback { border:1px solid #d8dfe9; padding:12px 16px; border-radius:9px; background:white; margin:0 0 16px; font-size:12px; color:#425470; }
+.greeto-details { margin:8px 0 18px; display:grid; gap:5px; }
+.greeto-details dt { color:#788192; font-size:10px; font-weight:500; text-transform:uppercase; letter-spacing:.04em; margin-top:9px; }
+.greeto-details dd { margin:0; font-size:12px; overflow-wrap:anywhere; }
+.greeto-muted { color:#64748b; font-size:11px; line-height:1.8; }
+.greeto-text-link { display:block; padding:5px 0; background:none; border:0; color:#8224a6; font:inherit; font-size:12px; text-align:left; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.greeto-page code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:11px; overflow-wrap:anywhere; word-break:break-word; }
+.greeto-code { font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:11px; padding:16px; border-radius:9px; background:#f4f0f8; overflow:auto; white-space:pre-wrap; word-break:break-word; }
+.greeto-table-wrap { overflow:auto; width:100%; }
+.greeto-table-wrap table { width:100%; min-width:640px; border-collapse:collapse; table-layout:fixed; text-align:left; font-size:11px; }
+.greeto-table-wrap th { background:#f8f5fb; padding:12px; font-size:10px; color:#6c5d7d; text-transform:uppercase; letter-spacing:.04em; font-weight:600; }
+.greeto-table-wrap td { padding:13px 12px; border-bottom:1px solid #ede7f2; vertical-align:top; overflow-wrap:anywhere; }
+.greeto-table-wrap small,.greeto-feature-grid small { display:block; color:#788393; font-size:10px; margin-top:5px; }
+.greeto-table-wrap tr.is-selected { background:#f8f0fe; }
+.greeto-table-link { font:inherit; text-align:left; background:none; border:0; padding:0; color:#26344f; cursor:pointer; text-decoration:underline; text-underline-offset:4px; }
+.greeto-step-list { padding:0 0 0 22px; margin-bottom:24px; list-style:decimal; }
+.greeto-step-list li { padding:7px 0 7px 7px; font-size:12px; color:#4d5d70; }
+.greeto-task-links { display:grid; gap:8px; }
+.greeto-task-links button { display:block; border:1px solid #e9deef; background:#fbf9fd; padding:13px; border-radius:8px; font:inherit; font-size:12px; color:#423051; text-align:left; cursor:pointer; }
+.greeto-task-links button strong { color:#852baa; margin-right:9px; }
+.greeto-task-links button span { display:block; font-size:10px; color:#6f7a8a; margin-top:4px; }
+.greeto-stat-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin:0 0 20px; }
+.greeto-stat { border:1px solid #e8deef; border-radius:14px; background:white; padding:18px; }
+.greeto-stat span { display:block; font-size:10px; color:#697486; }
+.greeto-stat strong { display:block; font-size:30px; color:#36134c; margin:7px 0; line-height:1.2; }
+.greeto-stat small { display:block; color:#818697; font-size:9px; line-height:1.8; }
+.greeto-filter-bar { display:flex; gap:12px; align-items:flex-end; flex-wrap:wrap; padding:18px; }
+.greeto-filter-bar label { flex:1 1 140px; min-width:0; }
+.greeto-filter-bar label:first-child { flex:2 1 220px; }
+.greeto-filter-bar label span { display:block; font-size:10px; font-weight:500; color:#667286; padding-bottom:5px; }
+.greeto-inline-links { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 20px; }
+.greeto-detail-panel { scroll-margin-top:20px; }
+.greeto-feature-section { margin-top:26px; }
+.greeto-feature-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.greeto-feature-grid .greeto-card { margin:0; display:flex; flex-direction:column; align-items:flex-start; }
+.greeto-feature-grid .greeto-card p { font-size:12px; color:#617083; }
+.greeto-feature-grid .greeto-button { margin-top:auto; }
+.greeto-empty { padding:30px 10px; color:#687486; text-align:center; }
+.greeto-block { display:block; margin-bottom:8px; }
+.greeto-preview-main { flex-direction:column; }
+.greeto-preview-banner { width:100%; background:#fff5dc; color:#76531a; text-align:center; padding:8px 12px; font-size:10px; flex:none; font-weight:600; letter-spacing:.035em; }
+.greeto-workspace-shell :focus-visible,.greeto-page :focus-visible { outline:3px solid #ae64d3; outline-offset:3px; }
+.greeto-sidebar :focus-visible { outline:2px solid #fae698; }
+.greeto-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.greeto-skip { position:fixed; top:-100px; left:12px; z-index:200; border-radius:6px; padding:12px; background:white; color:#7e1aa9; }
+.greeto-skip:focus { top:12px; }
+.greeto-mobile-bar,.greeto-mobile-close,.greeto-nav-backdrop { display:none; }
+@media(min-width:1600px){.greeto-page{padding:36px 44px}.greeto-studio-grid{grid-template-columns:minmax(0,1fr) 330px;gap:24px}}
+@media(max-width:1180px){.greeto-sidebar{width:222px;flex-basis:222px}.greeto-page{padding:24px}.greeto-studio-grid{grid-template-columns:minmax(0,1fr)}.greeto-studio-aside{display:block}.greeto-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.greeto-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.greeto-workspace-shell{padding-top:52px}.greeto-mobile-bar{position:fixed;inset:0 0 auto;height:52px;display:flex;gap:14px;align-items:center;background:#fff;border-bottom:1px solid #e9ddf2;z-index:40;padding:0 14px;font-size:13px;font-weight:600}.greeto-mobile-bar button{width:36px;height:36px;background:#f5eafc;border:0;border-radius:8px;color:#7e2ca7;font-size:20px}.greeto-sidebar{position:fixed;inset:0 auto 0 0;width:266px;transform:translateX(-105%);visibility:hidden;transition:transform .15s,visibility .15s}.greeto-sidebar.is-open{transform:translateX(0);visibility:visible}.greeto-nav-backdrop{display:block;position:fixed;inset:0;z-index:45;border:0;background:#16032880}.greeto-mobile-close{display:block;border:1px solid #ffffff55;background:none;color:#fff;width:34px;height:34px;border-radius:7px;font-size:24px}.greeto-page{padding:22px 16px}.greeto-page h1{font-size:23px}.greeto-page-header{display:block;margin-bottom:18px}.greeto-actions{margin-top:12px}.greeto-card{padding:18px}.greeto-scope-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.greeto-form-grid{grid-template-columns:1fr;gap:18px}.greeto-field-wide{grid-column:auto}.greeto-tabs{width:100%}.greeto-tabs button{padding:9px 10px;font-size:11px}.greeto-stat-grid{gap:10px}.greeto-stat{padding:14px}.greeto-stat strong{font-size:27px}.greeto-feature-grid{grid-template-columns:1fr}.greeto-filter-bar{gap:10px}.greeto-filter-bar label{flex-basis:120px}.greeto-form-actions .greeto-button{flex:1 1 135px}.greeto-preview-banner{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.greeto-workspace-shell *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}

@@ -1,0 +1,2 @@
+/** Stable feature facade over the original frontend API adapter. */
+export { createLabel, createNote, deleteNote, getConversationActivity, getConversationContact, getLabels, getLeadStages, getNotes, getScheduledTasks, getTemplates, retryTemplateMessage, sendInstagramMedia, sendInstagramText, sendMedia, sendMessengerMedia, sendMessengerText, sendTemplate, sendText, starTemplate, testAiAgent, unstarTemplate, updateConversationLeadStage, updateNote, uploadMedia } from '../../services/api/legacy.js';

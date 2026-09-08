@@ -1,0 +1,2 @@
+/** Stable feature facade over the original frontend API adapter. */
+export { assignTemplateToFolder, createEmailTemplate, createTemplate, createTemplateFolder, deleteEmailTemplate, deleteTemplate, deleteTemplateFolder, getEmailTemplates, getTemplateFolders, getTemplates, getWhatsAppSettings, sendTestTemplate, updateEmailTemplate, updateTemplateFolder, uploadFlowMedia, uploadTemplateExampleMedia, uploadTemplateTestMedia } from '../../services/api/legacy.js';

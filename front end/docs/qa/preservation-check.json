@@ -1,0 +1,77 @@
+{
+  "assetsChecked": 17,
+  "allAssetsByteIdentical": true,
+  "assetResults": [
+    {
+      "path": "public/favicon.svg",
+      "preserved": true
+    },
+    {
+      "path": "public/performance-10x-image1.webp",
+      "preserved": true
+    },
+    {
+      "path": "public/support-hero.mp4",
+      "preserved": true
+    },
+    {
+      "path": "public/performance-10x-image2.webp",
+      "preserved": true
+    },
+    {
+      "path": "public/bg.png",
+      "preserved": true
+    },
+    {
+      "path": "public/logo.svg",
+      "preserved": true
+    },
+    {
+      "path": "public/notification.mp3",
+      "preserved": true
+    },
+    {
+      "path": "public/performance-10x-image3.webp",
+      "preserved": true
+    },
+    {
+      "path": "public/favicon.png",
+      "preserved": true
+    },
+    {
+      "path": "public/banner.png",
+      "preserved": true
+    },
+    {
+      "path": "public/service-worker.js",
+      "preserved": true
+    },
+    {
+      "path": "src/assets/performance-prediction.png",
+      "preserved": true
+    },
+    {
+      "path": "src/assets/omnichannel-reach.png",
+      "preserved": true
+    },
+    {
+      "path": "src/assets/sparkles.png",
+      "preserved": true
+    },
+    {
+      "path": "src/assets/login.jpg",
+      "preserved": true
+    },
+    {
+      "path": "src/assets/team-collaboration.png",
+      "preserved": true
+    },
+    {
+      "path": "src/assets/login.png",
+      "preserved": true
+    }
+  ],
+  "lockDependencyRecordsUnchanged": true,
+  "originalApiAdapterByteIdentical": true,
+  "backendFilesIncluded": 0
+}

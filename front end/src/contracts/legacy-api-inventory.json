@@ -1,0 +1,2738 @@
+[
+  {
+    "name": "getTeamUser",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 3,
+    "endpointLiterals": [
+      "/api/team-users/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getInbox",
+    "parameters": "teamId, filter, phoneNumberId, limit = 20, offset = 0, search = '', filters = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 9,
+    "endpointLiterals": [
+      "/api/inbox?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getInboxCounts",
+    "parameters": "teamId, phoneNumberId = null, filters = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 26,
+    "endpointLiterals": [
+      "/api/inbox/counts?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTemplates",
+    "parameters": "phoneNumberId",
+    "source": "src/services/api/legacy.js",
+    "line": 39,
+    "endpointLiterals": [
+      "/api/templates?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "starTemplate",
+    "parameters": "name",
+    "source": "src/services/api/legacy.js",
+    "line": 48,
+    "endpointLiterals": [
+      "/api/templates/${name}/star"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "unstarTemplate",
+    "parameters": "name",
+    "source": "src/services/api/legacy.js",
+    "line": 57,
+    "endpointLiterals": [
+      "/api/templates/${name}/star"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteTemplate",
+    "parameters": "name, hsmId, phoneNumberId",
+    "source": "src/services/api/legacy.js",
+    "line": 66,
+    "endpointLiterals": [
+      "/api/templates?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createTemplate",
+    "parameters": "templateData",
+    "source": "src/services/api/legacy.js",
+    "line": 80,
+    "endpointLiterals": [
+      "/api/templates"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTemplateFolders",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 92,
+    "endpointLiterals": [
+      "/api/templates/folders"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createTemplateFolder",
+    "parameters": "name, color, emoji",
+    "source": "src/services/api/legacy.js",
+    "line": 98,
+    "endpointLiterals": [
+      "/api/templates/folders"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateTemplateFolder",
+    "parameters": "id, updates",
+    "source": "src/services/api/legacy.js",
+    "line": 108,
+    "endpointLiterals": [
+      "/api/templates/folders/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteTemplateFolder",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 118,
+    "endpointLiterals": [
+      "/api/templates/folders/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "assignTemplateToFolder",
+    "parameters": "templateName, folderName",
+    "source": "src/services/api/legacy.js",
+    "line": 127,
+    "endpointLiterals": [
+      "/api/templates/${templateName}/group"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendTestTemplate",
+    "parameters": "to, templateName, languageCode, components, phoneNumberId",
+    "source": "src/services/api/legacy.js",
+    "line": 137,
+    "endpointLiterals": [
+      "/api/templates/send-test"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getMessages",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 147,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/messages"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getConversationContact",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 153,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/contact"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "markAsRead",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 159,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/read"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateConversationLeadStage",
+    "parameters": "conversationId, stageId, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 168,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/lead-stage${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getNotes",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 179,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/notes?actorRole=agent"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createNote",
+    "parameters": "conversationId, authorUserId, body",
+    "source": "src/services/api/legacy.js",
+    "line": 185,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/notes"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateNote",
+    "parameters": "conversationId, noteId, body",
+    "source": "src/services/api/legacy.js",
+    "line": 195,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/notes/${noteId}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteNote",
+    "parameters": "conversationId, noteId",
+    "source": "src/services/api/legacy.js",
+    "line": 205,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/notes/${noteId}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getConversationActivity",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 214,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/activity"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "claimConversation",
+    "parameters": "conversationId, teamId, userId",
+    "source": "src/services/api/legacy.js",
+    "line": 220,
+    "endpointLiterals": [
+      "/api/conversations/claim"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "reassignConversation",
+    "parameters": "conversationId, teamId, newAssigneeUserId",
+    "source": "src/services/api/legacy.js",
+    "line": 230,
+    "endpointLiterals": [
+      "/api/conversations/reassign"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "reassignExternalLead",
+    "parameters": "leadId, newSalesPersonId",
+    "source": "src/services/api/legacy.js",
+    "line": 240,
+    "endpointLiterals": [
+      "/api/settings/integrations/xolox-crm/reassign"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "releaseConversation",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 252,
+    "endpointLiterals": [
+      "/api/conversations/release"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendText",
+    "parameters": "conversationId, text",
+    "source": "src/services/api/legacy.js",
+    "line": 262,
+    "endpointLiterals": [
+      "/api/whatsapp/text"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendMedia",
+    "parameters": "conversationId, kind, link, caption",
+    "source": "src/services/api/legacy.js",
+    "line": 272,
+    "endpointLiterals": [
+      "/api/whatsapp/media"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendTemplate",
+    "parameters": "conversationId, name, languageCode, components",
+    "source": "src/services/api/legacy.js",
+    "line": 282,
+    "endpointLiterals": [
+      "/api/whatsapp/template"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "retryTemplateMessage",
+    "parameters": "messageId",
+    "source": "src/services/api/legacy.js",
+    "line": 292,
+    "endpointLiterals": [
+      "/api/whatsapp/messages/${messageId}/retry"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendInteractive",
+    "parameters": "conversationId, interactive",
+    "source": "src/services/api/legacy.js",
+    "line": 301,
+    "endpointLiterals": [
+      "/api/whatsapp/interactive"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "uploadMedia",
+    "parameters": "conversationId, file",
+    "source": "src/services/api/legacy.js",
+    "line": 311,
+    "endpointLiterals": [
+      "/api/whatsapp/upload"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "uploadFlowMedia",
+    "parameters": "file",
+    "source": "src/services/api/legacy.js",
+    "line": 325,
+    "endpointLiterals": [
+      "/api/templates/upload-test-media"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "fetchMediaLibrary",
+    "parameters": "limit = 20",
+    "source": "src/services/api/legacy.js",
+    "line": 342,
+    "endpointLiterals": [
+      "/api/whatsapp/media-library?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "uploadTemplateExampleMedia",
+    "parameters": "file",
+    "source": "src/services/api/legacy.js",
+    "line": 353,
+    "endpointLiterals": [
+      "/api/templates/upload-example"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "uploadTemplateTestMedia",
+    "parameters": "file",
+    "source": "src/services/api/legacy.js",
+    "line": 373,
+    "endpointLiterals": [
+      "/api/templates/upload-test-media"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "resolveConversation",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 393,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/status"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "blockConversation",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 403,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/block"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "unblockConversation",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 412,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/unblock"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteConversation",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 421,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "pinConversation",
+    "parameters": "conversationId",
+    "source": "src/services/api/legacy.js",
+    "line": 430,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/pin"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getDashboardData",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 439,
+    "endpointLiterals": [
+      "/api/dashboard?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "login",
+    "parameters": "email, password",
+    "source": "src/services/api/legacy.js",
+    "line": 448,
+    "endpointLiterals": [
+      "/api/auth/login"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "customerLogin",
+    "parameters": "email, password",
+    "source": "src/services/api/legacy.js",
+    "line": 457,
+    "endpointLiterals": [
+      "/api/auth/customer/login"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "adminLogin",
+    "parameters": "email, password",
+    "source": "src/services/api/legacy.js",
+    "line": 466,
+    "endpointLiterals": [
+      "/api/auth/admin/login"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "requestPasswordReset",
+    "parameters": "email",
+    "source": "src/services/api/legacy.js",
+    "line": 475,
+    "endpointLiterals": [
+      "/api/auth/forgot-password"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "resetPassword",
+    "parameters": "token, password",
+    "source": "src/services/api/legacy.js",
+    "line": 484,
+    "endpointLiterals": [
+      "/api/auth/reset-password"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "logout",
+    "parameters": "accountType = 'customer'",
+    "source": "src/services/api/legacy.js",
+    "line": 493,
+    "endpointLiterals": [
+      "/api/auth/admin/logout",
+      "/api/auth/customer/logout"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "verifyTwoFactor",
+    "parameters": "mfaToken, code",
+    "source": "src/services/api/legacy.js",
+    "line": 502,
+    "endpointLiterals": [
+      "/api/auth/verify-2fa"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getMyProfile",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 511,
+    "endpointLiterals": [
+      "/api/auth/me"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateMyProfile",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 519,
+    "endpointLiterals": [
+      "/api/auth/me"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "setupTwoFactor",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 528,
+    "endpointLiterals": [
+      "/api/auth/2fa/setup"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "confirmTwoFactor",
+    "parameters": "code",
+    "source": "src/services/api/legacy.js",
+    "line": 536,
+    "endpointLiterals": [
+      "/api/auth/2fa/confirm"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disableTwoFactor",
+    "parameters": "code",
+    "source": "src/services/api/legacy.js",
+    "line": 545,
+    "endpointLiterals": [
+      "/api/auth/2fa/disable"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "completeOnboarding",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 554,
+    "endpointLiterals": [
+      "/api/auth/onboarding"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTeamUsers",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 563,
+    "endpointLiterals": [
+      "/api/settings/integrations/xolox-crm/team-users"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getLocalTeamUsers",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 572,
+    "endpointLiterals": [
+      "/api/team-users"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createTeamUser",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 579,
+    "endpointLiterals": [
+      "/api/team-users"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateTeamUser",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 588,
+    "endpointLiterals": [
+      "/api/team-users/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteTeamUser",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 599,
+    "endpointLiterals": [
+      "/api/team-users/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkflows",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 608,
+    "endpointLiterals": [
+      "/api/workflows"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkflowStageContext",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 614,
+    "endpointLiterals": [
+      "/api/workflows/${id}/stage-context"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTemplatesByNames",
+    "parameters": "names, phoneNumberId",
+    "source": "src/services/api/legacy.js",
+    "line": 620,
+    "endpointLiterals": [
+      "/api/templates/by-names?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkflowSequence",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 629,
+    "endpointLiterals": [
+      "/api/workflows/${id}/sequence"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkflow",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 635,
+    "endpointLiterals": [
+      "/api/workflows/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkflowsKanban",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 641,
+    "endpointLiterals": [
+      "/api/workflows/kanban${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "assignWorkflowToStage",
+    "parameters": "stageId, workflowId",
+    "source": "src/services/api/legacy.js",
+    "line": 648,
+    "endpointLiterals": [
+      "/api/workflows/kanban/assign"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "reorderStageWorkflows",
+    "parameters": "moves",
+    "source": "src/services/api/legacy.js",
+    "line": 658,
+    "endpointLiterals": [
+      "/api/workflows/kanban/reorder"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getLeadStages",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 667,
+    "endpointLiterals": [
+      "/api/settings/lead-stages${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createLeadStage",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 674,
+    "endpointLiterals": [
+      "/api/settings/lead-stages${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateLeadStage",
+    "parameters": "id, data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 685,
+    "endpointLiterals": [
+      "/api/settings/lead-stages/${id}${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteLeadStage",
+    "parameters": "id, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 696,
+    "endpointLiterals": [
+      "/api/settings/lead-stages/${id}${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkingHours",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 705,
+    "endpointLiterals": [
+      "/api/settings/working-hours${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "saveWorkingHours",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 714,
+    "endpointLiterals": [
+      "/api/settings/working-hours${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getGenericIntegrationSettings",
+    "parameters": "teamId, search = ''",
+    "source": "src/services/api/legacy.js",
+    "line": 725,
+    "endpointLiterals": [
+      "/api/settings/integrations${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateGenericIntegrationSettings",
+    "parameters": "providerId, data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 738,
+    "endpointLiterals": [
+      "/api/settings/integrations/${encodeURIComponent(providerId)}${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "testGenericIntegration",
+    "parameters": "providerId, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 753,
+    "endpointLiterals": [
+      "/api/settings/integrations/${encodeURIComponent(providerId)}/test${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectGenericIntegration",
+    "parameters": "providerId, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 763,
+    "endpointLiterals": [
+      "/api/settings/integrations/${encodeURIComponent(providerId)}${qs}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getRules",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 773,
+    "endpointLiterals": [
+      "/api/rules"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createRule",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 779,
+    "endpointLiterals": [
+      "/api/rules"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateRule",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 789,
+    "endpointLiterals": [
+      "/api/rules/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteRule",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 799,
+    "endpointLiterals": [
+      "/api/rules/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createWorkflow",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 807,
+    "endpointLiterals": [
+      "/api/workflows"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWorkflow",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 817,
+    "endpointLiterals": [
+      "/api/workflows/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "publishWorkflow",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 827,
+    "endpointLiterals": [
+      "/api/workflows/${id}/publish"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "retryWorkflowRun",
+    "parameters": "id, runId",
+    "source": "src/services/api/legacy.js",
+    "line": 836,
+    "endpointLiterals": [
+      "/api/workflows/${id}/runs/${runId}/retry"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkflowRuns",
+    "parameters": "id, limit = 50, offset = 0",
+    "source": "src/services/api/legacy.js",
+    "line": 845,
+    "endpointLiterals": [
+      "/api/workflows/${id}/runs?limit=${limit}&offset=${offset}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteWorkflow",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 851,
+    "endpointLiterals": [
+      "/api/workflows/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "runWorkflow",
+    "parameters": "id, phoneNumber",
+    "source": "src/services/api/legacy.js",
+    "line": 859,
+    "endpointLiterals": [
+      "/api/workflows/${id}/run"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "syncXoloxAssignments",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 869,
+    "endpointLiterals": [
+      "/api/conversations/sync-xolox-assignments"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "aiGenerateWorkflow",
+    "parameters": "description",
+    "source": "src/services/api/legacy.js",
+    "line": 879,
+    "endpointLiterals": [
+      "/api/workflows/ai/generate"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "testZoomConnection",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 889,
+    "endpointLiterals": [
+      "/api/workflows/test-zoom"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "listWhatsappFlows",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 899,
+    "endpointLiterals": [
+      "/api/whatsapp/flows"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "syncWhatsappFlows",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 912,
+    "endpointLiterals": [
+      "/api/whatsapp/flows/sync"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createWhatsappFlow",
+    "parameters": "payload",
+    "source": "src/services/api/legacy.js",
+    "line": 924,
+    "endpointLiterals": [
+      "/api/whatsapp/flows"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWhatsappFlow",
+    "parameters": "id, payload",
+    "source": "src/services/api/legacy.js",
+    "line": 956,
+    "endpointLiterals": [
+      "/api/whatsapp/flows/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "forceReassignConversation",
+    "parameters": "conversationId, teamId, newAssigneeUserId",
+    "source": "src/services/api/legacy.js",
+    "line": 988,
+    "endpointLiterals": [
+      "/api/conversations/reassign"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "registerWorkspace",
+    "parameters": "payload",
+    "source": "src/services/api/legacy.js",
+    "line": 1003,
+    "endpointLiterals": [
+      "/api/auth/register"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "verifyEmail",
+    "parameters": "token",
+    "source": "src/services/api/legacy.js",
+    "line": 1012,
+    "endpointLiterals": [
+      "/api/auth/verify-email"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "resendVerification",
+    "parameters": "email",
+    "source": "src/services/api/legacy.js",
+    "line": 1021,
+    "endpointLiterals": [
+      "/api/auth/resend-verification"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "acceptWorkspaceInvite",
+    "parameters": "payload",
+    "source": "src/services/api/legacy.js",
+    "line": 1030,
+    "endpointLiterals": [
+      "/api/auth/invites/accept"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTeamOrganization",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1039,
+    "endpointLiterals": [
+      "/api/team-management/organization"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkspaceMembers",
+    "parameters": "params = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 1044,
+    "endpointLiterals": [
+      "/api/team-management/members?${query.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkspaceInvites",
+    "parameters": "params = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 1053,
+    "endpointLiterals": [
+      "/api/team-management/invites?${query.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createDepartment",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1062,
+    "endpointLiterals": [
+      "/api/team-management/departments"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateDepartment",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 1069,
+    "endpointLiterals": [
+      "/api/team-management/departments/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteDepartment",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1076,
+    "endpointLiterals": [
+      "/api/team-management/departments/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createOrganizationTeam",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1081,
+    "endpointLiterals": [
+      "/api/team-management/teams"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateOrganizationTeam",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 1088,
+    "endpointLiterals": [
+      "/api/team-management/teams/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteOrganizationTeam",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1095,
+    "endpointLiterals": [
+      "/api/team-management/teams/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createWorkspaceInvite",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1100,
+    "endpointLiterals": [
+      "/api/team-management/invites"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "resendWorkspaceInvite",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1107,
+    "endpointLiterals": [
+      "/api/team-management/invites/${id}/resend"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "revokeWorkspaceInvite",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1114,
+    "endpointLiterals": [
+      "/api/team-management/invites/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWorkspaceMemberRole",
+    "parameters": "id, workspaceRoleKey",
+    "source": "src/services/api/legacy.js",
+    "line": 1121,
+    "endpointLiterals": [
+      "/api/team-management/members/${id}/role"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWorkspaceMemberStatus",
+    "parameters": "id, active",
+    "source": "src/services/api/legacy.js",
+    "line": 1128,
+    "endpointLiterals": [
+      "/api/team-management/members/${id}/status"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminWorkflowMonitor",
+    "parameters": "params = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 1135,
+    "endpointLiterals": [
+      "/api/admin/operations/workflows?${query}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminOperationsDashboard",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1144,
+    "endpointLiterals": [
+      "/api/admin/operations/dashboard"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminOperationsReports",
+    "parameters": "days = 30",
+    "source": "src/services/api/legacy.js",
+    "line": 1156,
+    "endpointLiterals": [
+      "/api/admin/operations/reports?days=${safeDays}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminSystemHealth",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1169,
+    "endpointLiterals": [
+      "/api/admin/operations/health"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "setAdminWorkflowStatus",
+    "parameters": "id, status",
+    "source": "src/services/api/legacy.js",
+    "line": 1181,
+    "endpointLiterals": [
+      "/api/admin/operations/workflows/${id}/status"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "retryAdminWorkflowRun",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1188,
+    "endpointLiterals": [
+      "/api/admin/operations/workflow-runs/${id}/retry"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "changeMyPassword",
+    "parameters": "currentPassword, newPassword",
+    "source": "src/services/api/legacy.js",
+    "line": 1195,
+    "endpointLiterals": [
+      "/api/auth/change-password"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminWorkspaces",
+    "parameters": "{ page = 1, limit = 20, search = '', status = 'all' } = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 1204,
+    "endpointLiterals": [
+      "/api/admin/operations/workspaces?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminIntegrationMonitor",
+    "parameters": "{ page = 1, limit = 20, search = '', provider = 'all' } = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 1215,
+    "endpointLiterals": [
+      "/api/admin/operations/integrations?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getContacts",
+    "parameters": "page = 1, limit = 10, search = \"\", filters = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 1314,
+    "endpointLiterals": [
+      "/api/contacts?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteContact",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1330,
+    "endpointLiterals": [
+      "/api/contacts/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "putContact",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 1339,
+    "endpointLiterals": [
+      "/api/contacts/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWorkflowDelay",
+    "parameters": "stageId, workflowId, delayMinutes, isIndependent, targetTime",
+    "source": "src/services/api/legacy.js",
+    "line": 1349,
+    "endpointLiterals": [
+      "/api/workflows/kanban/delay"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getScheduledTasks",
+    "parameters": "conversationId, contactPhone, limit = 10",
+    "source": "src/services/api/legacy.js",
+    "line": 1359,
+    "endpointLiterals": [
+      "/api/reports/scheduled-tasks?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getLabels",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1369,
+    "endpointLiterals": [
+      "/api/labels"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getEmailTemplates",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1374,
+    "endpointLiterals": [
+      "/api/email-templates"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createEmailTemplate",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1379,
+    "endpointLiterals": [
+      "/api/email-templates"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateEmailTemplate",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 1388,
+    "endpointLiterals": [
+      "/api/email-templates/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteEmailTemplate",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1397,
+    "endpointLiterals": [
+      "/api/email-templates/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createLabel",
+    "parameters": "name",
+    "source": "src/services/api/legacy.js",
+    "line": 1404,
+    "endpointLiterals": [
+      "/api/labels"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteLabel",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1413,
+    "endpointLiterals": [
+      "/api/labels/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getContactChannels",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1421,
+    "endpointLiterals": [
+      "/api/contacts/channels"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "addContact",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1426,
+    "endpointLiterals": [
+      "/api/contacts"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "importContactsBulk",
+    "parameters": "channel_id, contacts",
+    "source": "src/services/api/legacy.js",
+    "line": 1435,
+    "endpointLiterals": [
+      "/api/contacts/import-bulk"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createLabelWithContacts",
+    "parameters": "name, contact_ids",
+    "source": "src/services/api/legacy.js",
+    "line": 1444,
+    "endpointLiterals": [
+      "/api/labels"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "addContactsToLabel",
+    "parameters": "labelId, contact_ids",
+    "source": "src/services/api/legacy.js",
+    "line": 1453,
+    "endpointLiterals": [
+      "/api/labels/${labelId}/contacts"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getLabelContacts",
+    "parameters": "labelId",
+    "source": "src/services/api/legacy.js",
+    "line": 1462,
+    "endpointLiterals": [
+      "/api/labels/${labelId}/contacts"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getCampaigns",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1467,
+    "endpointLiterals": [
+      "/api/campaigns"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createCampaign",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1472,
+    "endpointLiterals": [
+      "/api/campaigns"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateCampaign",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 1481,
+    "endpointLiterals": [
+      "/api/campaigns/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getCampaignReport",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1490,
+    "endpointLiterals": [
+      "/api/campaigns/${id}/report"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "retryCampaignRecipient",
+    "parameters": "campaignId, logId",
+    "source": "src/services/api/legacy.js",
+    "line": 1495,
+    "endpointLiterals": [
+      "/api/campaigns/${campaignId}/recipients/${logId}/retry"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "stopCampaign",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1502,
+    "endpointLiterals": [
+      "/api/campaigns/${id}/stop"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteCampaign",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1510,
+    "endpointLiterals": [
+      "/api/campaigns/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWebhookEvents",
+    "parameters": "workflowId",
+    "source": "src/services/api/legacy.js",
+    "line": 1520,
+    "endpointLiterals": [
+      "/api/workflow-webhooks/${workflowId}/events"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "clearWebhookEvents",
+    "parameters": "workflowId",
+    "source": "src/services/api/legacy.js",
+    "line": 1527,
+    "endpointLiterals": [
+      "/api/workflow-webhooks/${workflowId}/events"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createPaymentLink",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1534,
+    "endpointLiterals": [
+      "/api/payments/create-link"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAiConfig",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1550,
+    "endpointLiterals": [
+      "/api/ai-agent/config"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateAiConfig",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1555,
+    "endpointLiterals": [
+      "/api/ai-agent/config"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAiKnowledge",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1564,
+    "endpointLiterals": [
+      "/api/ai-agent/knowledge"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "addAiTextKnowledge",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1569,
+    "endpointLiterals": [
+      "/api/ai-agent/knowledge/text"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteAiKnowledge",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1578,
+    "endpointLiterals": [
+      "/api/ai-agent/knowledge/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "uploadAiDocument",
+    "parameters": "file, title",
+    "source": "src/services/api/legacy.js",
+    "line": 1586,
+    "endpointLiterals": [
+      "/api/ai-agent/knowledge/upload"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "testAiAgent",
+    "parameters": "message",
+    "source": "src/services/api/legacy.js",
+    "line": 1602,
+    "endpointLiterals": [
+      "/api/ai-agent/test"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "toggleAiForConversation",
+    "parameters": "conversationId, isActive",
+    "source": "src/services/api/legacy.js",
+    "line": 1611,
+    "endpointLiterals": [
+      "/api/conversations/${conversationId}/ai-status"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWhatsAppSettings",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1620,
+    "endpointLiterals": [
+      "/api/settings/whatsapp?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWhatsAppSettings",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1628,
+    "endpointLiterals": [
+      "/api/settings/whatsapp?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTranslationSetting",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1639,
+    "endpointLiterals": [
+      "/api/settings/translation"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateTranslationSetting",
+    "parameters": "enabled",
+    "source": "src/services/api/legacy.js",
+    "line": 1645,
+    "endpointLiterals": [
+      "/api/settings/translation"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "onboardWhatsApp",
+    "parameters": "payload, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1655,
+    "endpointLiterals": [
+      "/api/auth/whatsapp/onboard?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectWhatsApp",
+    "parameters": "phoneNumberId, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1673,
+    "endpointLiterals": [
+      "/api/settings/whatsapp/${phoneNumberId}?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "patchWhatsAppSettings",
+    "parameters": "phoneNumberId, data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1684,
+    "endpointLiterals": [
+      "/api/settings/whatsapp/${encodeURIComponent(phoneNumberId)}?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "setPrimaryWhatsAppNumber",
+    "parameters": "phoneNumberId, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1695,
+    "endpointLiterals": [
+      "/api/settings/whatsapp/${encodeURIComponent(phoneNumberId)}/primary?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTelegramSettings",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1704,
+    "endpointLiterals": [
+      "/api/auth/telegram/settings?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "connectTelegram",
+    "parameters": "botToken, displayName, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1712,
+    "endpointLiterals": [
+      "/api/auth/telegram/connect"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectTelegram",
+    "parameters": "settingId, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1722,
+    "endpointLiterals": [
+      "/api/auth/telegram/disconnect/id/${encodeURIComponent(settingId)}?teamId=${encodeURIComponent(teamId || "
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "connectInstagram",
+    "parameters": "accessToken",
+    "source": "src/services/api/legacy.js",
+    "line": 1733,
+    "endpointLiterals": [
+      "/api/auth/instagram/connect"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "connectInstagramManually",
+    "parameters": "pageAccessToken, pageId",
+    "source": "src/services/api/legacy.js",
+    "line": 1743,
+    "endpointLiterals": [
+      "/api/auth/instagram/connect-env"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getInstagramAppSettings",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1753,
+    "endpointLiterals": [
+      "/api/auth/instagram/settings"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "saveInstagramAppSettings",
+    "parameters": "settings",
+    "source": "src/services/api/legacy.js",
+    "line": 1758,
+    "endpointLiterals": [
+      "/api/auth/instagram/settings"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getInstagramStatus",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1769,
+    "endpointLiterals": [
+      "/api/auth/instagram/status"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectInstagram",
+    "parameters": "channelId",
+    "source": "src/services/api/legacy.js",
+    "line": 1775,
+    "endpointLiterals": [
+      "/api/auth/instagram/disconnect"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendInstagramText",
+    "parameters": "conversationId, text",
+    "source": "src/services/api/legacy.js",
+    "line": 1785,
+    "endpointLiterals": [
+      "/api/instagram/text"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendInstagramMedia",
+    "parameters": "conversationId, kind, url, caption",
+    "source": "src/services/api/legacy.js",
+    "line": 1795,
+    "endpointLiterals": [
+      "/api/instagram/media"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createLabelFromCsv",
+    "parameters": "name, file",
+    "source": "src/services/api/legacy.js",
+    "line": 1805,
+    "endpointLiterals": [
+      "/api/labels/csv"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWorkspaceLoginPolicy",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1814,
+    "endpointLiterals": [
+      "/api/team-management/login-policy"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWorkspaceLoginPolicy",
+    "parameters": "loginSource",
+    "source": "src/services/api/legacy.js",
+    "line": 1819,
+    "endpointLiterals": [
+      "/api/team-management/login-policy"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendMessengerText",
+    "parameters": "conversationId, text",
+    "source": "src/services/api/legacy.js",
+    "line": 1826,
+    "endpointLiterals": [
+      "/api/messenger/text"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendMessengerMedia",
+    "parameters": "conversationId, kind, url, caption",
+    "source": "src/services/api/legacy.js",
+    "line": 1834,
+    "endpointLiterals": [
+      "/api/messenger/media"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getInstagramAutomations",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 1842,
+    "endpointLiterals": [
+      "/api/instagram/automations"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createInstagramAutomation",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 1848,
+    "endpointLiterals": [
+      "/api/instagram/automations"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateInstagramAutomation",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 1858,
+    "endpointLiterals": [
+      "/api/instagram/automations/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteInstagramAutomation",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1868,
+    "endpointLiterals": [
+      "/api/instagram/automations/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "toggleInstagramAutomation",
+    "parameters": "id",
+    "source": "src/services/api/legacy.js",
+    "line": 1877,
+    "endpointLiterals": [
+      "/api/instagram/automations/${id}/toggle"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getInstagramMedia",
+    "parameters": "channelId, after = null",
+    "source": "src/services/api/legacy.js",
+    "line": 1886,
+    "endpointLiterals": [
+      "/api/instagram/media-list?channelId=${channelId}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getRazorpaySettings",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1893,
+    "endpointLiterals": [
+      "/api/settings/razorpay?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateRazorpaySettings",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1901,
+    "endpointLiterals": [
+      "/api/settings/razorpay?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getWhatsAppAppSettings",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1916,
+    "endpointLiterals": [
+      "/api/settings/whatsapp-app?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateWhatsAppAppSettings",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1924,
+    "endpointLiterals": [
+      "/api/settings/whatsapp-app?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectRazorpay",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1935,
+    "endpointLiterals": [
+      "/api/settings/razorpay?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getExotelSettings",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1952,
+    "endpointLiterals": [
+      "/api/settings/exotel?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateExotelSettings",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1960,
+    "endpointLiterals": [
+      "/api/settings/exotel?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectExotel",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1972,
+    "endpointLiterals": [
+      "/api/settings/exotel?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "initiateExotelCall",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 1983,
+    "endpointLiterals": [
+      "/api/settings/exotel/call?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getExotelCallLogs",
+    "parameters": "teamId, { limit = 25, offset = 0 } = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 1995,
+    "endpointLiterals": [
+      "/api/settings/exotel/calls?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTwilioSettings",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2007,
+    "endpointLiterals": [
+      "/api/settings/twilio?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateTwilioSettings",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2015,
+    "endpointLiterals": [
+      "/api/settings/twilio?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectTwilio",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2027,
+    "endpointLiterals": [
+      "/api/settings/twilio?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendTwilioSms",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2037,
+    "endpointLiterals": [
+      "/api/settings/twilio/sms?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "initiateTwilioCall",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2049,
+    "endpointLiterals": [
+      "/api/settings/twilio/call?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getTwilioLogs",
+    "parameters": "teamId, { type, limit = 25, offset = 0 } = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 2061,
+    "endpointLiterals": [
+      "/api/settings/twilio/logs?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getEmailSettings",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2074,
+    "endpointLiterals": [
+      "/api/settings/email?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateEmailSettings",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2082,
+    "endpointLiterals": [
+      "/api/settings/email?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "disconnectEmail",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2094,
+    "endpointLiterals": [
+      "/api/settings/email?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "testEmailConnection",
+    "parameters": "teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2102,
+    "endpointLiterals": [
+      "/api/settings/email/test?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "syncEmails",
+    "parameters": "teamId, limit = 30",
+    "source": "src/services/api/legacy.js",
+    "line": 2110,
+    "endpointLiterals": [
+      "/api/settings/email/sync?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "sendEmailMessage",
+    "parameters": "data, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2122,
+    "endpointLiterals": [
+      "/api/settings/email/send?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getEmailMessages",
+    "parameters": "teamId, { direction, search, limit = 30, offset = 0 } = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 2134,
+    "endpointLiterals": [
+      "/api/settings/email/messages?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "markEmailRead",
+    "parameters": "id, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2146,
+    "endpointLiterals": [
+      "/api/settings/email/messages/${id}/read?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteEmailMessage",
+    "parameters": "id, teamId",
+    "source": "src/services/api/legacy.js",
+    "line": 2154,
+    "endpointLiterals": [
+      "/api/settings/email/messages/${id}?${params.toString()}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getSubscriptionCatalog",
+    "parameters": "includeInactive = false",
+    "source": "src/services/api/legacy.js",
+    "line": 2174,
+    "endpointLiterals": [
+      "/api/plans${qs ? ",
+      "/api/subscriptions/catalog${qs ? "
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getCustomerSubscription",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2185,
+    "endpointLiterals": [
+      "/api/customer/billing/subscription",
+      "/api/subscriptions/current"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "checkoutSubscription",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 2193,
+    "endpointLiterals": [
+      "/api/customer/billing/upgrade",
+      "/api/subscriptions/checkout"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "cancelCustomerSubscription",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2207,
+    "endpointLiterals": [
+      "/api/customer/billing/cancel",
+      "/api/subscriptions/cancel"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "reactivateCustomerSubscription",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2215,
+    "endpointLiterals": [
+      "/api/customer/billing/reactivate",
+      "/api/subscriptions/reactivate"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "cancelScheduledUpgrade",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2223,
+    "endpointLiterals": [
+      "/api/customer/billing/cancel-scheduled",
+      "/api/subscriptions/cancel-scheduled"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getBillingPortalUrl",
+    "parameters": "returnUrl",
+    "source": "src/services/api/legacy.js",
+    "line": 2231,
+    "endpointLiterals": [
+      "/api/customer/billing/portal",
+      "/api/subscriptions/portal"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getPaymentMethods",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2239,
+    "endpointLiterals": [
+      "/api/checkout/methods"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createSubscriptionOrder",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 2247,
+    "endpointLiterals": [
+      "/api/checkout/create-order"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "verifySubscriptionPayment",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 2259,
+    "endpointLiterals": [
+      "/api/checkout/verify-payment"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminSubscriptionPlans",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2271,
+    "endpointLiterals": [
+      "/api/subscriptions/admin/plans"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createAdminSubscriptionPlan",
+    "parameters": "data",
+    "source": "src/services/api/legacy.js",
+    "line": 2277,
+    "endpointLiterals": [
+      "/api/subscriptions/admin/plans"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateAdminSubscriptionPlan",
+    "parameters": "id, data",
+    "source": "src/services/api/legacy.js",
+    "line": 2287,
+    "endpointLiterals": [
+      "/api/subscriptions/admin/plans/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deactivateAdminSubscriptionPlan",
+    "parameters": "id, data = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 2297,
+    "endpointLiterals": [
+      "/api/subscriptions/admin/plans/${id}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAdminAuditLogs",
+    "parameters": "filters = {}",
+    "source": "src/services/api/legacy.js",
+    "line": 2307,
+    "endpointLiterals": [
+      "/api/admin/access-control/audit-logs?${params.toString()}",
+      "/api/admin/access-control${path}"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAccessControlRoles",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2333,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createAccessControlRole",
+    "parameters": "payload",
+    "source": "src/services/api/legacy.js",
+    "line": 2336,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "updateAccessControlRole",
+    "parameters": "id, payload",
+    "source": "src/services/api/legacy.js",
+    "line": 2339,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "deleteAccessControlRole",
+    "parameters": "id, reason",
+    "source": "src/services/api/legacy.js",
+    "line": 2342,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAccessControlPermissions",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2345,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "addRolePermission",
+    "parameters": "roleId, permId",
+    "source": "src/services/api/legacy.js",
+    "line": 2348,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "removeRolePermission",
+    "parameters": "roleId, permId",
+    "source": "src/services/api/legacy.js",
+    "line": 2351,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "syncInternalRolePresets",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2354,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getAccessControlAdmins",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2357,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "assignAdminRole",
+    "parameters": "adminId, roleId",
+    "source": "src/services/api/legacy.js",
+    "line": 2360,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "revokeAdminRole",
+    "parameters": "adminId, roleId",
+    "source": "src/services/api/legacy.js",
+    "line": 2363,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "grantAdminPermission",
+    "parameters": "adminId, permId",
+    "source": "src/services/api/legacy.js",
+    "line": 2366,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "revokeAdminPermission",
+    "parameters": "adminId, permId",
+    "source": "src/services/api/legacy.js",
+    "line": 2369,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getApprovalRequests",
+    "parameters": "status",
+    "source": "src/services/api/legacy.js",
+    "line": 2372,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "createApprovalRequest",
+    "parameters": "payload",
+    "source": "src/services/api/legacy.js",
+    "line": 2375,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "resolveApprovalRequest",
+    "parameters": "id, type, note",
+    "source": "src/services/api/legacy.js",
+    "line": 2378,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "runSecurityAudit",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2381,
+    "endpointLiterals": [],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "syncXoloxContacts",
+    "parameters": "page = 1, limit = 100, full = false",
+    "source": "src/services/api/legacy.js",
+    "line": 2385,
+    "endpointLiterals": [
+      "/api/contacts/sync"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "getXoloxSyncStatus",
+    "parameters": "",
+    "source": "src/services/api/legacy.js",
+    "line": 2395,
+    "endpointLiterals": [
+      "/api/contacts/sync/status"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  },
+  {
+    "name": "postWebhookSample",
+    "parameters": "workflowId, payload",
+    "source": "src/services/api/legacy.js",
+    "line": 2402,
+    "endpointLiterals": [
+      "/api/workflow-webhooks/${workflowId}/test"
+    ],
+    "serverVerification": "not_performed",
+    "note": "Literal extraction only. Dynamic paths and payload transformations must be checked in the function."
+  }
+]

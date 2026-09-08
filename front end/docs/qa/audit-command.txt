@@ -1,0 +1,12 @@
+
+> greeto-frontend@1.0.0 audit:frontend
+> node scripts/audit-frontend.mjs
+
+{
+  "features": 55,
+  "parameters": 231,
+  "workPackages": 262,
+  "domains": 27,
+  "checkedImports": 432,
+  "errors": []
+}

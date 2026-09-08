@@ -1,5 +1,16 @@
 # Frontend and backend publication status
 
+8 September 2026 update: the registered structured-v1 ZIP was recovered locally
+with its exact SHA-256 from `docs/architecture/SOURCE_REGISTER.json`. All 238
+frontend paths are now present: 233 match the archive bytes, and five existing
+repository files retain newer implementation/shared-utility changes. The root
+`start.bat` launches the existing draft-only frontend preview. Dependency install,
+source audit, 180 contract tests, three component tests and production build pass.
+Browser tests: seven pass, two mission-draft reload assertions fail, and one
+desktop-inapplicable test skips. No test or runtime behavior was changed to bypass
+these failures. See `docs/delivery/INC-014_LOCAL_LAUNCH.md`. The older status below
+describes the previous partial tree; backend, release and acceptance gates remain.
+
 7 September 2026 — foundation increment; not a complete application or deployment.
 
 The owner expanded scope to frontend and backend and requested `main` only. The prior original/structured frontend bulk import is still blocked (GitHub issue #1). The repository does not yet contain all 144 original frontend files, all structured-v1 feature files or their binary media. No replacement assets or temporary CI workflow were introduced.

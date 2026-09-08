@@ -1,5 +1,13 @@
 # Greeto / Customer Action OS
 
+## Start on Windows
+
+Double-click **`start.bat`** in the repository root. It installs the locked frontend dependencies when needed and opens **http://127.0.0.1:5174/frontend-preview**. Keep its console open; press **Ctrl+C** to stop. Node.js and npm must be on PATH; the frontend supports Node 24.15+ within 24.x, or 26+.
+
+**INC-014 update, 8 September 2026:** the complete registered structured-v1 frontend and original media have been restored, preserving the newer repository source. The preview, production build, 180 contract tests and three component tests pass. Browser tests: seven pass, two mission-draft assertions fail, one skips. See [launcher verification and remaining gates](docs/delivery/INC-014_LOCAL_LAUNCH.md) and the [Excel evidence workbook](docs/delivery/INC-014_EVIDENCE.xlsx). The preview uses draft-only configuration pages; backend/provider execution remains unconnected. The diagnostic Go host is not started by this launcher.
+
+The detailed INC-013 snapshot below records the preceding state. Its partial-frontend/import/build blockers are superseded by the INC-014 evidence above; original-import history, backend integration and production acceptance remain outstanding.
+
 Universal Messaging & Customer Action OS: a Mission-led SaaS for permitted messaging channels, customer operations, governed automation, AI and integrations.
 
 **Implementation status through INC-013 — 8 September 2026.** This README summarizes the published repository and its recorded evidence. The architecture is the target; a proposed feature, a local ZIP, a passing unit test and a deployed capability are not interchangeable.

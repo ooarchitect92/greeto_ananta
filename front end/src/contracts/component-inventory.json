@@ -1,0 +1,2082 @@
+[
+  {
+    "name": "App",
+    "source": "src/App.jsx",
+    "line": 5,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FrontendPreview",
+    "source": "src/app/FrontendPreview.jsx",
+    "line": 10,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Preloader",
+    "source": "src/app/GreetoWorkspace.jsx",
+    "line": 15,
+    "parameters": [
+      "{ onDone }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PageBoundary",
+    "source": "src/app/GreetoWorkspace.jsx",
+    "line": 142,
+    "parameters": [
+      "{ children, label = 'Loading workspace' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AppContent",
+    "source": "src/app/GreetoWorkspace.jsx",
+    "line": 172,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "App",
+    "source": "src/app/GreetoWorkspace.jsx",
+    "line": 2100,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WorkspaceSidebar",
+    "source": "src/app/layouts/WorkspaceSidebar.jsx",
+    "line": 5,
+    "parameters": [
+      "{activePage, onNavigate, role, userName, onLogout, preview=false}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Badge",
+    "source": "src/components/ui/Badge.jsx",
+    "line": 4,
+    "parameters": [
+      "{ className, variant = 'default', ...props }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GreetoLoader",
+    "source": "src/components/ui/GreetoLoader.jsx",
+    "line": 3,
+    "parameters": [
+      "{\n  label = 'Loading',\n  sublabel = 'Preparing your workspace...',\n  className = '',\n  fullScreen = false,\n}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LeadTaxonomyPage",
+    "source": "src/components/ui/LeadTaxonomyPage.jsx",
+    "line": 18,
+    "parameters": [
+      "{\n  eyebrow,\n  title,\n  description,\n  headerIcon: HeaderIcon,\n  extraHeaderBadge,\n  onCreate,\n  createLabel,\n  statCards = [],\n  listIcon: ListIcon,\n  listTitle,\n  loading,\n  loadingLabel,\n  loadingSublabel,\n  items = [],\n  emptyIcon: EmptyIcon,\n  emptyMessage,\n  emptyCreateLabel,\n  gridClassName = 'grid gap-4 sm:grid-cols-2 xl:grid-cols-3',\n  renderCard,\n  children,\n}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Modal",
+    "source": "src/components/ui/Modal.jsx",
+    "line": 6,
+    "parameters": [
+      "{ isOpen, onClose, title, children, className, zIndex = 'z-50' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Toaster",
+    "source": "src/components/ui/Toaster.jsx",
+    "line": 4,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ViewToggle",
+    "source": "src/components/ui/ViewToggle.jsx",
+    "line": 4,
+    "parameters": [
+      "{\n  value,\n  onChange,\n  boardValue = 'board',\n  tableValue = 'table',\n  boardLabel = 'Board',\n  tableLabel = 'Table',\n  className = '',\n}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WorkspaceEmptyState",
+    "source": "src/components/ui/WorkspaceEmptyState.jsx",
+    "line": 4,
+    "parameters": [
+      "{ title, description, primaryLabel, onPrimary, secondaryLabel, onSecondary }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "XoloxSyncBadge",
+    "source": "src/components/ui/XoloxSyncBadge.jsx",
+    "line": 5,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ConfirmActionHost",
+    "source": "src/components/ui/confirmAction.jsx",
+    "line": 18,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "useToast",
+    "source": "src/components/ui/use-toast.jsx",
+    "line": 137,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatusBadge",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 83,
+    "parameters": [
+      "{ status }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Toast",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 109,
+    "parameters": [
+      "{ msg, onDone }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ConfirmModal",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 120,
+    "parameters": [
+      "{ title, message, onConfirm, onCancel, requireReason = false }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RolesTab",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 155,
+    "parameters": [
+      "{ roles, permissions, onRefresh, toast }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminsTab",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 416,
+    "parameters": [
+      "{ admins, roles, onRefresh, toast }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ApprovalsTab",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 618,
+    "parameters": [
+      "{ onRefresh, toast }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AuditTab",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 760,
+    "parameters": [
+      "{ toast }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SecurityAuditModal",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 874,
+    "parameters": [
+      "{ onClose }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AccessControlPage",
+    "source": "src/features/admin/AccessControlPage.jsx",
+    "line": 991,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "MetricCard",
+    "source": "src/features/admin/AdminAuditLogsPage.jsx",
+    "line": 114,
+    "parameters": [
+      "{ label, value, icon, iconBg, valueColor = 'text-slate-950' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminAuditLogsPage",
+    "source": "src/features/admin/AdminAuditLogsPage.jsx",
+    "line": 128,
+    "parameters": [
+      "{ searchQuery = '' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminIntegrationsPage",
+    "source": "src/features/admin/AdminIntegrationsPage.jsx",
+    "line": 12,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminPlaceholder",
+    "source": "src/features/admin/AdminPortal.jsx",
+    "line": 70,
+    "parameters": [
+      "{ title, description, icon: Icon, cards = [] }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminDashboard",
+    "source": "src/features/admin/AdminPortal.jsx",
+    "line": 103,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminWorkspacesPage",
+    "source": "src/features/admin/AdminPortal.jsx",
+    "line": 224,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminPortal",
+    "source": "src/features/admin/AdminPortal.jsx",
+    "line": 346,
+    "parameters": [
+      "{ currentUser, onLogout }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PasswordField",
+    "source": "src/features/admin/AdminSettingsPage.jsx",
+    "line": 14,
+    "parameters": [
+      "{ label, value, onChange, visible, onToggle, autoComplete }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminSettingsPage",
+    "source": "src/features/admin/AdminSettingsPage.jsx",
+    "line": 28,
+    "parameters": [
+      "{ currentUser }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Section",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 102,
+    "parameters": [
+      "{ title, description, children }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Field",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 114,
+    "parameters": [
+      "{ label, value, onChange, type = 'text', placeholder = '', hint, min, step }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SelectField",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 132,
+    "parameters": [
+      "{ label, value, onChange, options, hint }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ChoiceGrid",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 144,
+    "parameters": [
+      "{ label, options, selected, onToggle, hint }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FeatureEditor",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 166,
+    "parameters": [
+      "{ value, onChange }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CurrencyField",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 218,
+    "parameters": [
+      "{ label, value, onChange }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TextArea",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 233,
+    "parameters": [
+      "{ label, value, onChange, rows = 3, placeholder = '', hint }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminSubscriptionPlanFormPage",
+    "source": "src/features/admin/AdminSubscriptionPlanFormPage.jsx",
+    "line": 249,
+    "parameters": [
+      "{ plan, onBack, onSaved }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Metric",
+    "source": "src/features/admin/AdminSubscriptionsPage.jsx",
+    "line": 14,
+    "parameters": [
+      "{ label, value, icon: Icon, tone = 'purple' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminSubscriptionsPage",
+    "source": "src/features/admin/AdminSubscriptionsPage.jsx",
+    "line": 32,
+    "parameters": [
+      "{ onCreate, onEdit }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminWorkflowMonitorPage",
+    "source": "src/features/admin/AdminWorkflowMonitorPage.jsx",
+    "line": 11,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AiAgentPage",
+    "source": "src/features/ai-agent/AiAgentPage.jsx",
+    "line": 19,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "useAiAgent",
+    "source": "src/features/ai-agent/hooks/useAiAgent.jsx",
+    "line": 9,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InviteAcceptancePage",
+    "source": "src/features/auth/InviteAcceptancePage.jsx",
+    "line": 6,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RightSectionLogin",
+    "source": "src/features/auth/LoginPage.jsx",
+    "line": 5,
+    "parameters": [
+      "{ isAdminMode = false }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LoginPage",
+    "source": "src/features/auth/LoginPage.jsx",
+    "line": 160,
+    "parameters": [
+      "{ onLogin, mode = 'customer' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ResetPasswordPage",
+    "source": "src/features/auth/ResetPasswordPage.jsx",
+    "line": 5,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SignupPage",
+    "source": "src/features/auth/SignupPage.jsx",
+    "line": 5,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Field",
+    "source": "src/features/auth/SignupPage.jsx",
+    "line": 65,
+    "parameters": [
+      "{ icon: Icon, label, children }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "VerifyEmailPage",
+    "source": "src/features/auth/VerifyEmailPage.jsx",
+    "line": 5,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AuthNotice",
+    "source": "src/features/auth/VerifyEmailPage.jsx",
+    "line": 14,
+    "parameters": [
+      "{ icon, title, message, action }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "QuickWorkflowBuilder",
+    "source": "src/features/automation/QuickWorkflowBuilder.jsx",
+    "line": 33,
+    "parameters": [
+      "{ stage, onBack, onOpenVisualBuilder }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RulesPage",
+    "source": "src/features/automation/RulesPage.jsx",
+    "line": 50,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RunsHistoryPanel",
+    "source": "src/features/automation/RunsHistoryPanel.jsx",
+    "line": 6,
+    "parameters": [
+      "{ workflow, onClose }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SequencesPage",
+    "source": "src/features/automation/SequencesPage.jsx",
+    "line": 20,
+    "parameters": [
+      "{ onOpenWorkflow }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "NodeWrapper",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 184,
+    "parameters": [
+      "{ children, selected, title, icon: Icon, colorClass, status }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "MediaPreview",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 248,
+    "parameters": [
+      "{ type, url, fileName }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TriggerNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 288,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TemplateNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 315,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DelayNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 356,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ConditionNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 383,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AttributeConditionNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 404,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SendMessageNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 432,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ListMessageNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 448,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ResponseMessageNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 488,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FeedbackNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 531,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PaymentRequestNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 563,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PaymentReminderNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 599,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "UserRepliedNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 618,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CustomCodeNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 638,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ActionNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 648,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "NotificationNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 700,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "EndNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 712,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CampaignTriggerNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 721,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CustomerMessageTriggerNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 730,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CampaignConditionNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 740,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "IncomingWebhookNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 787,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "NewContactCreatedNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 812,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "XoloxEventNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 827,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "XoloxLookupAgentNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 849,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WebhookNodeConfig",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 861,
+    "parameters": [
+      "{ node, workflowId, updateNodeFields }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TwilioSmsNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1079,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TwilioCallNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1097,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ExotelCallNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1115,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AgentCallDispatchNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1139,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SetVariableNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1167,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LeadStageUpdatedWebhookNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1182,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StarforzeLeadUpdatedNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1190,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LeadStageUpdatedWebhookConfig",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1197,
+    "parameters": [
+      "{ workflowId }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ZoomFetchNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1229,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LoopNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1240,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RelativeDelayNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1253,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ZoomMatchNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1272,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ZoomRegisterNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1281,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InlineMetaTemplateModal",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1333,
+    "parameters": [
+      "{ isOpen, onClose, onSubmitted }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PlusEdge",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1724,
+    "parameters": [
+      "{\n  id,\n  sourceX,\n  sourceY,\n  targetX,\n  targetY,\n  sourcePosition,\n  targetPosition,\n  style = {},\n  markerEnd,\n  source,\n  target,\n  sourceHandleId,\n  targetHandleId,\n}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WaitForStageNode",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1791,
+    "parameters": [
+      "{ data, selected }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WorkflowBuilder",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 1810,
+    "parameters": [
+      "{ onBack, onSave, initialWorkflow, linkedPhones = [] }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DraggableBlock",
+    "source": "src/features/automation/WorkflowBuilder.jsx",
+    "line": 10098,
+    "parameters": [
+      "{ type, actionType, label, icon: Icon, color, onAdd, disabledDrag }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DelayModal",
+    "source": "src/features/automation/WorkflowsKanban.jsx",
+    "line": 92,
+    "parameters": [
+      "{ isOpen, onClose, onSubmit, currentDelay, isIndependent: initialIndependent, targetTime: initialTargetTime }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CreateStageModal",
+    "source": "src/features/automation/WorkflowsKanban.jsx",
+    "line": 228,
+    "parameters": [
+      "{ isOpen, onClose, onSubmit }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "EditWorkflowModal",
+    "source": "src/features/automation/WorkflowsKanban.jsx",
+    "line": 300,
+    "parameters": [
+      "{ isOpen, onClose, onSubmit, workflow }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TriggerChooserView",
+    "source": "src/features/automation/WorkflowsKanban.jsx",
+    "line": 372,
+    "parameters": [
+      "{ selectedTrigger, selectedTab, onSelectTab, onSelectTrigger, onCancel, onBuild }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "BuilderChoiceModal",
+    "source": "src/features/automation/WorkflowsKanban.jsx",
+    "line": 458,
+    "parameters": [
+      "{ stage, onClose, onQuickBuilder, onVisualBuilder }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WorkflowsKanban",
+    "source": "src/features/automation/WorkflowsKanban.jsx",
+    "line": 463,
+    "parameters": [
+      "{ currentUser, onOpenBuilder, onOpenQuickBuilder, onNavigate, onLogout }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WorkflowsPage",
+    "source": "src/features/automation/WorkflowsPage.jsx",
+    "line": 12,
+    "parameters": [
+      "{ onOpenBuilder }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ConfirmModal",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 133,
+    "parameters": [
+      "{ title, message, confirmLabel, tone = 'danger', busy, onClose, onConfirm }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatCard",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 165,
+    "parameters": [
+      "{ icon: Icon, label, value, hint, tone = 'purple' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "UsageMeter",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 189,
+    "parameters": [
+      "{ meter }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PlanCard",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 215,
+    "parameters": [
+      "{ plan, billingCycle, isCurrent, busy, onChoose, onTrial }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FeatureComparison",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 301,
+    "parameters": [
+      "{ plans }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GatewayPickerModal",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 342,
+    "parameters": [
+      "{ gateways, plan, onChoose, onCancel, busy }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TransitionModal",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 376,
+    "parameters": [
+      "{ currentPlanName, currentPeriodEnd, newPlan, onChoose, onCancel }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SubscriptionsPage",
+    "source": "src/features/billing/SubscriptionsPage.jsx",
+    "line": 412,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatusBadge",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 30,
+    "parameters": [
+      "{ status }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CampaignPreview",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 83,
+    "parameters": [
+      "{ channel, template, mapping, smsMessage, headerUrl, headerFileName, contactFields = BASE_CONTACT_FIELDS }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ChannelIcon",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 104,
+    "parameters": [
+      "{ channel, size = 11 }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WhatsAppPreview",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 111,
+    "parameters": [
+      "{ template, mapping, headerUrl, headerFileName, contactFields = BASE_CONTACT_FIELDS }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Steps",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 166,
+    "parameters": [
+      "{ current, steps }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "NewCampaignPage",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 198,
+    "parameters": [
+      "{ onClose, onSuccess }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CreateTemplateModal",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 902,
+    "parameters": [
+      "{ isOpen, onClose, onCreated }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CampaignReportModal",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 1115,
+    "parameters": [
+      "{ campaign, onClose }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CampaignsPage",
+    "source": "src/features/campaigns/CampaignsPage.jsx",
+    "line": 1188,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AvatarCircle",
+    "source": "src/features/channels/EmailPage.jsx",
+    "line": 35,
+    "parameters": [
+      "{ name, email, size = 9, color = 'bg-indigo-100 text-indigo-700' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ComposePanel",
+    "source": "src/features/channels/EmailPage.jsx",
+    "line": 45,
+    "parameters": [
+      "{ settings, onSend, isSending, sendResult, defaultTo, defaultSubject, defaultBody, isReply, onClose }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "EmailDetail",
+    "source": "src/features/channels/EmailPage.jsx",
+    "line": 153,
+    "parameters": [
+      "{ msg, settings, onReply, onDelete, isSending, sendResult }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "EmailPage",
+    "source": "src/features/channels/EmailPage.jsx",
+    "line": 246,
+    "parameters": [
+      "{ currentUser }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "EditableNode",
+    "source": "src/features/channels/InstagramAutoDMBuilder.jsx",
+    "line": 46,
+    "parameters": [
+      "{ kind, title, value, onChange, placeholder, extra }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LibItem",
+    "source": "src/features/channels/InstagramAutoDMBuilder.jsx",
+    "line": 85,
+    "parameters": [
+      "{ item }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InstagramAutoDMBuilder",
+    "source": "src/features/channels/InstagramAutoDMBuilder.jsx",
+    "line": 105,
+    "parameters": [
+      "{ isOpen, onClose, post, channelId, onSaved }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RuleNameInput",
+    "source": "src/features/channels/InstagramAutoDMBuilder.jsx",
+    "line": 274,
+    "parameters": [
+      "{ value, onChange }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InstagramAutomationsPanel",
+    "source": "src/features/channels/InstagramAutomationsPanel.jsx",
+    "line": 13,
+    "parameters": [
+      "{ channelId, embedded = false }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InstagramMediaPage",
+    "source": "src/features/channels/InstagramMediaPage.jsx",
+    "line": 9,
+    "parameters": [
+      "{ activeChannelId, onBack, embedded = false, hideHeader = false }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InstagramPage",
+    "source": "src/features/channels/InstagramPage.jsx",
+    "line": 31,
+    "parameters": [
+      "{ currentUser, socket }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatusBadge",
+    "source": "src/features/channels/SmsPage.jsx",
+    "line": 25,
+    "parameters": [
+      "{ status }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DirectionIcon",
+    "source": "src/features/channels/SmsPage.jsx",
+    "line": 41,
+    "parameters": [
+      "{ direction, status }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SmsComposer",
+    "source": "src/features/channels/SmsPage.jsx",
+    "line": 49,
+    "parameters": [
+      "{ onSend, isSending, defaultTo, callerIdDefault }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SmsDetail",
+    "source": "src/features/channels/SmsPage.jsx",
+    "line": 105,
+    "parameters": [
+      "{ log, onReply, isSending }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SmsPage",
+    "source": "src/features/channels/SmsPage.jsx",
+    "line": 186,
+    "parameters": [
+      "{ currentUser }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TelegramPage",
+    "source": "src/features/channels/TelegramPage.jsx",
+    "line": 19,
+    "parameters": [
+      "{ currentUser, socket }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ChannelIcon",
+    "source": "src/features/contacts/ContactsEntry.jsx",
+    "line": 173,
+    "parameters": [
+      "{ type, name }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactDetailsPage",
+    "source": "src/features/contacts/ContactsEntry.jsx",
+    "line": 194,
+    "parameters": [
+      "{ contact, onBack, onDelete, onUpdate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DataField",
+    "source": "src/features/contacts/ContactsEntry.jsx",
+    "line": 380,
+    "parameters": [
+      "{ icon, label, value }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LeadInput",
+    "source": "src/features/contacts/ContactsEntry.jsx",
+    "line": 395,
+    "parameters": [
+      "{ label, value, onChange, placeholder, type = 'text' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AddContactModal",
+    "source": "src/features/contacts/ContactsEntry.jsx",
+    "line": 410,
+    "parameters": [
+      "{ isOpen, onClose, channels, onSuccess }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ImportContactsModal",
+    "source": "src/features/contacts/ContactsEntry.jsx",
+    "line": 617,
+    "parameters": [
+      "{ isOpen, onClose, channels, onImported }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactsPage",
+    "source": "src/features/contacts/ContactsEntry.jsx",
+    "line": 930,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactsPage",
+    "source": "src/features/contacts/ContactsPage.jsx",
+    "line": 10,
+    "parameters": [
+      "{ currentUser }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactDetailsDrawer",
+    "source": "src/features/contacts/components/ContactDetails/ContactDetailsDrawer.jsx",
+    "line": 6,
+    "parameters": [
+      "{ contact, isOpen, onClose, onUpdate, onDelete }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactsFilterBar",
+    "source": "src/features/contacts/components/ContactsFilterBar.jsx",
+    "line": 5,
+    "parameters": [
+      "{ \n    search, setSearch, \n    filters, onFilterChange, \n    onClearFilters \n}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactsHeader",
+    "source": "src/features/contacts/components/ContactsHeader.jsx",
+    "line": 4,
+    "parameters": [
+      "{ totalContacts, isSyncing, syncProgress, onSync, onAddContact }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactRow",
+    "source": "src/features/contacts/components/ContactsTable/ContactsTable.jsx",
+    "line": 6,
+    "parameters": [
+      "{ contact, onSelect, onDelete, onEdit }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ContactsTable",
+    "source": "src/features/contacts/components/ContactsTable/ContactsTable.jsx",
+    "line": 84,
+    "parameters": [
+      "{ contacts, isLoading, onSelectContact, onDeleteContact, onEditContact }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AddContactModal",
+    "source": "src/features/contacts/components/Modals/AddContactModal.jsx",
+    "line": 6,
+    "parameters": [
+      "{ isOpen, onClose, channels, onSuccess }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "useContacts",
+    "source": "src/features/contacts/hooks/useContacts.js",
+    "line": 5,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "useSync",
+    "source": "src/features/contacts/hooks/useSync.js",
+    "line": 4,
+    "parameters": [
+      "onComplete"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ChannelIcon",
+    "source": "src/features/contacts/utils/constants.jsx",
+    "line": 24,
+    "parameters": [
+      "{ type, name, size = 14 }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "EmailTemplatesPage",
+    "source": "src/features/content/EmailTemplatesPage.jsx",
+    "line": 75,
+    "parameters": [
+      "{ startCreate = false }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TemplateListModal",
+    "source": "src/features/content/TemplateListModal.jsx",
+    "line": 7,
+    "parameters": [
+      "{ isOpen, onClose, templates, onToggleStar }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TemplatesPage",
+    "source": "src/features/content/TemplatesPage.jsx",
+    "line": 14,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Tab",
+    "source": "src/features/crm/LabelsPage.jsx",
+    "line": 32,
+    "parameters": [
+      "{ active, onClick, icon: Icon, label }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GroupModal",
+    "source": "src/features/crm/LabelsPage.jsx",
+    "line": 49,
+    "parameters": [
+      "{ isOpen, onClose, editLabel, onSuccess }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ViewContactsModal",
+    "source": "src/features/crm/LabelsPage.jsx",
+    "line": 348,
+    "parameters": [
+      "{ isOpen, onClose, label }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LabelsPage",
+    "source": "src/features/crm/LabelsPage.jsx",
+    "line": 432,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StageFormModal",
+    "source": "src/features/crm/LeadStagesPage.jsx",
+    "line": 28,
+    "parameters": [
+      "{ isOpen, onClose, stage, onSaved }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LeadStagesPage",
+    "source": "src/features/crm/LeadStagesPage.jsx",
+    "line": 168,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatusFormModal",
+    "source": "src/features/crm/LeadStatusPage.jsx",
+    "line": 28,
+    "parameters": [
+      "{ isOpen, onClose, status, onSaved }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LeadStatusPage",
+    "source": "src/features/crm/LeadStatusPage.jsx",
+    "line": 168,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DuplicateWarningModal",
+    "source": "src/features/crm/OpportunitiesPage.jsx",
+    "line": 43,
+    "parameters": [
+      "{ isOpen, onClose, duplicate, onForceCreate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "OppModal",
+    "source": "src/features/crm/OpportunitiesPage.jsx",
+    "line": 101,
+    "parameters": [
+      "{ isOpen, onClose, opp, stages, statuses, onSaved, onDuplicate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "OpportunitiesPage",
+    "source": "src/features/crm/OpportunitiesPage.jsx",
+    "line": 236,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ProposalModal",
+    "source": "src/features/crm/ProposalModal.jsx",
+    "line": 24,
+    "parameters": [
+      "{ isOpen, onClose, onSend }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ShellCard",
+    "source": "src/features/dashboard/DashboardPage.jsx",
+    "line": 44,
+    "parameters": [
+      "{ children, className = '' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatCard",
+    "source": "src/features/dashboard/DashboardPage.jsx",
+    "line": 52,
+    "parameters": [
+      "{ icon: Icon, label, value, helper, tone = 'purple' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ChartTooltip",
+    "source": "src/features/dashboard/DashboardPage.jsx",
+    "line": 78,
+    "parameters": [
+      "{ active, payload, label }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SectionHeading",
+    "source": "src/features/dashboard/DashboardPage.jsx",
+    "line": 92,
+    "parameters": [
+      "{ icon: Icon, title, subtitle }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DashboardPage",
+    "source": "src/features/dashboard/DashboardPage.jsx",
+    "line": 108,
+    "parameters": [
+      "{ teamId, onNavigate, currentUser, onLogout, hasWhatsApp, onConnectWhatsApp }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ImplementationCenter",
+    "source": "src/features/implementation/ImplementationCenter.jsx",
+    "line": 8,
+    "parameters": [
+      "{onNavigate}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Chat",
+    "source": "src/features/inbox/Chat.jsx",
+    "line": 18,
+    "parameters": [
+      "{ socket, conversationId, channelExternalId, channelType, messages, onRefresh, isLoading, loadError, onRetry }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ConversationActivityPanel",
+    "source": "src/features/inbox/ConversationActivityPanel.jsx",
+    "line": 12,
+    "parameters": [
+      "{ conversationId }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ConversationFilters",
+    "source": "src/features/inbox/ConversationFilters.jsx",
+    "line": 5,
+    "parameters": [
+      "{ activeFilter, onSelectFilter, counts = {} }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CustomerCard",
+    "source": "src/features/inbox/CustomerCard.jsx",
+    "line": 41,
+    "parameters": [
+      "{ conversationId, onLeadStageUpdated, onContactUpdated }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GuestChat",
+    "source": "src/features/inbox/GuestChat.jsx",
+    "line": 7,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Inbox",
+    "source": "src/features/inbox/Inbox.jsx",
+    "line": 30,
+    "parameters": [
+      "{ conversations, hasMore, isLoadingMore, onLoadMore, selectedId, onSelect, onPin, onResolve, onDelete, currentUser, filter, setFilter, counts, channelFilter, setChannelFilter, hasConnectedChannel = true, onConnectChannel }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Avatar",
+    "source": "src/features/inbox/InternalChat.jsx",
+    "line": 37,
+    "parameters": [
+      "{ name, size = 32 }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RoomList",
+    "source": "src/features/inbox/InternalChat.jsx",
+    "line": 55,
+    "parameters": [
+      "{ rooms, loading, currentUser, onOpen, onNewChat }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "NewChat",
+    "source": "src/features/inbox/InternalChat.jsx",
+    "line": 113,
+    "parameters": [
+      "{ teamMembers, currentUser, onStart, onBack }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ChatRoom",
+    "source": "src/features/inbox/InternalChat.jsx",
+    "line": 206,
+    "parameters": [
+      "{ room, currentUser, socket, onBack }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InternalChat",
+    "source": "src/features/inbox/InternalChat.jsx",
+    "line": 417,
+    "parameters": [
+      "{ socket, currentUser, teamMembers = [], teamId, onClose }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "NotesPanel",
+    "source": "src/features/inbox/NotesPanel.jsx",
+    "line": 10,
+    "parameters": [
+      "{ conversationId, currentUser, socket }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TagSelector",
+    "source": "src/features/inbox/TagSelector.jsx",
+    "line": 6,
+    "parameters": [
+      "{ selectedLabels, onChange }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TemplatePanel",
+    "source": "src/features/inbox/TemplatePanel.jsx",
+    "line": 10,
+    "parameters": [
+      "{ conversationId }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Nav",
+    "source": "src/features/marketing/LandingPage.jsx",
+    "line": 9,
+    "parameters": [
+      "{ onLogin }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GlowOrb",
+    "source": "src/features/marketing/LandingPage.jsx",
+    "line": 59,
+    "parameters": [
+      "{ color, size, style }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "InboxMock",
+    "source": "src/features/marketing/LandingPage.jsx",
+    "line": 73,
+    "parameters": [
+      "{ tab }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AnimatedNumber",
+    "source": "src/features/marketing/LandingPage.jsx",
+    "line": 189,
+    "parameters": [
+      "{ value, suffix }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LogoStrip",
+    "source": "src/features/marketing/LandingPage.jsx",
+    "line": 226,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "WorkflowDiagram",
+    "source": "src/features/marketing/LandingPage.jsx",
+    "line": 247,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LandingPage",
+    "source": "src/features/marketing/LandingPage.jsx",
+    "line": 329,
+    "parameters": [
+      "{ onLoginClick }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LegalLayout",
+    "source": "src/features/marketing/LegalLayout.jsx",
+    "line": 3,
+    "parameters": [
+      "{ title, updated, children }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PrivacyPolicyPage",
+    "source": "src/features/marketing/PrivacyPolicyPage.jsx",
+    "line": 3,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TermsPage",
+    "source": "src/features/marketing/TermsPage.jsx",
+    "line": 3,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "HistoricalImage",
+    "source": "src/features/media/GalleryPage.jsx",
+    "line": 41,
+    "parameters": [
+      "{ file, onOpen }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GalleryPage",
+    "source": "src/features/media/GalleryPage.jsx",
+    "line": 74,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GallerySelectModal",
+    "source": "src/features/media/GallerySelectModal.jsx",
+    "line": 7,
+    "parameters": [
+      "{ isOpen, onClose, onSelect, resourceType = 'auto' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "GettingStartedPage",
+    "source": "src/features/onboarding/GettingStartedPage.jsx",
+    "line": 112,
+    "parameters": [
+      "{ variant = 'customer', onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "OnboardingTour",
+    "source": "src/features/onboarding/OnboardingTour.jsx",
+    "line": 136,
+    "parameters": [
+      "{ onComplete, activePage, setActivePage }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "LegacyAdminReportsView",
+    "source": "src/features/reports/ReportsPage.jsx",
+    "line": 137,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "AdminReportsView",
+    "source": "src/features/reports/ReportsPage.jsx",
+    "line": 407,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CustomerReportsView",
+    "source": "src/features/reports/ReportsPage.jsx",
+    "line": 512,
+    "parameters": [
+      "{ onNavigate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ReportsPage",
+    "source": "src/features/reports/ReportsPage.jsx",
+    "line": 1765,
+    "parameters": [
+      "{ onNavigate, variant = 'customer' }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Field",
+    "source": "src/features/settings/ProfilePage.jsx",
+    "line": 38,
+    "parameters": [
+      "{ label, icon: Icon, children }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ProfilePage",
+    "source": "src/features/settings/ProfilePage.jsx",
+    "line": 50,
+    "parameters": [
+      "{ currentUser, onProfileUpdated }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CopyButton",
+    "source": "src/features/settings/SettingsPage.jsx",
+    "line": 1317,
+    "parameters": [
+      "{ value }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "RevealInput",
+    "source": "src/features/settings/SettingsPage.jsx",
+    "line": 1332,
+    "parameters": [
+      "{ placeholder, value, onChange, disabled }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "SettingsPage",
+    "source": "src/features/settings/SettingsPage.jsx",
+    "line": 1361,
+    "parameters": [
+      "{ currentUser, onNavigate, initialMode = 'overview', autoOpenWhatsApp = false, onAutoOpenWhatsAppHandled }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FeatureStudioPage",
+    "source": "src/features/studio/FeatureStudioPage.jsx",
+    "line": 9,
+    "parameters": [
+      "{featureId,scope,onNavigate,preview=false}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "ParameterInput",
+    "source": "src/features/studio/ParameterInput.jsx",
+    "line": 2,
+    "parameters": [
+      "{field,value,onChange,error}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatusBadge",
+    "source": "src/features/voice/CallsPage.jsx",
+    "line": 35,
+    "parameters": [
+      "{ status }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DirectionIcon",
+    "source": "src/features/voice/CallsPage.jsx",
+    "line": 50,
+    "parameters": [
+      "{ direction, status }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "DialPad",
+    "source": "src/features/voice/CallsPage.jsx",
+    "line": 66,
+    "parameters": [
+      "{ value, onChange, onCall, isDialing, callerIdDefault }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CallDetail",
+    "source": "src/features/voice/CallsPage.jsx",
+    "line": 140,
+    "parameters": [
+      "{ log, onCallBack, isDialing }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "CallsPage",
+    "source": "src/features/voice/CallsPage.jsx",
+    "line": 220,
+    "parameters": [
+      "{ currentUser }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FlowBuilder",
+    "source": "src/features/whatsapp-flows/FlowBuilder.jsx",
+    "line": 63,
+    "parameters": [
+      "{ onBack, flowData, onSave, initialScreens }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FlowsCreate",
+    "source": "src/features/whatsapp-flows/FlowsCreate.jsx",
+    "line": 153,
+    "parameters": [
+      "{ onCancel, onSave }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FlowsList",
+    "source": "src/features/whatsapp-flows/FlowsList.jsx",
+    "line": 9,
+    "parameters": [
+      "{ onCreate }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "FlowsPage",
+    "source": "src/features/whatsapp-flows/FlowsPage.jsx",
+    "line": 5,
+    "parameters": [],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TeamMembersPage",
+    "source": "src/features/workforce/TeamMembersPage.jsx",
+    "line": 21,
+    "parameters": [
+      "{ onNavigate, adminMode = false }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "TeamPage",
+    "source": "src/features/workforce/TeamPage.jsx",
+    "line": 10,
+    "parameters": [
+      "{ conversations, agents, currentUser, onAssign, onUnassign }"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "useWhatsAppEmbeddedSignup",
+    "source": "src/hooks/useWhatsAppEmbeddedSignup.js",
+    "line": 31,
+    "parameters": [
+      "{ appId, configId } = {}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "PageLayout",
+    "source": "src/shared/ui/PageLayout.jsx",
+    "line": 2,
+    "parameters": [
+      "{eyebrow, title, description, actions, children}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "Notice",
+    "source": "src/shared/ui/PageLayout.jsx",
+    "line": 8,
+    "parameters": [
+      "{children, kind='info'}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  },
+  {
+    "name": "StatePage",
+    "source": "src/shared/ui/PageLayout.jsx",
+    "line": 9,
+    "parameters": [
+      "{title,children}"
+    ],
+    "status": "source_signature_not_runtime_verification"
+  }
+]

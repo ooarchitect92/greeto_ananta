@@ -1,0 +1,6496 @@
+[
+  {
+    "id": "dashboard",
+    "label": "Dashboard",
+    "group": "workspace",
+    "route": "/dashboard",
+    "description": "Workspace overview and operational metrics.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "fields": [
+      {
+        "name": "workspace_ref",
+        "label": "Workspace reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "range",
+        "label": "Date range",
+        "type": "select",
+        "default": "today",
+        "required": true,
+        "description": "Date range for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "today",
+          "last_7_days",
+          "last_30_days"
+        ]
+      },
+      {
+        "name": "timezone",
+        "label": "Timezone",
+        "type": "select",
+        "default": "Asia/Kolkata",
+        "required": true,
+        "description": "Timezone for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "Asia/Kolkata",
+          "UTC"
+        ]
+      }
+    ],
+    "domains": [
+      "UX"
+    ],
+    "sourceSection": "\u00a71.2",
+    "component": "src/features/dashboard/DashboardPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "UX-001",
+      "UX-002",
+      "UX-003",
+      "UX-004",
+      "UX-005",
+      "UX-006",
+      "UX-007",
+      "UX-008",
+      "UX-009",
+      "UX-010"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "getting-started",
+    "label": "Getting started",
+    "group": "workspace",
+    "route": "/getting-started",
+    "description": "Guided setup and onboarding.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "UX"
+    ],
+    "sourceSection": "\u00a710",
+    "component": "src/features/onboarding/GettingStartedPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "UX-001",
+      "UX-002",
+      "UX-003",
+      "UX-004",
+      "UX-005",
+      "UX-006",
+      "UX-007",
+      "UX-008",
+      "UX-009",
+      "UX-010"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "inbox",
+    "label": "Unified inbox",
+    "group": "customers",
+    "route": "/inbox",
+    "description": "Existing conversation timeline, assignment, notes and customer context.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "fields": [
+      {
+        "name": "teamId",
+        "label": "Team ID",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "filter",
+        "label": "Inbox filter",
+        "type": "select",
+        "default": "all",
+        "required": true,
+        "description": "Inbox filter for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "all",
+          "unread",
+          "mine",
+          "unassigned",
+          "closed"
+        ]
+      },
+      {
+        "name": "phoneNumberId",
+        "label": "Phone number ID",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "limit",
+        "label": "Page size",
+        "type": "number",
+        "default": 20,
+        "required": true,
+        "description": "Page size for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "offset",
+        "label": "Offset",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "description": "Offset for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 100000
+      },
+      {
+        "name": "search",
+        "label": "Search text",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Search text for this configuration. Validated again by the backend before execution.",
+        "maxLength": 200
+      },
+      {
+        "name": "filters",
+        "label": "Additional filters",
+        "type": "json",
+        "default": {},
+        "required": true,
+        "description": "Additional filters for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "MSG"
+    ],
+    "sourceSection": "\u00a713",
+    "component": "src/features/inbox/Inbox.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "MSG-001",
+      "MSG-002",
+      "MSG-003",
+      "MSG-004",
+      "MSG-005",
+      "MSG-006",
+      "MSG-007",
+      "MSG-008",
+      "MSG-009",
+      "MSG-010",
+      "MSG-011",
+      "MSG-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "contacts",
+    "label": "Contacts",
+    "group": "customers",
+    "route": "/contacts",
+    "description": "Existing contact directory, search, filters and imports.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "search",
+        "label": "Contact search",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Contact search for this configuration. Validated again by the backend before execution.",
+        "maxLength": 200
+      },
+      {
+        "name": "page",
+        "label": "Page",
+        "type": "number",
+        "default": 1,
+        "required": true,
+        "description": "Page for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 100000
+      },
+      {
+        "name": "limit",
+        "label": "Page size",
+        "type": "number",
+        "default": 20,
+        "required": true,
+        "description": "Page size for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "labels",
+        "label": "Label references",
+        "type": "json",
+        "default": [],
+        "required": true,
+        "description": "Label references for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "CUS"
+    ],
+    "sourceSection": "\u00a723.2",
+    "component": "src/features/contacts/ContactsEntry.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "CUS-001",
+      "CUS-002",
+      "CUS-003",
+      "CUS-004",
+      "CUS-005",
+      "CUS-006",
+      "CUS-007",
+      "CUS-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "labels",
+    "label": "Labels",
+    "group": "customers",
+    "route": "/labels",
+    "description": "Shared customer and conversation labels.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "CUS"
+    ],
+    "sourceSection": "\u00a723.2",
+    "component": "src/features/crm/LabelsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "CUS-001",
+      "CUS-002",
+      "CUS-003",
+      "CUS-004",
+      "CUS-005",
+      "CUS-006",
+      "CUS-007",
+      "CUS-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "opportunities",
+    "label": "Sales pipeline",
+    "group": "customers",
+    "route": "/opportunities",
+    "description": "Existing opportunities and pipeline stages.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "COM"
+    ],
+    "sourceSection": "\u00a723.2",
+    "component": "src/features/crm/OpportunitiesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "COM-001",
+      "COM-002",
+      "COM-003",
+      "COM-004",
+      "COM-005",
+      "COM-006",
+      "COM-007",
+      "COM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "lead-stages",
+    "label": "Lead stages",
+    "group": "customers",
+    "route": "/lead-stages",
+    "description": "Configure pipeline stages.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "COM"
+    ],
+    "sourceSection": "\u00a723.2",
+    "component": "src/features/crm/LeadStagesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "COM-001",
+      "COM-002",
+      "COM-003",
+      "COM-004",
+      "COM-005",
+      "COM-006",
+      "COM-007",
+      "COM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "lead-status",
+    "label": "Lead statuses",
+    "group": "customers",
+    "route": "/lead-status",
+    "description": "Configure lead status taxonomy.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "COM"
+    ],
+    "sourceSection": "\u00a723.2",
+    "component": "src/features/crm/LeadStatusPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "COM-001",
+      "COM-002",
+      "COM-003",
+      "COM-004",
+      "COM-005",
+      "COM-006",
+      "COM-007",
+      "COM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "campaigns",
+    "label": "Campaigns",
+    "group": "growth",
+    "route": "/campaigns",
+    "description": "Existing campaign management and creation.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Campaign name",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Campaign name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "audience_ref",
+        "label": "Audience reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "template_ref",
+        "label": "Template reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "template_parameters",
+        "label": "Template parameters",
+        "type": "json",
+        "default": {},
+        "required": true,
+        "description": "Template parameters for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "scheduled_at",
+        "label": "Schedule (with timezone)",
+        "type": "datetime",
+        "default": "",
+        "required": false,
+        "description": "Schedule (with timezone) for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "timezone",
+        "label": "IANA timezone",
+        "type": "text",
+        "default": "Asia/Kolkata",
+        "required": true,
+        "description": "IANA timezone for this configuration. Validated again by the backend before execution.",
+        "typeHint": "iana-timezone"
+      }
+    ],
+    "domains": [
+      "CMP"
+    ],
+    "sourceSection": "\u00a723.1",
+    "component": "src/features/campaigns/CampaignsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "CMP-001",
+      "CMP-002",
+      "CMP-003",
+      "CMP-004",
+      "CMP-005",
+      "CMP-006",
+      "CMP-007",
+      "CMP-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "templates",
+    "label": "WhatsApp templates",
+    "group": "growth",
+    "route": "/templates",
+    "description": "Existing reusable message templates.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "WHA"
+    ],
+    "sourceSection": "\u00a711",
+    "component": "src/features/content/TemplatesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "WHA-001",
+      "WHA-002",
+      "WHA-003",
+      "WHA-004",
+      "WHA-005",
+      "WHA-006",
+      "WHA-007",
+      "WHA-008",
+      "WHA-009",
+      "WHA-010",
+      "WHA-011",
+      "WHA-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "email-templates",
+    "label": "Email templates",
+    "group": "growth",
+    "route": "/email-templates",
+    "description": "Existing email content editor.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "CMP"
+    ],
+    "sourceSection": "\u00a723.1",
+    "component": "src/features/content/EmailTemplatesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "CMP-001",
+      "CMP-002",
+      "CMP-003",
+      "CMP-004",
+      "CMP-005",
+      "CMP-006",
+      "CMP-007",
+      "CMP-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "workflows",
+    "label": "Workflow builder",
+    "group": "automation",
+    "route": "/workflows",
+    "description": "Existing visual workflow editor and board.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "id",
+        "label": "Workflow ID",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "name",
+        "label": "Workflow name",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Workflow name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "trigger",
+        "label": "Trigger",
+        "type": "json",
+        "default": {},
+        "required": true,
+        "description": "Trigger for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "nodes",
+        "label": "Nodes",
+        "type": "json",
+        "default": [],
+        "required": true,
+        "description": "Nodes for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "edges",
+        "label": "Edges",
+        "type": "json",
+        "default": [],
+        "required": true,
+        "description": "Edges for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "WFL"
+    ],
+    "sourceSection": "\u00a718",
+    "component": "src/features/automation/WorkflowsKanban.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "WFL-001",
+      "WFL-002",
+      "WFL-003",
+      "WFL-004",
+      "WFL-005",
+      "WFL-006",
+      "WFL-007",
+      "WFL-008",
+      "WFL-009",
+      "WFL-010",
+      "WFL-011",
+      "WFL-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "sequences",
+    "label": "Sequences",
+    "group": "automation",
+    "route": "/sequences",
+    "description": "Existing multi-step sequences.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "WFL"
+    ],
+    "sourceSection": "\u00a718",
+    "component": "src/features/automation/SequencesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "WFL-001",
+      "WFL-002",
+      "WFL-003",
+      "WFL-004",
+      "WFL-005",
+      "WFL-006",
+      "WFL-007",
+      "WFL-008",
+      "WFL-009",
+      "WFL-010",
+      "WFL-011",
+      "WFL-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "rules",
+    "label": "Automation rules",
+    "group": "automation",
+    "route": "/rules",
+    "description": "Existing trigger and routing rules.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "WFL"
+    ],
+    "sourceSection": "\u00a718",
+    "component": "src/features/automation/RulesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "WFL-001",
+      "WFL-002",
+      "WFL-003",
+      "WFL-004",
+      "WFL-005",
+      "WFL-006",
+      "WFL-007",
+      "WFL-008",
+      "WFL-009",
+      "WFL-010",
+      "WFL-011",
+      "WFL-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "flows",
+    "label": "WhatsApp Flows",
+    "group": "automation",
+    "route": "/flows",
+    "description": "Existing channel-specific interactive flow builder.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "MIS"
+    ],
+    "sourceSection": "\u00a717.3",
+    "component": "src/features/whatsapp-flows/FlowsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "MIS-001",
+      "MIS-002",
+      "MIS-003",
+      "MIS-004",
+      "MIS-005",
+      "MIS-006",
+      "MIS-007",
+      "MIS-008",
+      "MIS-009"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "ai-agent",
+    "label": "AI agents",
+    "group": "ai",
+    "route": "/ai-agent",
+    "description": "Existing AI agent configuration.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "AIG"
+    ],
+    "sourceSection": "\u00a721",
+    "component": "src/features/ai-agent/AiAgentPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "AIG-001",
+      "AIG-002",
+      "AIG-003",
+      "AIG-004",
+      "AIG-005",
+      "AIG-006",
+      "AIG-007",
+      "AIG-008",
+      "AIG-009",
+      "AIG-010",
+      "AIG-011",
+      "AIG-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "integrations",
+    "label": "Connected integrations",
+    "group": "connect",
+    "route": "/integrations",
+    "description": "Existing provider configuration; account readiness requires server evidence.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "INT"
+    ],
+    "sourceSection": "\u00a722",
+    "component": "src/features/settings/SettingsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "INT-001",
+      "INT-002",
+      "INT-003",
+      "INT-004",
+      "INT-005",
+      "INT-006",
+      "INT-007",
+      "INT-008",
+      "INT-009",
+      "INT-010",
+      "INT-011",
+      "INT-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "instagram",
+    "label": "Instagram inbox",
+    "group": "connect",
+    "route": "/instagram",
+    "description": "Preserved legacy channel view; unified timeline is the target architecture.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "INS"
+    ],
+    "sourceSection": "\u00a713",
+    "component": "src/features/channels/InstagramPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "INS-001",
+      "INS-002",
+      "INS-003",
+      "INS-004",
+      "INS-005",
+      "INS-006",
+      "INS-007",
+      "INS-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "telegram",
+    "label": "Telegram inbox",
+    "group": "connect",
+    "route": "/telegram",
+    "description": "Preserved legacy channel view.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "TGM"
+    ],
+    "sourceSection": "\u00a713",
+    "component": "src/features/channels/TelegramPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "TGM-001",
+      "TGM-002",
+      "TGM-003",
+      "TGM-004",
+      "TGM-005",
+      "TGM-006",
+      "TGM-007",
+      "TGM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "sms",
+    "label": "SMS inbox",
+    "group": "connect",
+    "route": "/sms",
+    "description": "Preserved legacy SMS view.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "TGM"
+    ],
+    "sourceSection": "\u00a713",
+    "component": "src/features/channels/SmsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "TGM-001",
+      "TGM-002",
+      "TGM-003",
+      "TGM-004",
+      "TGM-005",
+      "TGM-006",
+      "TGM-007",
+      "TGM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "email",
+    "label": "Email inbox",
+    "group": "connect",
+    "route": "/email",
+    "description": "Preserved legacy email view.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "TGM"
+    ],
+    "sourceSection": "\u00a713",
+    "component": "src/features/channels/EmailPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "TGM-001",
+      "TGM-002",
+      "TGM-003",
+      "TGM-004",
+      "TGM-005",
+      "TGM-006",
+      "TGM-007",
+      "TGM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "calls",
+    "label": "Call history",
+    "group": "business",
+    "route": "/calls",
+    "description": "Existing calling interface; availability is provider-dependent.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "VOC"
+    ],
+    "sourceSection": "\u00a724",
+    "component": "src/features/voice/CallsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "VOC-001",
+      "VOC-002",
+      "VOC-003",
+      "VOC-004",
+      "VOC-005",
+      "VOC-006"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "gallery",
+    "label": "Media library",
+    "group": "business",
+    "route": "/gallery",
+    "description": "Existing media gallery and attachment picker.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "MSG"
+    ],
+    "sourceSection": "\u00a724.1",
+    "component": "src/features/media/GalleryPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "MSG-001",
+      "MSG-002",
+      "MSG-003",
+      "MSG-004",
+      "MSG-005",
+      "MSG-006",
+      "MSG-007",
+      "MSG-008",
+      "MSG-009",
+      "MSG-010",
+      "MSG-011",
+      "MSG-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "reports",
+    "label": "Reports",
+    "group": "business",
+    "route": "/reports",
+    "description": "Existing workflow and workspace reports.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "BIL"
+    ],
+    "sourceSection": "\u00a725",
+    "component": "src/features/reports/ReportsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "BIL-001",
+      "BIL-002",
+      "BIL-003",
+      "BIL-004",
+      "BIL-005",
+      "BIL-006",
+      "BIL-007",
+      "BIL-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "subscriptions",
+    "label": "Subscription & invoices",
+    "group": "manage",
+    "route": "/subscriptions",
+    "description": "Existing plan and billing page.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "BIL"
+    ],
+    "sourceSection": "\u00a725",
+    "component": "src/features/billing/SubscriptionsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "BIL-001",
+      "BIL-002",
+      "BIL-003",
+      "BIL-004",
+      "BIL-005",
+      "BIL-006",
+      "BIL-007",
+      "BIL-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "team",
+    "label": "Teams",
+    "group": "manage",
+    "route": "/team",
+    "description": "Existing team management screen, distinct from workspace members.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "PLT"
+    ],
+    "sourceSection": "\u00a710",
+    "component": "src/features/workforce/TeamPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "PLT-001",
+      "PLT-002",
+      "PLT-003",
+      "PLT-004",
+      "PLT-005",
+      "PLT-006",
+      "PLT-007",
+      "PLT-008",
+      "PLT-009",
+      "PLT-010",
+      "PLT-011",
+      "PLT-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "team-members",
+    "label": "Team members",
+    "group": "manage",
+    "route": "/team-members",
+    "description": "Existing team management.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "PLT"
+    ],
+    "sourceSection": "\u00a710",
+    "component": "src/features/workforce/TeamMembersPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "PLT-001",
+      "PLT-002",
+      "PLT-003",
+      "PLT-004",
+      "PLT-005",
+      "PLT-006",
+      "PLT-007",
+      "PLT-008",
+      "PLT-009",
+      "PLT-010",
+      "PLT-011",
+      "PLT-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "settings",
+    "label": "Workspace settings",
+    "group": "manage",
+    "route": "/settings",
+    "description": "Existing workspace configuration.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "fields": [],
+    "domains": [
+      "PLT"
+    ],
+    "sourceSection": "\u00a710",
+    "component": "src/features/settings/SettingsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "PLT-001",
+      "PLT-002",
+      "PLT-003",
+      "PLT-004",
+      "PLT-005",
+      "PLT-006",
+      "PLT-007",
+      "PLT-008",
+      "PLT-009",
+      "PLT-010",
+      "PLT-011",
+      "PLT-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "profile",
+    "label": "My profile",
+    "group": "manage",
+    "route": "/profile",
+    "description": "Existing account profile.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "fields": [],
+    "domains": [
+      "PLT"
+    ],
+    "sourceSection": "\u00a710",
+    "component": "src/features/settings/ProfilePage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "PLT-001",
+      "PLT-002",
+      "PLT-003",
+      "PLT-004",
+      "PLT-005",
+      "PLT-006",
+      "PLT-007",
+      "PLT-008",
+      "PLT-009",
+      "PLT-010",
+      "PLT-011",
+      "PLT-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  },
+  {
+    "id": "missions",
+    "label": "Mission Studio",
+    "group": "growth",
+    "route": "/missions",
+    "description": "Define an objective, audience, success evidence, allowed actions and budget before compilation.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Mission name",
+        "type": "text",
+        "default": "Appointment follow-up",
+        "required": true,
+        "description": "Mission name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "objective",
+        "label": "Business objective",
+        "type": "textarea",
+        "default": "Help opted-in customers confirm their appointments.",
+        "required": true,
+        "description": "Business objective for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "audience_ref",
+        "label": "Audience snapshot reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "workflow_ref",
+        "label": "Workflow draft reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "success_predicate",
+        "label": "Success evidence predicate",
+        "type": "textarea",
+        "default": "appointment.confirmed = true",
+        "required": true,
+        "description": "Success evidence predicate for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "channels",
+        "label": "Allowed channels",
+        "type": "multiselect",
+        "default": [
+          "whatsapp"
+        ],
+        "required": true,
+        "description": "Allowed channels for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "whatsapp",
+          "instagram",
+          "messenger",
+          "telegram",
+          "email",
+          "sms",
+          "webchat",
+          "rcs"
+        ]
+      },
+      {
+        "name": "budget_minor",
+        "label": "Budget in minor currency units",
+        "type": "number",
+        "default": 100000,
+        "required": true,
+        "description": "Budget in minor currency units for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 100000000
+      },
+      {
+        "name": "currency",
+        "label": "Currency",
+        "type": "select",
+        "default": "INR",
+        "required": true,
+        "description": "Currency for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "INR",
+          "USD",
+          "EUR",
+          "GBP"
+        ]
+      },
+      {
+        "name": "owner_ref",
+        "label": "Accountable owner reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "human_approval_required",
+        "label": "Require human approval",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Require human approval for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "max_actions",
+        "label": "Maximum actions per run",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "description": "Maximum actions per run for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "expires_in_hours",
+        "label": "Draft expiry (hours)",
+        "type": "number",
+        "default": 72,
+        "required": true,
+        "description": "Draft expiry (hours) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 8760
+      }
+    ],
+    "domains": [
+      "MIS"
+    ],
+    "sourceSection": "\u00a717.1\u201317.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": {
+      "status": "proposed",
+      "method": "POST",
+      "path": "/v1/missions",
+      "execution": "disabled_until_server_contract_verified"
+    },
+    "dependencies": [
+      "channel-center",
+      "policy-studio"
+    ],
+    "workPackageIds": [
+      "MIS-001",
+      "MIS-002",
+      "MIS-003",
+      "MIS-004",
+      "MIS-005",
+      "MIS-006",
+      "MIS-007",
+      "MIS-008",
+      "MIS-009"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "experiences",
+    "label": "Experience Studio",
+    "group": "growth",
+    "route": "/experiences",
+    "description": "Design channel-native fields and fallback behavior without claiming provider support.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Experience name",
+        "type": "text",
+        "default": "Appointment confirmation",
+        "required": true,
+        "description": "Experience name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "channel",
+        "label": "Preferred channel",
+        "type": "select",
+        "default": "whatsapp",
+        "required": true,
+        "description": "Preferred channel for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "whatsapp",
+          "instagram",
+          "messenger",
+          "telegram",
+          "email",
+          "sms",
+          "webchat",
+          "rcs"
+        ]
+      },
+      {
+        "name": "renderer",
+        "label": "Preferred renderer",
+        "type": "select",
+        "default": "interactive_message",
+        "required": true,
+        "description": "Preferred renderer for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "interactive_message",
+          "whatsapp_flow",
+          "telegram_buttons",
+          "web_form"
+        ]
+      },
+      {
+        "name": "fields",
+        "label": "Fields schema",
+        "type": "json",
+        "default": [
+          {
+            "name": "appointment_ref",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "required": true,
+        "description": "Fields schema for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "confirmation_text",
+        "label": "Confirmation copy",
+        "type": "textarea",
+        "default": "Thank you. Your request is recorded.",
+        "required": true,
+        "description": "Confirmation copy for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "expires_in_minutes",
+        "label": "Session expiry (minutes)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Session expiry (minutes) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 1440
+      },
+      {
+        "name": "fallback",
+        "label": "Permitted fallback",
+        "type": "select",
+        "default": "none",
+        "required": true,
+        "description": "Permitted fallback for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "none",
+          "scoped_web_form",
+          "human_handoff"
+        ]
+      },
+      {
+        "name": "consent_policy_ref",
+        "label": "Consent policy reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "MIS"
+    ],
+    "sourceSection": "\u00a717.3",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "missions",
+      "channel-center"
+    ],
+    "workPackageIds": [
+      "MIS-001",
+      "MIS-002",
+      "MIS-003",
+      "MIS-004",
+      "MIS-005",
+      "MIS-006",
+      "MIS-007",
+      "MIS-008",
+      "MIS-009"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "journey-twin",
+    "label": "Journey Twin",
+    "group": "automation",
+    "route": "/journey-twin",
+    "description": "Configure deterministic synthetic scenarios. No real providers, customers, network or business outcomes.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "mission_ref",
+        "label": "Mission reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "version_ref",
+        "label": "Immutable version reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "scenario",
+        "label": "Scenario",
+        "type": "select",
+        "default": "happy_path",
+        "required": true,
+        "description": "Scenario for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "happy_path",
+          "provider_timeout",
+          "duplicate_event",
+          "opt_out",
+          "approval_expired"
+        ]
+      },
+      {
+        "name": "seed",
+        "label": "Deterministic seed",
+        "type": "number",
+        "default": 42,
+        "required": true,
+        "description": "Deterministic seed for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 2147483647
+      },
+      {
+        "name": "virtual_duration_minutes",
+        "label": "Virtual duration (minutes)",
+        "type": "number",
+        "default": 60,
+        "required": true,
+        "description": "Virtual duration (minutes) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 10080
+      },
+      {
+        "name": "synthetic_only",
+        "label": "Synthetic data only",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Synthetic data only for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "SIM"
+    ],
+    "sourceSection": "\u00a720.1\u201320.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "missions"
+    ],
+    "workPackageIds": [
+      "SIM-001",
+      "SIM-002",
+      "SIM-003",
+      "SIM-004",
+      "SIM-005",
+      "SIM-006",
+      "SIM-007",
+      "SIM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "change-radar",
+    "label": "Change Radar & Workflow Doctor",
+    "group": "automation",
+    "route": "/change-radar",
+    "description": "Describe capability changes and proposed repairs; automatic production rollout is not enabled.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "capability_ref",
+        "label": "Capability reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "current_version",
+        "label": "Current contract version",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "candidate_version",
+        "label": "Candidate contract version",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "impact",
+        "label": "Impact class",
+        "type": "select",
+        "default": "unknown",
+        "required": true,
+        "description": "Impact class for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "unknown",
+          "compatible",
+          "breaking",
+          "restricted"
+        ]
+      },
+      {
+        "name": "evidence_summary",
+        "label": "Evidence summary",
+        "type": "textarea",
+        "default": "",
+        "required": true,
+        "description": "Evidence summary for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "repair_policy",
+        "label": "Repair policy",
+        "type": "select",
+        "default": "review_only",
+        "required": true,
+        "description": "Repair policy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "review_only",
+          "sandbox_proposal"
+        ]
+      },
+      {
+        "name": "reviewer_ref",
+        "label": "Reviewer reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "SIM"
+    ],
+    "sourceSection": "\u00a720.3",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "journey-twin",
+      "channel-center"
+    ],
+    "workPackageIds": [
+      "SIM-001",
+      "SIM-002",
+      "SIM-003",
+      "SIM-004",
+      "SIM-005",
+      "SIM-006",
+      "SIM-007",
+      "SIM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "policy-studio",
+    "label": "Policy Studio",
+    "group": "automation",
+    "route": "/policy-studio",
+    "description": "Author action policy inputs, consent, budget and approval requirements.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Policy name",
+        "type": "text",
+        "default": "Consent-first policy",
+        "required": true,
+        "description": "Policy name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "allowed_actions",
+        "label": "Allowed action names",
+        "type": "multiselect",
+        "default": [
+          "message.send"
+        ],
+        "required": true,
+        "description": "Allowed action names for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "message.send",
+          "crm.update",
+          "calendar.book",
+          "payment.request",
+          "human.handoff"
+        ]
+      },
+      {
+        "name": "consent_policy_ref",
+        "label": "Consent policy reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "approval_required",
+        "label": "Require human approval",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Require human approval for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "max_actions_per_run",
+        "label": "Actions per run",
+        "type": "number",
+        "default": 10,
+        "required": true,
+        "description": "Actions per run for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "max_budget_minor",
+        "label": "Budget limit (minor units)",
+        "type": "number",
+        "default": 100000,
+        "required": true,
+        "description": "Budget limit (minor units) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 100000000
+      },
+      {
+        "name": "approval_ttl_minutes",
+        "label": "Approval validity (minutes)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Approval validity (minutes) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 1440
+      },
+      {
+        "name": "unknown_outcome_policy",
+        "label": "Unknown outcome behavior",
+        "type": "select",
+        "default": "manual_review",
+        "required": true,
+        "description": "Unknown outcome behavior for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "manual_review",
+          "reconcile_only"
+        ]
+      },
+      {
+        "name": "suspend_new_actions",
+        "label": "Propose a kill switch",
+        "type": "boolean",
+        "default": false,
+        "required": false,
+        "description": "Propose a kill switch for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "ACT"
+    ],
+    "sourceSection": "\u00a719",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "workspace-access"
+    ],
+    "workPackageIds": [
+      "ACT-001",
+      "ACT-002",
+      "ACT-003",
+      "ACT-004",
+      "ACT-005",
+      "ACT-006",
+      "ACT-007",
+      "ACT-008",
+      "ACT-009",
+      "ACT-010"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "approvals",
+    "label": "Approvals & human tasks",
+    "group": "automation",
+    "route": "/approvals",
+    "description": "Prepare a decision bound to an exact action version and input hash; submitting decisions requires the server.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "approval_ref",
+        "label": "Approval reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "action_ref",
+        "label": "Action reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "input_hash",
+        "label": "Input digest",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "SHA-256 hex digest of the immutable action input. The server must verify this binding before accepting a decision.",
+        "maxLength": 64,
+        "pattern": "^[a-fA-F0-9]{64}$"
+      },
+      {
+        "name": "decision",
+        "label": "Decision",
+        "type": "select",
+        "default": "approve",
+        "required": true,
+        "description": "Decision for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "approve",
+          "reject"
+        ]
+      },
+      {
+        "name": "reason",
+        "label": "Decision reason",
+        "type": "textarea",
+        "default": "",
+        "required": true,
+        "description": "Decision reason for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "expires_at",
+        "label": "Expiry (with timezone)",
+        "type": "datetime",
+        "default": "",
+        "required": true,
+        "description": "Expiry (with timezone) for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "reviewer_ref",
+        "label": "Reviewer reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "ACT",
+      "WFL"
+    ],
+    "sourceSection": "\u00a719",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": {
+      "status": "proposed",
+      "method": "POST",
+      "path": "/v1/approvals/{id}/decisions",
+      "execution": "disabled_until_server_contract_verified"
+    },
+    "dependencies": [
+      "policy-studio"
+    ],
+    "workPackageIds": [
+      "WFL-001",
+      "WFL-002",
+      "WFL-003",
+      "WFL-004",
+      "WFL-005",
+      "WFL-006",
+      "WFL-007",
+      "WFL-008",
+      "WFL-009",
+      "WFL-010",
+      "WFL-011",
+      "WFL-012",
+      "ACT-001",
+      "ACT-002",
+      "ACT-003",
+      "ACT-004",
+      "ACT-005",
+      "ACT-006",
+      "ACT-007",
+      "ACT-008",
+      "ACT-009",
+      "ACT-010"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "action-receipts",
+    "label": "Action receipts",
+    "group": "automation",
+    "route": "/action-receipts",
+    "description": "Keep transport acceptance, provider acceptance, delivery and verified business success separate.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "action_ref",
+        "label": "Action reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "request_ref",
+        "label": "Request reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "observed_state",
+        "label": "Observed state",
+        "type": "select",
+        "default": "unknown",
+        "required": true,
+        "description": "Observed state for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "unknown",
+          "accepted",
+          "provider_accepted",
+          "delivered",
+          "read",
+          "verified_success",
+          "failed"
+        ]
+      },
+      {
+        "name": "evidence_level",
+        "label": "Evidence level",
+        "type": "select",
+        "default": "none",
+        "required": true,
+        "description": "Evidence level for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "none",
+          "transport",
+          "provider",
+          "business"
+        ]
+      },
+      {
+        "name": "evidence_ref",
+        "label": "Evidence reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "notes",
+        "label": "Evidence notes",
+        "type": "textarea",
+        "default": "",
+        "required": false,
+        "description": "Evidence notes for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      }
+    ],
+    "domains": [
+      "ACT",
+      "MSG"
+    ],
+    "sourceSection": "\u00a79 and \u00a719",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "policy-studio"
+    ],
+    "workPackageIds": [
+      "MSG-001",
+      "MSG-002",
+      "MSG-003",
+      "MSG-004",
+      "MSG-005",
+      "MSG-006",
+      "MSG-007",
+      "MSG-008",
+      "MSG-009",
+      "MSG-010",
+      "MSG-011",
+      "MSG-012",
+      "ACT-001",
+      "ACT-002",
+      "ACT-003",
+      "ACT-004",
+      "ACT-005",
+      "ACT-006",
+      "ACT-007",
+      "ACT-008",
+      "ACT-009",
+      "ACT-010"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "channel-center",
+    "label": "Channel Control Center",
+    "group": "connect",
+    "route": "/channel-center",
+    "description": "Plan onboarding and record readiness evidence per channel; connection status is never fabricated.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "provider",
+        "label": "Provider",
+        "type": "select",
+        "default": "whatsapp",
+        "required": true,
+        "description": "Provider for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "whatsapp",
+          "instagram",
+          "messenger",
+          "telegram",
+          "email",
+          "sms",
+          "webchat",
+          "rcs"
+        ]
+      },
+      {
+        "name": "connection_ref",
+        "label": "Connection reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "business_portfolio_ref",
+        "label": "Business portfolio reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "waba_ref",
+        "label": "WhatsApp Business Account reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "phone_number_ref",
+        "label": "Phone number reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "capability_state",
+        "label": "Readiness state",
+        "type": "select",
+        "default": "not_configured",
+        "required": true,
+        "description": "Readiness state for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "not_configured",
+          "not_authorized",
+          "not_eligible",
+          "not_supported",
+          "temporarily_unhealthy",
+          "ready"
+        ]
+      },
+      {
+        "name": "capability_version",
+        "label": "Capability evidence version",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "required_scopes",
+        "label": "Required permission names",
+        "type": "textarea",
+        "default": "",
+        "required": false,
+        "description": "Required permission names for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "next_action",
+        "label": "Required setup action",
+        "type": "textarea",
+        "default": "Request authorization through the server-mediated onboarding flow.",
+        "required": true,
+        "description": "Required setup action for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      }
+    ],
+    "domains": [
+      "WHA",
+      "INS",
+      "TGM"
+    ],
+    "sourceSection": "\u00a711",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": {
+      "status": "proposed",
+      "method": "POST",
+      "path": "/v1/channel-connections/authorizations",
+      "execution": "disabled_until_server_contract_verified"
+    },
+    "dependencies": [
+      "workspace-access"
+    ],
+    "workPackageIds": [
+      "WHA-001",
+      "WHA-002",
+      "WHA-003",
+      "WHA-004",
+      "WHA-005",
+      "WHA-006",
+      "WHA-007",
+      "WHA-008",
+      "WHA-009",
+      "WHA-010",
+      "WHA-011",
+      "WHA-012",
+      "INS-001",
+      "INS-002",
+      "INS-003",
+      "INS-004",
+      "INS-005",
+      "INS-006",
+      "INS-007",
+      "INS-008",
+      "TGM-001",
+      "TGM-002",
+      "TGM-003",
+      "TGM-004",
+      "TGM-005",
+      "TGM-006",
+      "TGM-007",
+      "TGM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "customer-state",
+    "label": "Customer Graph & consent",
+    "group": "customers",
+    "route": "/customer-state",
+    "description": "Configure evidence-based identity linking, preferences and journey state.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "customer_ref",
+        "label": "Customer reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "operation",
+        "label": "Operation",
+        "type": "select",
+        "default": "update_preferences",
+        "required": true,
+        "description": "Operation for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "update_preferences",
+          "link_verified_identity",
+          "revoke_consent",
+          "review_memory"
+        ]
+      },
+      {
+        "name": "identity_evidence_ref",
+        "label": "Verified identity evidence reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "purpose",
+        "label": "Allowed purpose",
+        "type": "select",
+        "default": "support",
+        "required": true,
+        "description": "Allowed purpose for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "support",
+          "appointment",
+          "marketing",
+          "transactional"
+        ]
+      },
+      {
+        "name": "consent_state",
+        "label": "Consent state",
+        "type": "select",
+        "default": "unknown",
+        "required": true,
+        "description": "Consent state for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "unknown",
+          "granted",
+          "revoked"
+        ]
+      },
+      {
+        "name": "channels",
+        "label": "Allowed channels",
+        "type": "multiselect",
+        "default": [],
+        "required": false,
+        "description": "Allowed channels for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "whatsapp",
+          "instagram",
+          "messenger",
+          "telegram",
+          "email",
+          "sms",
+          "webchat",
+          "rcs"
+        ]
+      },
+      {
+        "name": "memory_policy",
+        "label": "Memory policy",
+        "type": "select",
+        "default": "none",
+        "required": true,
+        "description": "Memory policy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "none",
+          "authorized_summary",
+          "authorized_history"
+        ]
+      },
+      {
+        "name": "policy_version",
+        "label": "Policy version",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "reason",
+        "label": "Change reason",
+        "type": "textarea",
+        "default": "",
+        "required": true,
+        "description": "Change reason for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      }
+    ],
+    "domains": [
+      "CUS"
+    ],
+    "sourceSection": "\u00a723.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "contacts"
+    ],
+    "workPackageIds": [
+      "CUS-001",
+      "CUS-002",
+      "CUS-003",
+      "CUS-004",
+      "CUS-005",
+      "CUS-006",
+      "CUS-007",
+      "CUS-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "audiences",
+    "label": "Audience & schedule controls",
+    "group": "growth",
+    "route": "/audiences",
+    "description": "Describe immutable audiences, quiet hours, frequency caps and suppression.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Audience name",
+        "type": "text",
+        "default": "Opted-in appointments",
+        "required": true,
+        "description": "Audience name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "segment_ref",
+        "label": "Segment reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "snapshot_ref",
+        "label": "Immutable audience snapshot",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "filters",
+        "label": "Filter rules",
+        "type": "json",
+        "default": {
+          "operator": "and",
+          "conditions": []
+        },
+        "required": true,
+        "description": "Filter rules for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "timezone",
+        "label": "IANA timezone",
+        "type": "text",
+        "default": "Asia/Kolkata",
+        "required": true,
+        "description": "IANA timezone for this configuration. Validated again by the backend before execution.",
+        "typeHint": "iana-timezone"
+      },
+      {
+        "name": "quiet_hours_start",
+        "label": "Quiet hours start",
+        "type": "time",
+        "default": "21:00",
+        "required": true,
+        "description": "Quiet hours start for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "quiet_hours_end",
+        "label": "Quiet hours end",
+        "type": "time",
+        "default": "09:00",
+        "required": true,
+        "description": "Quiet hours end for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "max_per_contact_per_day",
+        "label": "Per-contact daily limit",
+        "type": "number",
+        "default": 1,
+        "required": true,
+        "description": "Per-contact daily limit for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "exclude_opt_out",
+        "label": "Exclude opt-out contacts",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Exclude opt-out contacts for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "CMP",
+      "CUS"
+    ],
+    "sourceSection": "\u00a723.1",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "customer-state",
+      "campaigns"
+    ],
+    "workPackageIds": [
+      "CUS-001",
+      "CUS-002",
+      "CUS-003",
+      "CUS-004",
+      "CUS-005",
+      "CUS-006",
+      "CUS-007",
+      "CUS-008",
+      "CMP-001",
+      "CMP-002",
+      "CMP-003",
+      "CMP-004",
+      "CMP-005",
+      "CMP-006",
+      "CMP-007",
+      "CMP-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "ai-policy",
+    "label": "AI models & routing",
+    "group": "ai",
+    "route": "/ai-policy",
+    "description": "Define model order, bounded fallbacks, local endpoint references and cost limits. No keys are stored in the browser.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Routing policy name",
+        "type": "text",
+        "default": "Support assistant",
+        "required": true,
+        "description": "Routing policy name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "provider",
+        "label": "Primary provider",
+        "type": "select",
+        "default": "tenant_model_gateway",
+        "required": true,
+        "description": "Primary provider for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "tenant_model_gateway",
+          "local_model_gateway"
+        ]
+      },
+      {
+        "name": "primary_model_ref",
+        "label": "Primary model reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "fallback_model_refs",
+        "label": "Ordered fallback model references",
+        "type": "json",
+        "default": [],
+        "required": true,
+        "description": "Ordered fallback model references for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "credential_ref",
+        "label": "Server-held credential reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "max_fallbacks",
+        "label": "Maximum fallback attempts",
+        "type": "number",
+        "default": 1,
+        "required": true,
+        "description": "Maximum fallback attempts for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "timeout_ms",
+        "label": "Timeout (milliseconds)",
+        "type": "number",
+        "default": 15000,
+        "required": true,
+        "description": "Timeout (milliseconds) for this configuration. Validated again by the backend before execution.",
+        "min": 1000,
+        "max": 120000
+      },
+      {
+        "name": "max_output_tokens",
+        "label": "Output token limit",
+        "type": "number",
+        "default": 1000,
+        "required": true,
+        "description": "Output token limit for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 16000
+      },
+      {
+        "name": "daily_budget_minor",
+        "label": "Daily cost limit (minor units)",
+        "type": "number",
+        "default": 10000,
+        "required": true,
+        "description": "Daily cost limit (minor units) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 100000000
+      },
+      {
+        "name": "tool_autonomy",
+        "label": "Tool autonomy",
+        "type": "select",
+        "default": "suggest_only",
+        "required": true,
+        "description": "Tool autonomy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "suggest_only",
+          "approval_required",
+          "policy_bounded"
+        ]
+      },
+      {
+        "name": "cross_tenant_reuse",
+        "label": "Cross-tenant reuse (prohibited)",
+        "type": "boolean",
+        "default": false,
+        "required": false,
+        "description": "Cross-tenant reuse (prohibited) for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "AIG"
+    ],
+    "sourceSection": "\u00a721",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "policy-studio"
+    ],
+    "workPackageIds": [
+      "AIG-001",
+      "AIG-002",
+      "AIG-003",
+      "AIG-004",
+      "AIG-005",
+      "AIG-006",
+      "AIG-007",
+      "AIG-008",
+      "AIG-009",
+      "AIG-010",
+      "AIG-011",
+      "AIG-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "knowledge",
+    "label": "Knowledge & retrieval",
+    "group": "ai",
+    "route": "/knowledge",
+    "description": "Configure source references, access controls, retrieval and cache invalidation.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Knowledge collection name",
+        "type": "text",
+        "default": "Support knowledge",
+        "required": true,
+        "description": "Knowledge collection name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "source_type",
+        "label": "Source type",
+        "type": "select",
+        "default": "file_reference",
+        "required": true,
+        "description": "Source type for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "file_reference",
+          "website_reference",
+          "connector_reference"
+        ]
+      },
+      {
+        "name": "source_ref",
+        "label": "Source reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "acl_policy_ref",
+        "label": "Access policy reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "retrieval_mode",
+        "label": "Retrieval mode",
+        "type": "select",
+        "default": "hybrid",
+        "required": true,
+        "description": "Retrieval mode for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "hybrid",
+          "keyword",
+          "vector"
+        ]
+      },
+      {
+        "name": "top_k",
+        "label": "Maximum retrieved passages",
+        "type": "number",
+        "default": 5,
+        "required": true,
+        "description": "Maximum retrieved passages for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 30
+      },
+      {
+        "name": "chunk_size",
+        "label": "Chunk size (tokens)",
+        "type": "number",
+        "default": 500,
+        "required": true,
+        "description": "Chunk size (tokens) for this configuration. Validated again by the backend before execution.",
+        "min": 100,
+        "max": 2000
+      },
+      {
+        "name": "overlap",
+        "label": "Chunk overlap (tokens)",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "description": "Chunk overlap (tokens) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 500
+      },
+      {
+        "name": "citations_required",
+        "label": "Require citations",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Require citations for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "cache_ttl_seconds",
+        "label": "Scoped cache TTL (seconds)",
+        "type": "number",
+        "default": 3600,
+        "required": true,
+        "description": "Scoped cache TTL (seconds) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 86400
+      },
+      {
+        "name": "knowledge_version",
+        "label": "Knowledge version",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "AIG"
+    ],
+    "sourceSection": "\u00a721.2\u201321.4",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "ai-policy"
+    ],
+    "workPackageIds": [
+      "AIG-001",
+      "AIG-002",
+      "AIG-003",
+      "AIG-004",
+      "AIG-005",
+      "AIG-006",
+      "AIG-007",
+      "AIG-008",
+      "AIG-009",
+      "AIG-010",
+      "AIG-011",
+      "AIG-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "ai-evaluations",
+    "label": "AI evaluations",
+    "group": "ai",
+    "route": "/ai-evaluations",
+    "description": "Describe tenant-isolated test sets, safety thresholds and approval gates.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "agent_ref",
+        "label": "Agent reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "dataset_ref",
+        "label": "Approved evaluation dataset",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "prompt_version",
+        "label": "Prompt version",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "minimum_grounded_score",
+        "label": "Minimum grounded score (%)",
+        "type": "number",
+        "default": 90,
+        "required": true,
+        "description": "Minimum grounded score (%) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 100
+      },
+      {
+        "name": "maximum_cost_minor",
+        "label": "Maximum test cost (minor units)",
+        "type": "number",
+        "default": 1000,
+        "required": true,
+        "description": "Maximum test cost (minor units) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 1000000
+      },
+      {
+        "name": "release_policy",
+        "label": "Release policy",
+        "type": "select",
+        "default": "review_required",
+        "required": true,
+        "description": "Release policy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "review_required",
+          "block_on_failure"
+        ]
+      },
+      {
+        "name": "reviewer_ref",
+        "label": "Approver reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "AIG"
+    ],
+    "sourceSection": "\u00a721",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "knowledge"
+    ],
+    "workPackageIds": [
+      "AIG-001",
+      "AIG-002",
+      "AIG-003",
+      "AIG-004",
+      "AIG-005",
+      "AIG-006",
+      "AIG-007",
+      "AIG-008",
+      "AIG-009",
+      "AIG-010",
+      "AIG-011",
+      "AIG-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "connector-studio",
+    "label": "Connector Studio",
+    "group": "connect",
+    "route": "/connector-studio",
+    "description": "Describe OAuth/OpenAPI/HTTP integrations. Imports and connectivity checks remain server responsibilities.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Connector name",
+        "type": "text",
+        "default": "Appointment service",
+        "required": true,
+        "description": "Connector name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "kind",
+        "label": "Connector type",
+        "type": "select",
+        "default": "oauth",
+        "required": true,
+        "description": "Connector type for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "oauth",
+          "openapi",
+          "http",
+          "private_agent"
+        ]
+      },
+      {
+        "name": "base_url",
+        "label": "Public API base URL",
+        "type": "url",
+        "default": "https://api.example.com",
+        "required": true,
+        "description": "Public API base URL for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "credential_ref",
+        "label": "Server credential reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "method",
+        "label": "HTTP method",
+        "type": "select",
+        "default": "GET",
+        "required": true,
+        "description": "HTTP method for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "GET",
+          "POST",
+          "PUT",
+          "PATCH",
+          "DELETE"
+        ]
+      },
+      {
+        "name": "operation_path",
+        "label": "Operation path",
+        "type": "text",
+        "default": "/appointments",
+        "required": true,
+        "description": "Operation path for this configuration. Validated again by the backend before execution.",
+        "pattern": "^/[A-Za-z0-9_/{}/.:-]*$"
+      },
+      {
+        "name": "input_schema",
+        "label": "Input schema",
+        "type": "json",
+        "default": {
+          "type": "object",
+          "properties": {}
+        },
+        "required": true,
+        "description": "Input schema for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "timeout_ms",
+        "label": "Timeout (milliseconds)",
+        "type": "number",
+        "default": 10000,
+        "required": true,
+        "description": "Timeout (milliseconds) for this configuration. Validated again by the backend before execution.",
+        "min": 1000,
+        "max": 60000
+      },
+      {
+        "name": "side_effect_class",
+        "label": "Side-effect class",
+        "type": "select",
+        "default": "read",
+        "required": true,
+        "description": "Side-effect class for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "read",
+          "write",
+          "financial",
+          "destructive"
+        ]
+      },
+      {
+        "name": "approval_required",
+        "label": "Human approval required",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Human approval required for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "INT"
+    ],
+    "sourceSection": "\u00a722.1\u201322.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": {
+      "status": "proposed",
+      "method": "POST",
+      "path": "/v1/connectors/imports",
+      "execution": "disabled_until_server_contract_verified"
+    },
+    "dependencies": [
+      "policy-studio"
+    ],
+    "workPackageIds": [
+      "INT-001",
+      "INT-002",
+      "INT-003",
+      "INT-004",
+      "INT-005",
+      "INT-006",
+      "INT-007",
+      "INT-008",
+      "INT-009",
+      "INT-010",
+      "INT-011",
+      "INT-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "webhooks",
+    "label": "Webhooks & deliveries",
+    "group": "connect",
+    "route": "/webhooks",
+    "description": "Configure subscriptions and inspect replay intent without sending network requests.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Endpoint name",
+        "type": "text",
+        "default": "CRM events",
+        "required": true,
+        "description": "Endpoint name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "url",
+        "label": "HTTPS callback URL",
+        "type": "url",
+        "default": "https://hooks.example.com/events",
+        "required": true,
+        "description": "HTTPS callback URL for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "events",
+        "label": "Subscribed events",
+        "type": "multiselect",
+        "default": [
+          "message.updated"
+        ],
+        "required": true,
+        "description": "Subscribed events for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "message.updated",
+          "mission.completed",
+          "action.verified",
+          "contact.updated",
+          "delivery.failed"
+        ]
+      },
+      {
+        "name": "signing_secret_ref",
+        "label": "Server signing-secret reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "timeout_ms",
+        "label": "Timeout (milliseconds)",
+        "type": "number",
+        "default": 5000,
+        "required": true,
+        "description": "Timeout (milliseconds) for this configuration. Validated again by the backend before execution.",
+        "min": 1000,
+        "max": 30000
+      },
+      {
+        "name": "max_attempts",
+        "label": "Maximum attempts",
+        "type": "number",
+        "default": 5,
+        "required": true,
+        "description": "Maximum attempts for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 10
+      },
+      {
+        "name": "replay_window_seconds",
+        "label": "Replay window (seconds)",
+        "type": "number",
+        "default": 300,
+        "required": true,
+        "description": "Replay window (seconds) for this configuration. Validated again by the backend before execution.",
+        "min": 30,
+        "max": 900
+      },
+      {
+        "name": "require_business_ack",
+        "label": "Require separate business acknowledgement",
+        "type": "boolean",
+        "default": false,
+        "required": false,
+        "description": "Require separate business acknowledgement for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "WHK"
+    ],
+    "sourceSection": "\u00a716",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": {
+      "status": "proposed",
+      "method": "POST",
+      "path": "/v1/webhook-endpoints",
+      "execution": "disabled_until_server_contract_verified"
+    },
+    "dependencies": [
+      "workspace-access"
+    ],
+    "workPackageIds": [
+      "WHK-001",
+      "WHK-002",
+      "WHK-003",
+      "WHK-004",
+      "WHK-005",
+      "WHK-006",
+      "WHK-007",
+      "WHK-008",
+      "WHK-009",
+      "WHK-010"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "developer-center",
+    "label": "Developer Center",
+    "group": "connect",
+    "route": "/developer-center",
+    "description": "Prepare versioned service identities, scopes, sandbox requests and event subscriptions.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Service identity name",
+        "type": "text",
+        "default": "CRM integration",
+        "required": true,
+        "description": "Service identity name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "scopes",
+        "label": "Requested scopes",
+        "type": "multiselect",
+        "default": [
+          "messages:read"
+        ],
+        "required": true,
+        "description": "Requested scopes for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "messages:read",
+          "messages:write",
+          "missions:read",
+          "missions:write",
+          "contacts:read",
+          "webhooks:manage"
+        ]
+      },
+      {
+        "name": "environment",
+        "label": "Target environment",
+        "type": "select",
+        "default": "sandbox",
+        "required": true,
+        "description": "Target environment for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "sandbox",
+          "production"
+        ]
+      },
+      {
+        "name": "expiry_days",
+        "label": "Credential expiry (days)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Credential expiry (days) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 365
+      },
+      {
+        "name": "owner_ref",
+        "label": "Owner reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "mcp_policy_ref",
+        "label": "MCP policy reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "read_only",
+        "label": "Read-only access",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Read-only access for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "DEV"
+    ],
+    "sourceSection": "\u00a722.3",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "workspace-access"
+    ],
+    "workPackageIds": [
+      "DEV-001",
+      "DEV-002",
+      "DEV-003",
+      "DEV-004",
+      "DEV-005",
+      "DEV-006",
+      "DEV-007",
+      "DEV-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "business-studio",
+    "label": "Forms, commerce & bookings",
+    "group": "business",
+    "route": "/business-studio",
+    "description": "Define business module handoffs using references; no payment or booking is executed.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Business flow name",
+        "type": "text",
+        "default": "Appointment request",
+        "required": true,
+        "description": "Business flow name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "module",
+        "label": "Business module",
+        "type": "select",
+        "default": "appointment",
+        "required": true,
+        "description": "Business module for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "appointment",
+          "form",
+          "order",
+          "payment",
+          "deal",
+          "task"
+        ]
+      },
+      {
+        "name": "connector_ref",
+        "label": "Authorized connector reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "resource_ref",
+        "label": "Calendar/catalog/pipeline reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "timezone",
+        "label": "IANA timezone",
+        "type": "text",
+        "default": "Asia/Kolkata",
+        "required": true,
+        "description": "IANA timezone for this configuration. Validated again by the backend before execution.",
+        "typeHint": "iana-timezone"
+      },
+      {
+        "name": "duration_minutes",
+        "label": "Appointment duration (minutes)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Appointment duration (minutes) for this configuration. Validated again by the backend before execution.",
+        "min": 5,
+        "max": 480
+      },
+      {
+        "name": "amount_minor",
+        "label": "Payment amount (minor units)",
+        "type": "number",
+        "default": 0,
+        "required": true,
+        "description": "Payment amount (minor units) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 100000000
+      },
+      {
+        "name": "currency",
+        "label": "Currency",
+        "type": "select",
+        "default": "INR",
+        "required": true,
+        "description": "Currency for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "INR",
+          "USD",
+          "EUR",
+          "GBP"
+        ]
+      },
+      {
+        "name": "confirmation_required",
+        "label": "Require confirmation",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Require confirmation for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "cancellation_policy",
+        "label": "Cancellation/compensation policy",
+        "type": "textarea",
+        "default": "Route uncertain results to a human reviewer.",
+        "required": true,
+        "description": "Cancellation/compensation policy for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      }
+    ],
+    "domains": [
+      "COM"
+    ],
+    "sourceSection": "\u00a723.3\u201323.4",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "connector-studio"
+    ],
+    "workPackageIds": [
+      "COM-001",
+      "COM-002",
+      "COM-003",
+      "COM-004",
+      "COM-005",
+      "COM-006",
+      "COM-007",
+      "COM-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "voice-studio",
+    "label": "Calling configuration",
+    "group": "business",
+    "route": "/voice-studio",
+    "description": "Capture eligibility, consent, recording policy and handoff. A visible form does not enable calling.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "provider",
+        "label": "Calling adapter",
+        "type": "select",
+        "default": "whatsapp_business",
+        "required": true,
+        "description": "Calling adapter for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "whatsapp_business",
+          "sip",
+          "exotel",
+          "twilio"
+        ]
+      },
+      {
+        "name": "connection_ref",
+        "label": "Connection reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "direction",
+        "label": "Direction",
+        "type": "select",
+        "default": "user_initiated",
+        "required": true,
+        "description": "Direction for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "user_initiated",
+          "business_initiated"
+        ]
+      },
+      {
+        "name": "permission_evidence_ref",
+        "label": "Call permission evidence",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "recording_policy",
+        "label": "Recording policy",
+        "type": "select",
+        "default": "disabled",
+        "required": true,
+        "description": "Recording policy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "disabled",
+          "explicit_consent_only"
+        ]
+      },
+      {
+        "name": "max_duration_seconds",
+        "label": "Maximum duration (seconds)",
+        "type": "number",
+        "default": 1800,
+        "required": true,
+        "description": "Maximum duration (seconds) for this configuration. Validated again by the backend before execution.",
+        "min": 30,
+        "max": 14400
+      },
+      {
+        "name": "fallback_queue_ref",
+        "label": "Human queue reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "transcription_enabled",
+        "label": "Propose consented transcription",
+        "type": "boolean",
+        "default": false,
+        "required": false,
+        "description": "Propose consented transcription for this configuration. Validated again by the backend before execution."
+      }
+    ],
+    "domains": [
+      "VOC"
+    ],
+    "sourceSection": "\u00a724.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "channel-center",
+      "policy-studio"
+    ],
+    "workPackageIds": [
+      "VOC-001",
+      "VOC-002",
+      "VOC-003",
+      "VOC-004",
+      "VOC-005",
+      "VOC-006"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "support-center",
+    "label": "Support & diagnostics",
+    "group": "business",
+    "route": "/support-center",
+    "description": "Prepare a support request with scoped, redacted evidence. No ticket is submitted by this frontend-only draft.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "subject",
+        "label": "Subject",
+        "type": "text",
+        "default": "Connection readiness review",
+        "required": true,
+        "description": "Subject for this configuration. Validated again by the backend before execution.",
+        "maxLength": 160
+      },
+      {
+        "name": "severity",
+        "label": "Severity",
+        "type": "select",
+        "default": "low",
+        "required": true,
+        "description": "Severity for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "low",
+          "medium",
+          "high",
+          "critical"
+        ]
+      },
+      {
+        "name": "category",
+        "label": "Category",
+        "type": "select",
+        "default": "setup",
+        "required": true,
+        "description": "Category for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "setup",
+          "delivery",
+          "automation",
+          "billing",
+          "security"
+        ]
+      },
+      {
+        "name": "description",
+        "label": "Description",
+        "type": "textarea",
+        "default": "",
+        "required": true,
+        "description": "Description for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "request_ref",
+        "label": "Related request reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "evidence_ref",
+        "label": "Redacted evidence bundle reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "access_mode",
+        "label": "Support access",
+        "type": "select",
+        "default": "no_access",
+        "required": true,
+        "description": "Support access for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "no_access",
+          "time_boxed_read_only"
+        ]
+      },
+      {
+        "name": "access_expiry_minutes",
+        "label": "Support access expiry (minutes)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Support access expiry (minutes) for this configuration. Validated again by the backend before execution.",
+        "min": 5,
+        "max": 240
+      }
+    ],
+    "domains": [
+      "SUP"
+    ],
+    "sourceSection": "\u00a726",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "workspace-access"
+    ],
+    "workPackageIds": [
+      "SUP-001",
+      "SUP-002",
+      "SUP-003",
+      "SUP-004",
+      "SUP-005",
+      "SUP-006",
+      "SUP-007",
+      "SUP-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "billing-controls",
+    "label": "Usage & budget controls",
+    "group": "manage",
+    "route": "/billing-controls",
+    "description": "Configure entitlements and usage views without computing a real bill or charging customers.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "plan_ref",
+        "label": "Plan reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "currency",
+        "label": "Currency",
+        "type": "select",
+        "default": "INR",
+        "required": true,
+        "description": "Currency for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "INR",
+          "USD",
+          "EUR",
+          "GBP"
+        ]
+      },
+      {
+        "name": "monthly_budget_minor",
+        "label": "Monthly budget (minor units)",
+        "type": "number",
+        "default": 100000,
+        "required": true,
+        "description": "Monthly budget (minor units) for this configuration. Validated again by the backend before execution.",
+        "min": 0,
+        "max": 100000000
+      },
+      {
+        "name": "alert_threshold_percent",
+        "label": "Budget alert threshold (%)",
+        "type": "number",
+        "default": 80,
+        "required": true,
+        "description": "Budget alert threshold (%) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 100
+      },
+      {
+        "name": "usage_view",
+        "label": "Usage evidence",
+        "type": "select",
+        "default": "provisional",
+        "required": true,
+        "description": "Usage evidence for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "provisional",
+          "reconciled"
+        ]
+      },
+      {
+        "name": "over_limit_policy",
+        "label": "Over-limit policy",
+        "type": "select",
+        "default": "block_new_actions",
+        "required": true,
+        "description": "Over-limit policy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "block_new_actions",
+          "request_approval"
+        ]
+      },
+      {
+        "name": "billing_owner_ref",
+        "label": "Billing owner reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "BIL"
+    ],
+    "sourceSection": "\u00a725",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "subscriptions"
+    ],
+    "workPackageIds": [
+      "BIL-001",
+      "BIL-002",
+      "BIL-003",
+      "BIL-004",
+      "BIL-005",
+      "BIL-006",
+      "BIL-007",
+      "BIL-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "workspace-access",
+    "label": "Workspace & access policies",
+    "group": "manage",
+    "route": "/workspace-access",
+    "description": "Define non-secret workspace configuration; all authority remains server-verified.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Workspace name",
+        "type": "text",
+        "default": "Customer operations",
+        "required": true,
+        "description": "Workspace name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "timezone",
+        "label": "IANA timezone",
+        "type": "text",
+        "default": "Asia/Kolkata",
+        "required": true,
+        "description": "IANA timezone for this configuration. Validated again by the backend before execution.",
+        "typeHint": "iana-timezone"
+      },
+      {
+        "name": "locale",
+        "label": "Locale",
+        "type": "select",
+        "default": "en-IN",
+        "required": true,
+        "description": "Locale for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "en-IN",
+          "en-US",
+          "en-GB"
+        ]
+      },
+      {
+        "name": "environment",
+        "label": "Environment",
+        "type": "select",
+        "default": "sandbox",
+        "required": true,
+        "description": "Environment for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "sandbox",
+          "production"
+        ]
+      },
+      {
+        "name": "default_role",
+        "label": "Default invited role",
+        "type": "select",
+        "default": "viewer",
+        "required": true,
+        "description": "Default invited role for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "viewer",
+          "agent"
+        ]
+      },
+      {
+        "name": "mfa_required",
+        "label": "Require MFA",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Require MFA for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "session_idle_minutes",
+        "label": "Idle session timeout (minutes)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Idle session timeout (minutes) for this configuration. Validated again by the backend before execution.",
+        "min": 5,
+        "max": 1440
+      },
+      {
+        "name": "identity_provider_ref",
+        "label": "Identity provider reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "PLT"
+    ],
+    "sourceSection": "\u00a710 and \u00a728.1",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "PLT-001",
+      "PLT-002",
+      "PLT-003",
+      "PLT-004",
+      "PLT-005",
+      "PLT-006",
+      "PLT-007",
+      "PLT-008",
+      "PLT-009",
+      "PLT-010",
+      "PLT-011",
+      "PLT-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "security-center",
+    "label": "Security & governance",
+    "group": "manage",
+    "route": "/security-center",
+    "description": "Prepare policy changes with reason and evidence; UI permissions are not security enforcement.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Security policy name",
+        "type": "text",
+        "default": "Workspace baseline",
+        "required": true,
+        "description": "Security policy name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "mfa_required",
+        "label": "Require MFA",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Require MFA for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "retention_days",
+        "label": "Retention (days)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Retention (days) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 3650
+      },
+      {
+        "name": "data_use",
+        "label": "AI data-use policy",
+        "type": "select",
+        "default": "no_training",
+        "required": true,
+        "description": "AI data-use policy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "no_training",
+          "tenant_evaluation_only"
+        ]
+      },
+      {
+        "name": "export_policy",
+        "label": "Export policy",
+        "type": "select",
+        "default": "admin_approval",
+        "required": true,
+        "description": "Export policy for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "admin_approval",
+          "disabled"
+        ]
+      },
+      {
+        "name": "pii_redaction",
+        "label": "Redact diagnostic data",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Redact diagnostic data for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "change_reason",
+        "label": "Change reason",
+        "type": "textarea",
+        "default": "",
+        "required": true,
+        "description": "Change reason for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "approval_ref",
+        "label": "Approval reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "SEC"
+    ],
+    "sourceSection": "\u00a728",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "workspace-access"
+    ],
+    "workPackageIds": [
+      "SEC-001",
+      "SEC-002",
+      "SEC-003",
+      "SEC-004",
+      "SEC-005",
+      "SEC-006",
+      "SEC-007",
+      "SEC-008",
+      "SEC-009",
+      "SEC-010",
+      "SEC-011",
+      "SEC-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "data-lifecycle",
+    "label": "Retention & data requests",
+    "group": "manage",
+    "route": "/data-lifecycle",
+    "description": "Prepare export or erasure requests and legal-hold checks. Nothing is deleted in this UI.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "request_type",
+        "label": "Request type",
+        "type": "select",
+        "default": "export",
+        "required": true,
+        "description": "Request type for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "export",
+          "erasure",
+          "disconnect",
+          "retention_change"
+        ]
+      },
+      {
+        "name": "subject_ref",
+        "label": "Subject/resource reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "resources",
+        "label": "Resource classes",
+        "type": "multiselect",
+        "default": [
+          "contacts"
+        ],
+        "required": true,
+        "description": "Resource classes for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "contacts",
+          "messages",
+          "media",
+          "knowledge",
+          "audit"
+        ]
+      },
+      {
+        "name": "purpose",
+        "label": "Purpose and authority",
+        "type": "textarea",
+        "default": "",
+        "required": true,
+        "description": "Purpose and authority for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      },
+      {
+        "name": "legal_hold_reviewed",
+        "label": "Legal hold reviewed",
+        "type": "boolean",
+        "default": false,
+        "required": false,
+        "description": "Legal hold reviewed for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "retention_days",
+        "label": "Requested retention (days)",
+        "type": "number",
+        "default": 30,
+        "required": true,
+        "description": "Requested retention (days) for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 3650
+      },
+      {
+        "name": "approval_ref",
+        "label": "Approval reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      }
+    ],
+    "domains": [
+      "DAT",
+      "SEC"
+    ],
+    "sourceSection": "\u00a727",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": {
+      "status": "proposed",
+      "method": "POST",
+      "path": "/v1/data-requests",
+      "execution": "disabled_until_server_contract_verified"
+    },
+    "dependencies": [
+      "security-center"
+    ],
+    "workPackageIds": [
+      "DAT-001",
+      "DAT-002",
+      "DAT-003",
+      "DAT-004",
+      "DAT-005",
+      "DAT-006",
+      "DAT-007",
+      "DAT-008",
+      "DAT-009",
+      "DAT-010",
+      "SEC-001",
+      "SEC-002",
+      "SEC-003",
+      "SEC-004",
+      "SEC-005",
+      "SEC-006",
+      "SEC-007",
+      "SEC-008",
+      "SEC-009",
+      "SEC-010",
+      "SEC-011",
+      "SEC-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "operations",
+    "label": "System health & operations",
+    "group": "manage",
+    "route": "/operations",
+    "description": "Prepare a diagnostic view definition; do not label an unqueried system as healthy.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "view",
+        "label": "View",
+        "type": "select",
+        "default": "channel_health",
+        "required": true,
+        "description": "View for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "channel_health",
+          "execution_backlog",
+          "delivery_failures",
+          "audit",
+          "incident",
+          "release_gate"
+        ]
+      },
+      {
+        "name": "correlation_ref",
+        "label": "Correlation reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "from",
+        "label": "From (with timezone)",
+        "type": "datetime",
+        "default": "",
+        "required": false,
+        "description": "From (with timezone) for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "to",
+        "label": "To (with timezone)",
+        "type": "datetime",
+        "default": "",
+        "required": false,
+        "description": "To (with timezone) for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "limit",
+        "label": "Maximum records",
+        "type": "number",
+        "default": 50,
+        "required": true,
+        "description": "Maximum records for this configuration. Validated again by the backend before execution.",
+        "min": 1,
+        "max": 200
+      },
+      {
+        "name": "health",
+        "label": "Evidence state",
+        "type": "select",
+        "default": "unknown",
+        "required": true,
+        "description": "Evidence state for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "unknown",
+          "degraded",
+          "unavailable",
+          "healthy"
+        ]
+      },
+      {
+        "name": "reason",
+        "label": "Diagnostic reason",
+        "type": "textarea",
+        "default": "Review observed evidence before taking action.",
+        "required": true,
+        "description": "Diagnostic reason for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      }
+    ],
+    "domains": [
+      "OPS",
+      "EVT"
+    ],
+    "sourceSection": "\u00a729\u201330",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "security-center"
+    ],
+    "workPackageIds": [
+      "EVT-001",
+      "EVT-002",
+      "EVT-003",
+      "EVT-004",
+      "EVT-005",
+      "EVT-006",
+      "EVT-007",
+      "EVT-008",
+      "EVT-009",
+      "EVT-010",
+      "EVT-011",
+      "EVT-012",
+      "OPS-001",
+      "OPS-002",
+      "OPS-003",
+      "OPS-004",
+      "OPS-005",
+      "OPS-006",
+      "OPS-007",
+      "OPS-008",
+      "OPS-009",
+      "OPS-010",
+      "OPS-011",
+      "OPS-012"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "agency-center",
+    "label": "Agency & marketplace",
+    "group": "manage",
+    "route": "/agency-center",
+    "description": "Describe tenant memberships and package review while preserving explicit tenant boundaries.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [
+      {
+        "name": "name",
+        "label": "Agency/package name",
+        "type": "text",
+        "default": "Customer operations agency",
+        "required": true,
+        "description": "Agency/package name for this configuration. Validated again by the backend before execution.",
+        "maxLength": 120
+      },
+      {
+        "name": "mode",
+        "label": "Operation",
+        "type": "select",
+        "default": "tenant_membership",
+        "required": true,
+        "description": "Operation for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "tenant_membership",
+          "branding",
+          "package_submission",
+          "reseller_plan"
+        ]
+      },
+      {
+        "name": "tenant_ref",
+        "label": "Authorized tenant reference",
+        "type": "text",
+        "default": "",
+        "required": true,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "package_ref",
+        "label": "Package reference",
+        "type": "text",
+        "default": "",
+        "required": false,
+        "description": "Opaque resource reference. Do not enter passwords, access tokens, API keys or personal data.",
+        "maxLength": 128,
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+      },
+      {
+        "name": "access_level",
+        "label": "Access level",
+        "type": "select",
+        "default": "read_only",
+        "required": true,
+        "description": "Access level for this configuration. Validated again by the backend before execution.",
+        "options": [
+          "read_only",
+          "delegated_management"
+        ]
+      },
+      {
+        "name": "approval_required",
+        "label": "Require tenant-owner approval",
+        "type": "boolean",
+        "default": true,
+        "required": false,
+        "description": "Require tenant-owner approval for this configuration. Validated again by the backend before execution."
+      },
+      {
+        "name": "purpose",
+        "label": "Delegation purpose",
+        "type": "textarea",
+        "default": "",
+        "required": true,
+        "description": "Delegation purpose for this configuration. Validated again by the backend before execution.",
+        "maxLength": 4000
+      }
+    ],
+    "domains": [
+      "ECO"
+    ],
+    "sourceSection": "\u00a736 ECO",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [
+      "workspace-access"
+    ],
+    "workPackageIds": [
+      "ECO-001",
+      "ECO-002",
+      "ECO-003",
+      "ECO-004",
+      "ECO-005",
+      "ECO-006",
+      "ECO-007",
+      "ECO-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "implemented_frontend_schema"
+  },
+  {
+    "id": "implementation",
+    "label": "Implementation Center",
+    "group": "delivery",
+    "route": "/implementation",
+    "description": "All 262 exact work packages, dependencies, acceptance criteria, code locations and parameter contracts.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "fields": [],
+    "domains": [
+      "GOV",
+      "PLT",
+      "DAT",
+      "EVT",
+      "WHA",
+      "INS",
+      "TGM",
+      "MSG",
+      "WHK",
+      "CUS",
+      "MIS",
+      "WFL",
+      "ACT",
+      "SIM",
+      "AIG",
+      "INT",
+      "DEV",
+      "UX",
+      "CMP",
+      "COM",
+      "VOC",
+      "SUP",
+      "BIL",
+      "SEC",
+      "OPS",
+      "QAT",
+      "ECO"
+    ],
+    "sourceSection": "\u00a736\u201337",
+    "component": "src/features/implementation/ImplementationCenter.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "contract": null,
+    "dependencies": [],
+    "workPackageIds": [
+      "GOV-001",
+      "GOV-002",
+      "GOV-003",
+      "GOV-004",
+      "GOV-005",
+      "GOV-006",
+      "GOV-007",
+      "PLT-001",
+      "PLT-002",
+      "PLT-003",
+      "PLT-004",
+      "PLT-005",
+      "PLT-006",
+      "PLT-007",
+      "PLT-008",
+      "PLT-009",
+      "PLT-010",
+      "PLT-011",
+      "PLT-012",
+      "DAT-001",
+      "DAT-002",
+      "DAT-003",
+      "DAT-004",
+      "DAT-005",
+      "DAT-006",
+      "DAT-007",
+      "DAT-008",
+      "DAT-009",
+      "DAT-010",
+      "EVT-001",
+      "EVT-002",
+      "EVT-003",
+      "EVT-004",
+      "EVT-005",
+      "EVT-006",
+      "EVT-007",
+      "EVT-008",
+      "EVT-009",
+      "EVT-010",
+      "EVT-011",
+      "EVT-012",
+      "WHA-001",
+      "WHA-002",
+      "WHA-003",
+      "WHA-004",
+      "WHA-005",
+      "WHA-006",
+      "WHA-007",
+      "WHA-008",
+      "WHA-009",
+      "WHA-010",
+      "WHA-011",
+      "WHA-012",
+      "INS-001",
+      "INS-002",
+      "INS-003",
+      "INS-004",
+      "INS-005",
+      "INS-006",
+      "INS-007",
+      "INS-008",
+      "TGM-001",
+      "TGM-002",
+      "TGM-003",
+      "TGM-004",
+      "TGM-005",
+      "TGM-006",
+      "TGM-007",
+      "TGM-008",
+      "MSG-001",
+      "MSG-002",
+      "MSG-003",
+      "MSG-004",
+      "MSG-005",
+      "MSG-006",
+      "MSG-007",
+      "MSG-008",
+      "MSG-009",
+      "MSG-010",
+      "MSG-011",
+      "MSG-012",
+      "WHK-001",
+      "WHK-002",
+      "WHK-003",
+      "WHK-004",
+      "WHK-005",
+      "WHK-006",
+      "WHK-007",
+      "WHK-008",
+      "WHK-009",
+      "WHK-010",
+      "CUS-001",
+      "CUS-002",
+      "CUS-003",
+      "CUS-004",
+      "CUS-005",
+      "CUS-006",
+      "CUS-007",
+      "CUS-008",
+      "MIS-001",
+      "MIS-002",
+      "MIS-003",
+      "MIS-004",
+      "MIS-005",
+      "MIS-006",
+      "MIS-007",
+      "MIS-008",
+      "MIS-009",
+      "WFL-001",
+      "WFL-002",
+      "WFL-003",
+      "WFL-004",
+      "WFL-005",
+      "WFL-006",
+      "WFL-007",
+      "WFL-008",
+      "WFL-009",
+      "WFL-010",
+      "WFL-011",
+      "WFL-012",
+      "ACT-001",
+      "ACT-002",
+      "ACT-003",
+      "ACT-004",
+      "ACT-005",
+      "ACT-006",
+      "ACT-007",
+      "ACT-008",
+      "ACT-009",
+      "ACT-010",
+      "SIM-001",
+      "SIM-002",
+      "SIM-003",
+      "SIM-004",
+      "SIM-005",
+      "SIM-006",
+      "SIM-007",
+      "SIM-008",
+      "AIG-001",
+      "AIG-002",
+      "AIG-003",
+      "AIG-004",
+      "AIG-005",
+      "AIG-006",
+      "AIG-007",
+      "AIG-008",
+      "AIG-009",
+      "AIG-010",
+      "AIG-011",
+      "AIG-012",
+      "INT-001",
+      "INT-002",
+      "INT-003",
+      "INT-004",
+      "INT-005",
+      "INT-006",
+      "INT-007",
+      "INT-008",
+      "INT-009",
+      "INT-010",
+      "INT-011",
+      "INT-012",
+      "DEV-001",
+      "DEV-002",
+      "DEV-003",
+      "DEV-004",
+      "DEV-005",
+      "DEV-006",
+      "DEV-007",
+      "DEV-008",
+      "UX-001",
+      "UX-002",
+      "UX-003",
+      "UX-004",
+      "UX-005",
+      "UX-006",
+      "UX-007",
+      "UX-008",
+      "UX-009",
+      "UX-010",
+      "CMP-001",
+      "CMP-002",
+      "CMP-003",
+      "CMP-004",
+      "CMP-005",
+      "CMP-006",
+      "CMP-007",
+      "CMP-008",
+      "COM-001",
+      "COM-002",
+      "COM-003",
+      "COM-004",
+      "COM-005",
+      "COM-006",
+      "COM-007",
+      "COM-008",
+      "VOC-001",
+      "VOC-002",
+      "VOC-003",
+      "VOC-004",
+      "VOC-005",
+      "VOC-006",
+      "SUP-001",
+      "SUP-002",
+      "SUP-003",
+      "SUP-004",
+      "SUP-005",
+      "SUP-006",
+      "SUP-007",
+      "SUP-008",
+      "BIL-001",
+      "BIL-002",
+      "BIL-003",
+      "BIL-004",
+      "BIL-005",
+      "BIL-006",
+      "BIL-007",
+      "BIL-008",
+      "SEC-001",
+      "SEC-002",
+      "SEC-003",
+      "SEC-004",
+      "SEC-005",
+      "SEC-006",
+      "SEC-007",
+      "SEC-008",
+      "SEC-009",
+      "SEC-010",
+      "SEC-011",
+      "SEC-012",
+      "OPS-001",
+      "OPS-002",
+      "OPS-003",
+      "OPS-004",
+      "OPS-005",
+      "OPS-006",
+      "OPS-007",
+      "OPS-008",
+      "OPS-009",
+      "OPS-010",
+      "OPS-011",
+      "OPS-012",
+      "QAT-001",
+      "QAT-002",
+      "QAT-003",
+      "QAT-004",
+      "QAT-005",
+      "QAT-006",
+      "QAT-007",
+      "QAT-008",
+      "QAT-009",
+      "QAT-010",
+      "QAT-011",
+      "QAT-012",
+      "ECO-001",
+      "ECO-002",
+      "ECO-003",
+      "ECO-004",
+      "ECO-005",
+      "ECO-006",
+      "ECO-007",
+      "ECO-008"
+    ],
+    "implementationSteps": [
+      "Confirm the source requirement and exact acceptance test.",
+      "Review the browser parameters and shared scope contract.",
+      "Implement or verify the server adapter without changing the page contract.",
+      "Add loading, empty, invalid, forbidden, pending, conflict and failure fixtures.",
+      "Run contract, role, route, keyboard and responsive tests.",
+      "Attach evidence before advancing the parent work package."
+    ],
+    "states": [
+      "draft",
+      "invalid",
+      "loading",
+      "empty",
+      "forbidden",
+      "pending",
+      "conflict",
+      "failed",
+      "unknown"
+    ],
+    "scope": {
+      "tenant": "server_verified",
+      "workspace": "server_verified",
+      "environment": "server_verified",
+      "user": "server_verified",
+      "authority": "UI values do not establish authorization"
+    },
+    "fieldSchemaStatus": "existing_component_contract_inventory"
+  }
+]

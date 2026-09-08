@@ -1,0 +1,38 @@
+[
+  {
+    "id": "workspace",
+    "label": "Workspace"
+  },
+  {
+    "id": "customers",
+    "label": "Customers & conversations"
+  },
+  {
+    "id": "growth",
+    "label": "Missions & growth"
+  },
+  {
+    "id": "automation",
+    "label": "Automation & trust"
+  },
+  {
+    "id": "ai",
+    "label": "AI workforce"
+  },
+  {
+    "id": "connect",
+    "label": "Channels & integrations"
+  },
+  {
+    "id": "business",
+    "label": "Business operations"
+  },
+  {
+    "id": "manage",
+    "label": "Workspace management"
+  },
+  {
+    "id": "delivery",
+    "label": "Implementation"
+  }
+]

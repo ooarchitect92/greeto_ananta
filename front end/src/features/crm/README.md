@@ -1,0 +1,12 @@
+# crm frontend ownership
+
+| Feature | Route | Component |
+|---|---|---|
+| Labels | `/labels` | `src/features/crm/LabelsPage.jsx` |
+| Sales pipeline | `/opportunities` | `src/features/crm/OpportunitiesPage.jsx` |
+| Lead stages | `/lead-stages` | `src/features/crm/LeadStagesPage.jsx` |
+| Lead statuses | `/lead-status` | `src/features/crm/LeadStatusPage.jsx` |
+
+Shared contracts live in `src/contracts/`; execution is owned by a separately authorized backend. `api.js` is the domain facade over the preserved adapter at `src/services/api/legacy.js`. Its functions are source-inventoried, not live-reverified.
+
+See `docs/FEATURE_MAP.md`, `docs/PARAMETERS.md`, `docs/COMPONENT_INVENTORY.md`, and `docs/IMPLEMENTATION_ORDER.md` for exact ownership, parameters and source work packages.

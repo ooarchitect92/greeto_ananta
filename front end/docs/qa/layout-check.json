@@ -1,0 +1,41 @@
+{
+  "kind": "static HTML fixture using the actual shared CSS; not a React runtime, feature behavior, accessibility conformance or production build test",
+  "viewports": [
+    {
+      "viewport": 375,
+      "documentWidth": 375,
+      "mainClient": 375,
+      "mainScroll": 375,
+      "columns": "305px",
+      "height": 950,
+      "passed": true
+    },
+    {
+      "viewport": 768,
+      "documentWidth": 768,
+      "mainClient": 546,
+      "mainScroll": 546,
+      "columns": "213px 213px",
+      "height": 1024,
+      "passed": true
+    },
+    {
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "mainClient": 1192,
+      "mainScroll": 1192,
+      "columns": "368px 368px",
+      "height": 1050,
+      "passed": true
+    },
+    {
+      "viewport": 1920,
+      "documentWidth": 1920,
+      "mainClient": 1672,
+      "mainScroll": 1672,
+      "columns": "533px 533px",
+      "height": 1080,
+      "passed": true
+    }
+  ]
+}

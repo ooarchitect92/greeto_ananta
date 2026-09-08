@@ -1,0 +1,1289 @@
+[
+  {
+    "id": "dashboard",
+    "label": "Dashboard",
+    "group": "workspace",
+    "route": "/dashboard",
+    "description": "Workspace overview and operational metrics.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "sourceSection": "§1.2",
+    "component": "src/features/dashboard/DashboardPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 3
+  },
+  {
+    "id": "getting-started",
+    "label": "Getting started",
+    "group": "workspace",
+    "route": "/getting-started",
+    "description": "Guided setup and onboarding.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§10",
+    "component": "src/features/onboarding/GettingStartedPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "inbox",
+    "label": "Unified inbox",
+    "group": "customers",
+    "route": "/inbox",
+    "description": "Existing conversation timeline, assignment, notes and customer context.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "sourceSection": "§13",
+    "component": "src/features/inbox/Inbox.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 7
+  },
+  {
+    "id": "contacts",
+    "label": "Contacts",
+    "group": "customers",
+    "route": "/contacts",
+    "description": "Existing contact directory, search, filters and imports.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.2",
+    "component": "src/features/contacts/ContactsEntry.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 4
+  },
+  {
+    "id": "labels",
+    "label": "Labels",
+    "group": "customers",
+    "route": "/labels",
+    "description": "Shared customer and conversation labels.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.2",
+    "component": "src/features/crm/LabelsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "opportunities",
+    "label": "Sales pipeline",
+    "group": "customers",
+    "route": "/opportunities",
+    "description": "Existing opportunities and pipeline stages.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.2",
+    "component": "src/features/crm/OpportunitiesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "lead-stages",
+    "label": "Lead stages",
+    "group": "customers",
+    "route": "/lead-stages",
+    "description": "Configure pipeline stages.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.2",
+    "component": "src/features/crm/LeadStagesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "lead-status",
+    "label": "Lead statuses",
+    "group": "customers",
+    "route": "/lead-status",
+    "description": "Configure lead status taxonomy.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.2",
+    "component": "src/features/crm/LeadStatusPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "campaigns",
+    "label": "Campaigns",
+    "group": "growth",
+    "route": "/campaigns",
+    "description": "Existing campaign management and creation.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.1",
+    "component": "src/features/campaigns/CampaignsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 6
+  },
+  {
+    "id": "templates",
+    "label": "WhatsApp templates",
+    "group": "growth",
+    "route": "/templates",
+    "description": "Existing reusable message templates.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§11",
+    "component": "src/features/content/TemplatesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "email-templates",
+    "label": "Email templates",
+    "group": "growth",
+    "route": "/email-templates",
+    "description": "Existing email content editor.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.1",
+    "component": "src/features/content/EmailTemplatesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "workflows",
+    "label": "Workflow builder",
+    "group": "automation",
+    "route": "/workflows",
+    "description": "Existing visual workflow editor and board.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§18",
+    "component": "src/features/automation/WorkflowsKanban.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 5
+  },
+  {
+    "id": "sequences",
+    "label": "Sequences",
+    "group": "automation",
+    "route": "/sequences",
+    "description": "Existing multi-step sequences.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§18",
+    "component": "src/features/automation/SequencesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "rules",
+    "label": "Automation rules",
+    "group": "automation",
+    "route": "/rules",
+    "description": "Existing trigger and routing rules.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§18",
+    "component": "src/features/automation/RulesPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "flows",
+    "label": "WhatsApp Flows",
+    "group": "automation",
+    "route": "/flows",
+    "description": "Existing channel-specific interactive flow builder.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§17.3",
+    "component": "src/features/whatsapp-flows/FlowsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "ai-agent",
+    "label": "AI agents",
+    "group": "ai",
+    "route": "/ai-agent",
+    "description": "Existing AI agent configuration.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§21",
+    "component": "src/features/ai-agent/AiAgentPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "integrations",
+    "label": "Connected integrations",
+    "group": "connect",
+    "route": "/integrations",
+    "description": "Existing provider configuration; account readiness requires server evidence.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§22",
+    "component": "src/features/settings/SettingsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "instagram",
+    "label": "Instagram inbox",
+    "group": "connect",
+    "route": "/instagram",
+    "description": "Preserved legacy channel view; unified timeline is the target architecture.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§13",
+    "component": "src/features/channels/InstagramPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "telegram",
+    "label": "Telegram inbox",
+    "group": "connect",
+    "route": "/telegram",
+    "description": "Preserved legacy channel view.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§13",
+    "component": "src/features/channels/TelegramPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "sms",
+    "label": "SMS inbox",
+    "group": "connect",
+    "route": "/sms",
+    "description": "Preserved legacy SMS view.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§13",
+    "component": "src/features/channels/SmsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "email",
+    "label": "Email inbox",
+    "group": "connect",
+    "route": "/email",
+    "description": "Preserved legacy email view.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§13",
+    "component": "src/features/channels/EmailPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "calls",
+    "label": "Call history",
+    "group": "business",
+    "route": "/calls",
+    "description": "Existing calling interface; availability is provider-dependent.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§24",
+    "component": "src/features/voice/CallsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "gallery",
+    "label": "Media library",
+    "group": "business",
+    "route": "/gallery",
+    "description": "Existing media gallery and attachment picker.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§24.1",
+    "component": "src/features/media/GalleryPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "reports",
+    "label": "Reports",
+    "group": "business",
+    "route": "/reports",
+    "description": "Existing workflow and workspace reports.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§25",
+    "component": "src/features/reports/ReportsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "subscriptions",
+    "label": "Subscription & invoices",
+    "group": "manage",
+    "route": "/subscriptions",
+    "description": "Existing plan and billing page.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§25",
+    "component": "src/features/billing/SubscriptionsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "team",
+    "label": "Teams",
+    "group": "manage",
+    "route": "/team",
+    "description": "Existing team management screen, distinct from workspace members.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§10",
+    "component": "src/features/workforce/TeamPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "team-members",
+    "label": "Team members",
+    "group": "manage",
+    "route": "/team-members",
+    "description": "Existing team management.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§10",
+    "component": "src/features/workforce/TeamMembersPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "settings",
+    "label": "Workspace settings",
+    "group": "manage",
+    "route": "/settings",
+    "description": "Existing workspace configuration.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "sourceSection": "§10",
+    "component": "src/features/settings/SettingsPage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "profile",
+    "label": "My profile",
+    "group": "manage",
+    "route": "/profile",
+    "description": "Existing account profile.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin",
+      "agent",
+      "source_agent",
+      "sales_person",
+      "sales_manager",
+      "team_lead",
+      "viewer"
+    ],
+    "sourceSection": "§10",
+    "component": "src/features/settings/ProfilePage.jsx",
+    "uiStatus": "existing_screen",
+    "serverStatus": "legacy_integration_unverified",
+    "dependencies": [],
+    "parameterCount": 0
+  },
+  {
+    "id": "missions",
+    "label": "Mission Studio",
+    "group": "growth",
+    "route": "/missions",
+    "description": "Define an objective, audience, success evidence, allowed actions and budget before compilation.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§17.1–17.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "channel-center",
+      "policy-studio"
+    ],
+    "parameterCount": 12
+  },
+  {
+    "id": "experiences",
+    "label": "Experience Studio",
+    "group": "growth",
+    "route": "/experiences",
+    "description": "Design channel-native fields and fallback behavior without claiming provider support.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§17.3",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "missions",
+      "channel-center"
+    ],
+    "parameterCount": 8
+  },
+  {
+    "id": "journey-twin",
+    "label": "Journey Twin",
+    "group": "automation",
+    "route": "/journey-twin",
+    "description": "Configure deterministic synthetic scenarios. No real providers, customers, network or business outcomes.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§20.1–20.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "missions"
+    ],
+    "parameterCount": 6
+  },
+  {
+    "id": "change-radar",
+    "label": "Change Radar & Workflow Doctor",
+    "group": "automation",
+    "route": "/change-radar",
+    "description": "Describe capability changes and proposed repairs; automatic production rollout is not enabled.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§20.3",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "journey-twin",
+      "channel-center"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "policy-studio",
+    "label": "Policy Studio",
+    "group": "automation",
+    "route": "/policy-studio",
+    "description": "Author action policy inputs, consent, budget and approval requirements.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§19",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "workspace-access"
+    ],
+    "parameterCount": 9
+  },
+  {
+    "id": "approvals",
+    "label": "Approvals & human tasks",
+    "group": "automation",
+    "route": "/approvals",
+    "description": "Prepare a decision bound to an exact action version and input hash; submitting decisions requires the server.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§19",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "policy-studio"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "action-receipts",
+    "label": "Action receipts",
+    "group": "automation",
+    "route": "/action-receipts",
+    "description": "Keep transport acceptance, provider acceptance, delivery and verified business success separate.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§9 and §19",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "policy-studio"
+    ],
+    "parameterCount": 6
+  },
+  {
+    "id": "channel-center",
+    "label": "Channel Control Center",
+    "group": "connect",
+    "route": "/channel-center",
+    "description": "Plan onboarding and record readiness evidence per channel; connection status is never fabricated.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§11",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "workspace-access"
+    ],
+    "parameterCount": 9
+  },
+  {
+    "id": "customer-state",
+    "label": "Customer Graph & consent",
+    "group": "customers",
+    "route": "/customer-state",
+    "description": "Configure evidence-based identity linking, preferences and journey state.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "contacts"
+    ],
+    "parameterCount": 9
+  },
+  {
+    "id": "audiences",
+    "label": "Audience & schedule controls",
+    "group": "growth",
+    "route": "/audiences",
+    "description": "Describe immutable audiences, quiet hours, frequency caps and suppression.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.1",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "customer-state",
+      "campaigns"
+    ],
+    "parameterCount": 9
+  },
+  {
+    "id": "ai-policy",
+    "label": "AI models & routing",
+    "group": "ai",
+    "route": "/ai-policy",
+    "description": "Define model order, bounded fallbacks, local endpoint references and cost limits. No keys are stored in the browser.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§21",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "policy-studio"
+    ],
+    "parameterCount": 11
+  },
+  {
+    "id": "knowledge",
+    "label": "Knowledge & retrieval",
+    "group": "ai",
+    "route": "/knowledge",
+    "description": "Configure source references, access controls, retrieval and cache invalidation.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§21.2–21.4",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "ai-policy"
+    ],
+    "parameterCount": 11
+  },
+  {
+    "id": "ai-evaluations",
+    "label": "AI evaluations",
+    "group": "ai",
+    "route": "/ai-evaluations",
+    "description": "Describe tenant-isolated test sets, safety thresholds and approval gates.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§21",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "knowledge"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "connector-studio",
+    "label": "Connector Studio",
+    "group": "connect",
+    "route": "/connector-studio",
+    "description": "Describe OAuth/OpenAPI/HTTP integrations. Imports and connectivity checks remain server responsibilities.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§22.1–22.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "policy-studio"
+    ],
+    "parameterCount": 10
+  },
+  {
+    "id": "webhooks",
+    "label": "Webhooks & deliveries",
+    "group": "connect",
+    "route": "/webhooks",
+    "description": "Configure subscriptions and inspect replay intent without sending network requests.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§16",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "workspace-access"
+    ],
+    "parameterCount": 8
+  },
+  {
+    "id": "developer-center",
+    "label": "Developer Center",
+    "group": "connect",
+    "route": "/developer-center",
+    "description": "Prepare versioned service identities, scopes, sandbox requests and event subscriptions.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§22.3",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "workspace-access"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "business-studio",
+    "label": "Forms, commerce & bookings",
+    "group": "business",
+    "route": "/business-studio",
+    "description": "Define business module handoffs using references; no payment or booking is executed.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§23.3–23.4",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "connector-studio"
+    ],
+    "parameterCount": 10
+  },
+  {
+    "id": "voice-studio",
+    "label": "Calling configuration",
+    "group": "business",
+    "route": "/voice-studio",
+    "description": "Capture eligibility, consent, recording policy and handoff. A visible form does not enable calling.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§24.2",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "channel-center",
+      "policy-studio"
+    ],
+    "parameterCount": 8
+  },
+  {
+    "id": "support-center",
+    "label": "Support & diagnostics",
+    "group": "business",
+    "route": "/support-center",
+    "description": "Prepare a support request with scoped, redacted evidence. No ticket is submitted by this frontend-only draft.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§26",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "workspace-access"
+    ],
+    "parameterCount": 8
+  },
+  {
+    "id": "billing-controls",
+    "label": "Usage & budget controls",
+    "group": "manage",
+    "route": "/billing-controls",
+    "description": "Configure entitlements and usage views without computing a real bill or charging customers.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§25",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "subscriptions"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "workspace-access",
+    "label": "Workspace & access policies",
+    "group": "manage",
+    "route": "/workspace-access",
+    "description": "Define non-secret workspace configuration; all authority remains server-verified.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§10 and §28.1",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [],
+    "parameterCount": 8
+  },
+  {
+    "id": "security-center",
+    "label": "Security & governance",
+    "group": "manage",
+    "route": "/security-center",
+    "description": "Prepare policy changes with reason and evidence; UI permissions are not security enforcement.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§28",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "workspace-access"
+    ],
+    "parameterCount": 8
+  },
+  {
+    "id": "data-lifecycle",
+    "label": "Retention & data requests",
+    "group": "manage",
+    "route": "/data-lifecycle",
+    "description": "Prepare export or erasure requests and legal-hold checks. Nothing is deleted in this UI.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§27",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "security-center"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "operations",
+    "label": "System health & operations",
+    "group": "manage",
+    "route": "/operations",
+    "description": "Prepare a diagnostic view definition; do not label an unqueried system as healthy.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§29–30",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "security-center"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "agency-center",
+    "label": "Agency & marketplace",
+    "group": "manage",
+    "route": "/agency-center",
+    "description": "Describe tenant memberships and package review while preserving explicit tenant boundaries.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§36 ECO",
+    "component": "src/features/studio/FeatureStudioPage.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [
+      "workspace-access"
+    ],
+    "parameterCount": 7
+  },
+  {
+    "id": "implementation",
+    "label": "Implementation Center",
+    "group": "delivery",
+    "route": "/implementation",
+    "description": "All 262 exact work packages, dependencies, acceptance criteria, code locations and parameter contracts.",
+    "roles": [
+      "admin",
+      "super_admin",
+      "quality_manager",
+      "department_head",
+      "owner",
+      "tenant_admin",
+      "workspace_admin"
+    ],
+    "sourceSection": "§36–37",
+    "component": "src/features/implementation/ImplementationCenter.jsx",
+    "uiStatus": "frontend_configuration",
+    "serverStatus": "not_connected",
+    "dependencies": [],
+    "parameterCount": 0
+  }
+]

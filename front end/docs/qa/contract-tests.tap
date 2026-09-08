@@ -1,0 +1,422 @@
+
+> greeto-frontend@1.0.0 test:contracts
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: exact source IDs and navigation counts remain unique
+ok 1 - exact source IDs and navigation counts remain unique
+  ---
+  duration_ms: 4.788958
+  type: 'test'
+  ...
+# Subtest: all parent delivery statuses remain uncompleted
+ok 2 - all parent delivery statuses remain uncompleted
+  ---
+  duration_ms: 0.284253
+  type: 'test'
+  ...
+# Subtest: every source dependency resolves and dependency graph is acyclic
+ok 3 - every source dependency resolves and dependency graph is acyclic
+  ---
+  duration_ms: 1.097236
+  type: 'test'
+  ...
+# Subtest: dashboard: documented sample validates
+ok 4 - dashboard: documented sample validates
+  ---
+  duration_ms: 1.420556
+  type: 'test'
+  ...
+# Subtest: inbox: documented sample validates
+ok 5 - inbox: documented sample validates
+  ---
+  duration_ms: 0.451535
+  type: 'test'
+  ...
+# Subtest: contacts: documented sample validates
+ok 6 - contacts: documented sample validates
+  ---
+  duration_ms: 0.13874
+  type: 'test'
+  ...
+# Subtest: campaigns: documented sample validates
+ok 7 - campaigns: documented sample validates
+  ---
+  duration_ms: 58.571407
+  type: 'test'
+  ...
+# Subtest: workflows: documented sample validates
+ok 8 - workflows: documented sample validates
+  ---
+  duration_ms: 0.174443
+  type: 'test'
+  ...
+# Subtest: missions: documented sample validates
+ok 9 - missions: documented sample validates
+  ---
+  duration_ms: 0.825155
+  type: 'test'
+  ...
+# Subtest: experiences: documented sample validates
+ok 10 - experiences: documented sample validates
+  ---
+  duration_ms: 0.601617
+  type: 'test'
+  ...
+# Subtest: journey-twin: documented sample validates
+ok 11 - journey-twin: documented sample validates
+  ---
+  duration_ms: 0.223957
+  type: 'test'
+  ...
+# Subtest: change-radar: documented sample validates
+ok 12 - change-radar: documented sample validates
+  ---
+  duration_ms: 0.09511
+  type: 'test'
+  ...
+# Subtest: policy-studio: documented sample validates
+ok 13 - policy-studio: documented sample validates
+  ---
+  duration_ms: 0.101222
+  type: 'test'
+  ...
+# Subtest: approvals: documented sample validates
+ok 14 - approvals: documented sample validates
+  ---
+  duration_ms: 0.729543
+  type: 'test'
+  ...
+# Subtest: action-receipts: documented sample validates
+ok 15 - action-receipts: documented sample validates
+  ---
+  duration_ms: 0.107831
+  type: 'test'
+  ...
+# Subtest: channel-center: documented sample validates
+ok 16 - channel-center: documented sample validates
+  ---
+  duration_ms: 0.151531
+  type: 'test'
+  ...
+# Subtest: customer-state: documented sample validates
+ok 17 - customer-state: documented sample validates
+  ---
+  duration_ms: 0.08631
+  type: 'test'
+  ...
+# Subtest: audiences: documented sample validates
+ok 18 - audiences: documented sample validates
+  ---
+  duration_ms: 0.361783
+  type: 'test'
+  ...
+# Subtest: ai-policy: documented sample validates
+ok 19 - ai-policy: documented sample validates
+  ---
+  duration_ms: 0.116194
+  type: 'test'
+  ...
+# Subtest: knowledge: documented sample validates
+ok 20 - knowledge: documented sample validates
+  ---
+  duration_ms: 0.088881
+  type: 'test'
+  ...
+# Subtest: ai-evaluations: documented sample validates
+ok 21 - ai-evaluations: documented sample validates
+  ---
+  duration_ms: 0.07516
+  type: 'test'
+  ...
+# Subtest: connector-studio: documented sample validates
+ok 22 - connector-studio: documented sample validates
+  ---
+  duration_ms: 0.634704
+  type: 'test'
+  ...
+# Subtest: webhooks: documented sample validates
+ok 23 - webhooks: documented sample validates
+  ---
+  duration_ms: 0.221155
+  type: 'test'
+  ...
+# Subtest: developer-center: documented sample validates
+ok 24 - developer-center: documented sample validates
+  ---
+  duration_ms: 0.091429
+  type: 'test'
+  ...
+# Subtest: business-studio: documented sample validates
+ok 25 - business-studio: documented sample validates
+  ---
+  duration_ms: 0.220783
+  type: 'test'
+  ...
+# Subtest: voice-studio: documented sample validates
+ok 26 - voice-studio: documented sample validates
+  ---
+  duration_ms: 0.129477
+  type: 'test'
+  ...
+# Subtest: support-center: documented sample validates
+ok 27 - support-center: documented sample validates
+  ---
+  duration_ms: 0.133123
+  type: 'test'
+  ...
+# Subtest: billing-controls: documented sample validates
+ok 28 - billing-controls: documented sample validates
+  ---
+  duration_ms: 0.069797
+  type: 'test'
+  ...
+# Subtest: workspace-access: documented sample validates
+ok 29 - workspace-access: documented sample validates
+  ---
+  duration_ms: 0.175182
+  type: 'test'
+  ...
+# Subtest: security-center: documented sample validates
+ok 30 - security-center: documented sample validates
+  ---
+  duration_ms: 0.079317
+  type: 'test'
+  ...
+# Subtest: data-lifecycle: documented sample validates
+ok 31 - data-lifecycle: documented sample validates
+  ---
+  duration_ms: 0.087398
+  type: 'test'
+  ...
+# Subtest: operations: documented sample validates
+ok 32 - operations: documented sample validates
+  ---
+  duration_ms: 0.068943
+  type: 'test'
+  ...
+# Subtest: agency-center: documented sample validates
+ok 33 - agency-center: documented sample validates
+  ---
+  duration_ms: 0.070183
+  type: 'test'
+  ...
+# Subtest: required parameter and unknown fields rejected
+ok 34 - required parameter and unknown fields rejected
+  ---
+  duration_ms: 0.394366
+  type: 'test'
+  ...
+# Subtest: numeric bounds, nonnumeric, infinity and fractional whole numbers rejected
+ok 35 - numeric bounds, nonnumeric, infinity and fractional whole numbers rejected
+  ---
+  duration_ms: 0.698566
+  type: 'test'
+  ...
+# Subtest: select values and duplicate multiselect entries rejected
+ok 36 - select values and duplicate multiselect entries rejected
+  ---
+  duration_ms: 0.292618
+  type: 'test'
+  ...
+# Subtest: null and wrong primitive types are invalid
+ok 37 - null and wrong primitive types are invalid
+  ---
+  duration_ms: 0.282366
+  type: 'test'
+  ...
+# Subtest: prototype and raw secret JSON fields rejected
+ok 38 - prototype and raw secret JSON fields rejected
+  ---
+  duration_ms: 0.783939
+  type: 'test'
+  ...
+# Subtest: known private key pattern rejected
+ok 39 - known private key pattern rejected
+  ---
+  duration_ms: 0.092907
+  type: 'test'
+  ...
+# Subtest: JSON size and nesting bounded
+ok 40 - JSON size and nesting bounded
+  ---
+  duration_ms: 0.426326
+  type: 'test'
+  ...
+# Subtest: JSON primitives not accepted as schemas
+ok 41 - JSON primitives not accepted as schemas
+  ---
+  duration_ms: 1.276227
+  type: 'test'
+  ...
+# Subtest: webhook public HTTPS sanity checks
+ok 42 - webhook public HTTPS sanity checks
+  ---
+  duration_ms: 1.110221
+  type: 'test'
+  ...
+# Subtest: invalid IANA timezone rejected
+ok 43 - invalid IANA timezone rejected
+  ---
+  duration_ms: 1.006742
+  type: 'test'
+  ...
+# Subtest: ISO timestamp requires seconds and timezone
+ok 44 - ISO timestamp requires seconds and timezone
+  ---
+  duration_ms: 0.435935
+  type: 'test'
+  ...
+# Subtest: end date cannot precede start
+ok 45 - end date cannot precede start
+  ---
+  duration_ms: 0.202873
+  type: 'test'
+  ...
+# Subtest: approval digest bound to SHA256 hex representation
+ok 46 - approval digest bound to SHA256 hex representation
+  ---
+  duration_ms: 0.516716
+  type: 'test'
+  ...
+# Subtest: synthetic simulation cannot be switched to production
+ok 47 - synthetic simulation cannot be switched to production
+  ---
+  duration_ms: 0.114615
+  type: 'test'
+  ...
+# Subtest: opt-out exclusion cannot be bypassed
+ok 48 - opt-out exclusion cannot be bypassed
+  ---
+  duration_ms: 0.232525
+  type: 'test'
+  ...
+# Subtest: cross-tenant AI reuse not authorized
+ok 49 - cross-tenant AI reuse not authorized
+  ---
+  duration_ms: 0.1444
+  type: 'test'
+  ...
+# Subtest: ordered AI fallback references bounded and empty array allowed
+ok 50 - ordered AI fallback references bounded and empty array allowed
+  ---
+  duration_ms: 0.190364
+  type: 'test'
+  ...
+# Subtest: knowledge overlap smaller than chunk size
+ok 51 - knowledge overlap smaller than chunk size
+  ---
+  duration_ms: 0.086633
+  type: 'test'
+  ...
+# Subtest: identity linking requires evidence reference
+ok 52 - identity linking requires evidence reference
+  ---
+  duration_ms: 0.08984
+  type: 'test'
+  ...
+# Subtest: channel readiness requires connection and capability version
+ok 53 - channel readiness requires connection and capability version
+  ---
+  duration_ms: 0.10667
+  type: 'test'
+  ...
+# Subtest: observed receipt outcomes require evidence
+ok 54 - observed receipt outcomes require evidence
+  ---
+  duration_ms: 0.071227
+  type: 'test'
+  ...
+# Subtest: handoff stays a draft and makes no authority or success claims
+ok 55 - handoff stays a draft and makes no authority or success claims
+  ---
+  duration_ms: 0.214603
+  type: 'test'
+  ...
+# Subtest: invalid configurations cannot be exported
+ok 56 - invalid configurations cannot be exported
+  ---
+  duration_ms: 0.215611
+  type: 'test'
+  ...
+# Subtest: unknown role and missing role denied
+ok 57 - unknown role and missing role denied
+  ---
+  duration_ms: 0.075214
+  type: 'test'
+  ...
+# Subtest: navigation search respects role and hides restricted features
+ok 58 - navigation search respects role and hides restricted features
+  ---
+  duration_ms: 0.170334
+  type: 'test'
+  ...
+# Subtest: aliases and unknown routes explicit
+ok 59 - aliases and unknown routes explicit
+  ---
+  duration_ms: 0.227953
+  type: 'test'
+  ...
+# Subtest: task query identifies exact known work package only
+ok 60 - task query identifies exact known work package only
+  ---
+  duration_ms: 0.351518
+  type: 'test'
+  ...
+# Subtest: draft storage requires all four scope dimensions
+ok 61 - draft storage requires all four scope dimensions
+  ---
+  duration_ms: 0.226878
+  type: 'test'
+  ...
+# Subtest: session draft round-trip and all scope dimensions isolated
+ok 62 - session draft round-trip and all scope dimensions isolated
+  ---
+  duration_ms: 2.045036
+  type: 'test'
+  ...
+# Subtest: corrupt and unknown-schema drafts rejected
+ok 63 - corrupt and unknown-schema drafts rejected
+  ---
+  duration_ms: 0.389171
+  type: 'test'
+  ...
+# Subtest: unsafe JSON cannot be saved as a string parameter
+ok 64 - unsafe JSON cannot be saved as a string parameter
+  ---
+  duration_ms: 0.187483
+  type: 'test'
+  ...
+# Subtest: storage quota failure does not claim save
+ok 65 - storage quota failure does not claim save
+  ---
+  duration_ms: 1.150902
+  type: 'test'
+  ...
+# Subtest: clearing drafts only removes active user scope
+ok 66 - clearing drafts only removes active user scope
+  ---
+  duration_ms: 0.348825
+  type: 'test'
+  ...
+# Subtest: impossible dates do not normalize silently
+ok 67 - impossible dates do not normalize silently
+  ---
+  duration_ms: 0.144985
+  type: 'test'
+  ...
+# Subtest: draft arrays rejected before storage
+ok 68 - draft arrays rejected before storage
+  ---
+  duration_ms: 0.165681
+  type: 'test'
+  ...
+1..68
+# tests 68
+# suites 0
+# pass 68
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 235.938372

@@ -1,0 +1,178 @@
+[
+  {
+    "surface": "public_and_auth",
+    "route": "/",
+    "label": "Marketing landing",
+    "component": "src/features/marketing/LandingPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/login",
+    "label": "Customer login",
+    "component": "src/features/auth/LoginPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/customer/login",
+    "label": "Customer login alias",
+    "component": "src/features/auth/LoginPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/admin/login",
+    "label": "Admin login",
+    "component": "src/features/auth/LoginPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/signup",
+    "label": "Signup",
+    "component": "src/features/auth/SignupPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/reset-password",
+    "label": "Password reset",
+    "component": "src/features/auth/ResetPasswordPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/verify-email",
+    "label": "Email verification",
+    "component": "src/features/auth/VerifyEmailPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/accept-invite",
+    "label": "Invitation acceptance",
+    "component": "src/features/auth/InviteAcceptancePage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/privacy",
+    "label": "Privacy policy",
+    "component": "src/features/marketing/PrivacyPolicyPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "public_and_auth",
+    "route": "/terms",
+    "label": "Terms",
+    "component": "src/features/marketing/TermsPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "The root route serves the inbox when authenticated. Public/auth behavior remains in GreetoWorkspace."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/dashboard",
+    "label": "Dashboard",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/getting-started",
+    "label": "Getting Started",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/workspaces",
+    "label": "Workspaces",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/inbox-monitor",
+    "label": "Inbox Monitor",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/workflows",
+    "label": "Workflow Monitor",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/integrations",
+    "label": "Integrations",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/subscriptions",
+    "label": "Subscriptions",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/team-management",
+    "label": "Team Management",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/access-control",
+    "label": "Access Control",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/audit-logs",
+    "label": "Audit Logs",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/reports",
+    "label": "Reports",
+    "component": "src/features/admin/AdminPortal.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Kept inside the existing admin shell; this inventory does not grant access."
+  },
+  {
+    "surface": "admin",
+    "route": "/admin/settings",
+    "label": "Admin settings",
+    "component": "src/features/admin/AdminSettingsPage.jsx",
+    "status": "existing_screen_not_runtime_reverified",
+    "notes": "Existing explicit route in AdminPortal.normalizeAdminPath."
+  }
+]

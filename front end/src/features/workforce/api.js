@@ -1,0 +1,2 @@
+/** Stable feature facade over the original frontend API adapter. */
+export { createDepartment, createOrganizationTeam, createTeamUser, createWorkspaceInvite, deleteDepartment, deleteOrganizationTeam, deleteTeamUser, getLocalTeamUsers, getTeamOrganization, getTeamUsers, getWorkspaceInvites, getWorkspaceLoginPolicy, getWorkspaceMembers, resendWorkspaceInvite, revokeWorkspaceInvite, updateDepartment, updateOrganizationTeam, updateTeamUser, updateWorkspaceLoginPolicy, updateWorkspaceMemberRole, updateWorkspaceMemberStatus } from '../../services/api/legacy.js';

@@ -1,0 +1,49 @@
+{
+  "name": "greeto-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test --config playwright.frontend.config.js",
+    "test:e2e:run": "playwright test",
+    "dev:frontend": "vite --host 127.0.0.1 --port 5174 --open /frontend-preview",
+    "test:contracts": "node --test tests/*.test.mjs",
+    "audit:frontend": "node scripts/audit-frontend.mjs",
+    "test:e2e:legacy": "powershell -NoProfile -ExecutionPolicy Bypass -File ./e2e/run-e2e.ps1",
+    "check:frontend": "npm run audit:frontend && npm run test:contracts && npm run build",
+    "sync:navigation": "node scripts/sync-navigation.mjs"
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.10.0",
+    "axios": "^1.13.2",
+    "clsx": "^2.1.1",
+    "dagre": "^0.8.5",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-qr-code": "^2.0.18",
+    "recharts": "^3.7.0",
+    "socket.io-client": "^4.8.3",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@vitejs/plugin-react": "^5.1.2",
+    "autoprefixer": "^10.4.23",
+    "jsdom": "^30.0.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.3.1",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=24.15.0 <25 || >=26"
+  }
+}

@@ -1,0 +1,7 @@
+npm ci --no-audit --no-fund (original attempt)
+Node v22.16.0, npm 10.9.2
+Locked jsdom@30.0.1 requires ^22.22.2 || ^24.15.0 || >=26.0.0
+Locked undici@8.10.0 requires >=22.19.0
+Npm debug log recorded repeated registry.npmjs.org download EAI_AGAIN errors.
+Final npm error: Exit handler never called!
+Dependencies were not installed; no successful build is claimed.

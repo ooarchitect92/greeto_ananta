@@ -1,0 +1,5 @@
+
+> greeto-frontend@1.0.0 build
+> vite build
+
+sh: 1: vite: not found
