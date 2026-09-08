@@ -6,6 +6,7 @@ import { defaultValues, validateFeature, buildHandoff } from '../../shared/forms
 import { loadDraft, saveDraft, clearDraft, draftKey } from '../../shared/state/drafts.js';
 import { PageLayout, Notice, StatePage, downloadJson } from '../../shared/ui/PageLayout.jsx';
 import ParameterInput from './ParameterInput.jsx';
+import MetaSignupSetupPanel from '../channels/meta/MetaSignupSetupPanel.jsx';
 export default function FeatureStudioPage({featureId,scope,onNavigate,preview=false}) {
   const feature=schemas.find(f=>f.id===featureId);
   const [tab,setTab]=useState('configure'); const [values,setValues]=useState(()=>feature?defaultValues(feature):{});
@@ -39,6 +40,7 @@ export default function FeatureStudioPage({featureId,scope,onNavigate,preview=fa
     <div className="greeto-scope-strip"><span><strong>Tenant</strong>{scope?.tenantId||'Not provided'}</span><span><strong>Workspace</strong>{scope?.workspaceId||'Not provided'}</span><span><strong>Environment</strong>{scope?.environment||'Not provided'}</span><span><strong>Schema</strong>1.0 · Browser validation</span></div>
     {!completeScope&&<Notice kind="warning">Session draft storage is disabled until the existing session provides a complete tenant, workspace, environment and user scope. No scope is invented. Parameters may still be reviewed and exported without authorization claims.</Notice>}
     <div className="greeto-tabs" aria-label="Feature sections">{[['configure','Configure'],['parameters',`Parameters (${feature.fields.length})`],['implementation','Implementation']].map(([id,label])=><button type="button" key={id} aria-pressed={tab===id} onClick={()=>setTab(id)}>{label}</button>)}</div>
+    {featureId==='channel-center'&&tab==='configure'&&<MetaSignupSetupPanel/>}
     {notice&&<div className="greeto-feedback" role="status">{notice}</div>}
     {tab==='configure'&&<div className="greeto-studio-grid"><div className="greeto-card"><div className="greeto-card-heading"><h2>Configuration parameters</h2><span className="greeto-muted">Required fields are marked *</span></div>
       {Object.values(errors).some(Boolean)&&<div className="greeto-notice error" ref={errorRef} tabIndex={-1} role="alert"><strong>Check your parameters</strong><ul>{Object.entries(errors).filter(([,message])=>message).map(([key,message])=><li key={key}>{key}: {message}</li>)}</ul></div>}

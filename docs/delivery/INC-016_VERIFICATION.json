@@ -1,0 +1,46 @@
+{
+  "increment": "INC-016",
+  "passed": true,
+  "production_verified": false,
+  "publication": "not_determined_by_tests",
+  "node": "v22.16.0",
+  "typescript": "Version 5.8.3",
+  "tests": {
+    "tests": 82,
+    "pass": 82,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "strict_types": "passed",
+  "scope": "Pure producer and synthetic profile/presentation tests; no OAuth, provider, DB or browser",
+  "source_hashes": {
+    "backend/services/core/src/channels/meta/signup-configuration.ts": "84648b03d797c48a4636e5cdaa03e2d20302f033d32e8acda1fb5184441c8a75",
+    "backend/services/core/tests/meta-signup-configuration.test.mjs": "d7414056bc059c107f29c4998c5262488ead4b8de88d749d0b08f71daaa16e37",
+    "front end/tests/meta-signup-setup.test.mjs": "1505dfe9cc2eb1e40fec76058c93a4ff1fcac4ee322a6ee826d9d2bc30333945",
+    "front end/src/features/channels/meta/signup-setup-model.mjs": "00cdae58229cd06e8cd66201fd158f8cf00b6fe43dde5534e2e09dc44d6843d5",
+    "front end/src/features/channels/meta/MetaSignupSetupPanel.jsx": "36eca1e729eff5b1444905e439df970831d0469517d83b7f8d8835bd0502c57c",
+    "front end/src/features/studio/FeatureStudioPage.jsx": "7476e9d6267871b7e975c81fe59bb3d6d971ff6cdd23bf21f86d4ca3366b0473"
+  },
+  "base_commit": "46f39a844278f144c408918df49ccfb326e23a3f",
+  "test_breakdown": {
+    "backend": 50,
+    "frontend_and_composition": 32
+  },
+  "jsx_syntax": {
+    "passed": 2,
+    "method": "TypeScript createSourceFile parseDiagnostics only; no React render"
+  },
+  "upstream_commit": "14703a3e1fdba9bcf75b2360b00817b6fcc9f79b",
+  "pipeline_changed": false,
+  "runtime_connected": false,
+  "provider_docs_retrieval": "HTTP 429 for implementation and versions on 2026-09-09",
+  "remaining": [
+    "original PLT-008/EVT-003/PLT-001 prerequisites",
+    "authenticated host/registry and current provider-contract evidence",
+    "server attempt and callback/exchange/grant/binding lifecycle",
+    "current React build/browser/security/recovery acceptance"
+  ],
+  "frontend_standalone_tests": 32
+}

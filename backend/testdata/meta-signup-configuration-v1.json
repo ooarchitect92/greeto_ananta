@@ -1,0 +1,66 @@
+{
+  "description": "Synthetic fixtures, not live Meta IDs or approved version/eligibility evidence. Never load into runtime configuration.",
+  "context": {
+    "scope": {
+      "tenantId": "10000000-0000-0000-0000-000000000001",
+      "workspaceId": "20000000-0000-0000-0000-000000000002",
+      "environmentId": "30000000-0000-0000-0000-000000000003"
+    },
+    "actorId": "40000000-0000-0000-0000-000000000004",
+    "appRef": "synthetic-app",
+    "profileId": "synthetic-profile",
+    "profileRevision": 2,
+    "nowMs": 1788912000000
+  },
+  "profile": {
+    "schemaVersion": 1,
+    "scope": {
+      "tenantId": "10000000-0000-0000-0000-000000000001",
+      "workspaceId": "20000000-0000-0000-0000-000000000002",
+      "environmentId": "30000000-0000-0000-0000-000000000003"
+    },
+    "appRef": "synthetic-app",
+    "profileId": "synthetic-profile",
+    "profileRevision": 2,
+    "appId": "100000000000000001",
+    "configId": "200000000000000002",
+    "graphApiVersion": "v24.0",
+    "signupVersion": "v4",
+    "featureType": "",
+    "features": [],
+    "enabled": true,
+    "evidence": {
+      "status": "verified",
+      "sourceRef": "synthetic-evidence-only",
+      "reviewedAtMs": 1788911999000,
+      "expiresAtMs": 1788912060000
+    }
+  },
+  "expected": {
+    "schemaVersion": 1,
+    "status": "prepared",
+    "execution": "not_requested",
+    "scope": {
+      "tenantId": "10000000-0000-0000-0000-000000000001",
+      "workspaceId": "20000000-0000-0000-0000-000000000002",
+      "environmentId": "30000000-0000-0000-0000-000000000003"
+    },
+    "appRef": "synthetic-app",
+    "profileId": "synthetic-profile",
+    "profileRevision": 2,
+    "appId": "100000000000000001",
+    "graphApiVersion": "v24.0",
+    "checkedAtMs": 1788912000000,
+    "expiresAtMs": 1788912060000,
+    "loginOptions": {
+      "config_id": "200000000000000002",
+      "response_type": "code",
+      "override_default_response_type": true,
+      "extras": {
+        "sessionInfoVersion": "3",
+        "version": "v4",
+        "features": []
+      }
+    }
+  }
+}
