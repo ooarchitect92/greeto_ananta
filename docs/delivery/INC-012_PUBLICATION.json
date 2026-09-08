@@ -1,0 +1,105 @@
+{
+  "increment": "INC-012",
+  "date": "2026-09-08",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "750da6f5595bae03dde8d63bd2084d51501c9b92",
+  "source_commit": "f3913e0dfd5158d058f86f101a4d6aba0f852278",
+  "source_tree": "bc102d8fce0936e5bb0bd2628a3f96bd0e962d6a",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/sdk/python/greeto_webhooks/event.py",
+      "bytes": 8229,
+      "sha": "c58a6d23935719814b85d716de13388cb5835845",
+      "sha256": "348c08a4f5e2cb1e7347577a4a8285742434d055744dd73ab94b1a2c4be08878"
+    },
+    {
+      "path": "backend/sdk/python/test_event.py",
+      "bytes": 5589,
+      "sha": "92e7807c3609c90c4fdac547cd8b897486275dfc",
+      "sha256": "44268b73a4ce37c62bbfec82b52174de77c4c9a837cecb502dd3d1599b22efd4"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.d.mts",
+      "bytes": 1419,
+      "sha": "1989eec96f1a7c7727759ce622a63f052ed98e3d",
+      "sha256": "1b89b3a2fdfc68f16a5fc77b734bf05b75b8d58313948244559d4a2737de9a5c"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.mjs",
+      "bytes": 6948,
+      "sha": "39498c067c3033f8b0578bb710e101c7ae298138",
+      "sha256": "1c9277ea1d8cec4156bafbfdc3a5aa775648dfbe2be2f662fc0e3074dad1cff4"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.test.mjs",
+      "bytes": 5583,
+      "sha": "38d34f8598f2f833e25d529a3311ee310a743ccf",
+      "sha256": "cb637ebec50b142b1b6c39f8ff2b40c725ac781f2bc41eda08de7ea1ad6c1efa"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.types.mts",
+      "bytes": 1175,
+      "sha": "e5b34ac33ac41cbf6e6d18ec69da2cfd296b7339",
+      "sha256": "9741468934133f4e5ad1f996a305d3ecebbd8a3e430046f7f623b9cb0dac3304"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/sdk_conformance_test.go",
+      "bytes": 3623,
+      "sha": "380f912316fd495224d2960b1c7a26c6b7d90200",
+      "sha256": "0478adb3ebc4fd225aec97a9d869f132a30203acaaa5779ddc6afe94f943997e"
+    },
+    {
+      "path": "backend/testdata/webhook-event-v1.json",
+      "bytes": 19238,
+      "sha": "b3b907dc8058282498fc50e8b12c4ee9c25e227d",
+      "sha256": "8bc59aa52547808610edf49ffc005723b51cc0293a9e213e9e8b2c241fb5dedc"
+    },
+    {
+      "path": "docs/delivery/INC-012_SDK_EVENT_BINDING.md",
+      "bytes": 9691,
+      "sha": "fd1d13c27046a43d5b84ae6067b1cb3aa838ff58",
+      "sha256": "61ed52665043c8a82f582cae7d064e25e8de77a8d838e3f3337033e494e9c5c0"
+    },
+    {
+      "path": "docs/delivery/INC-012_VERIFICATION.json",
+      "bytes": 3057,
+      "sha": "e9286ad5577fbd08b836ad68b3e3b08f49ae8998",
+      "sha256": "7b46abde4c05a1a1d24bc0fddbce1d66d376ae48f0ded2feb25964ec1fe51213"
+    },
+    {
+      "path": "tools/check_webhook_sdk_events.py",
+      "bytes": 5937,
+      "sha": "36da4ec5e363cc1df99108db90a7ec6571b0ea76",
+      "sha256": "fbcda648c46ef520600e29ee046982f99a3ed0e4cfc20ab421e3cc3d3657fd9e"
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 11,
+    "unexpected_paths": 0,
+    "shared_vectors": 74,
+    "go_tests": 74,
+    "node_tests": 86,
+    "python_tests": 86,
+    "language_specific_tests": 24,
+    "total_test_executions": 246,
+    "failed": 0,
+    "cross_language_outputs": "identical",
+    "go_race": "passed",
+    "go_vet": "passed",
+    "strict_typescript": "passed",
+    "pipeline_order_changed": false,
+    "runtime_deployed": false,
+    "parent_tasks_certified": 0
+  },
+  "remaining": [
+    "Full receiver schema/subscription/object authorization",
+    "Durable receiver replay ledger and HTTP host",
+    "Production SDK distribution, generated clients and independent review",
+    "Full earlier frontend/media import and React/browser acceptance",
+    "Database/Kafka/KMS/backups/deployment qualification"
+  ],
+  "pending_inc010": "Unpublished candidate retained; no blocked content retried or included."
+}
