@@ -1,0 +1,82 @@
+{
+  "increment": "INC-012",
+  "passed": true,
+  "production_verified": false,
+  "toolchains": {
+    "go": "go version go1.23.2 linux/amd64",
+    "node": "v22.16.0",
+    "python": "3.13.5",
+    "typescript": "Version 5.8.3"
+  },
+  "shared_vectors": 74,
+  "go_tests": 74,
+  "node_tests": 86,
+  "python_tests": 86,
+  "language_specific_tests": 24,
+  "total_test_executions": 246,
+  "failed": 0,
+  "cross_language_outputs": "identical",
+  "go_race": "passed",
+  "go_vet": "passed",
+  "strict_typescript": "passed",
+  "python_checks": "unit tests and typed source; no separate static type checker",
+  "scope": "Synthetic conformance and local SDK boundaries; no HTTP host, database, replay store or full regression",
+  "sources": [
+    {
+      "path": "backend/sdk/python/greeto_webhooks/event.py",
+      "sha256": "348c08a4f5e2cb1e7347577a4a8285742434d055744dd73ab94b1a2c4be08878"
+    },
+    {
+      "path": "backend/sdk/python/greeto_webhooks/signature.py",
+      "sha256": "aa715eaccd99485d8ada64fe55c1ca7c3f141e381eb374f63ed78fb07cd56ff8"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.d.mts",
+      "sha256": "1b89b3a2fdfc68f16a5fc77b734bf05b75b8d58313948244559d4a2737de9a5c"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.mjs",
+      "sha256": "1c9277ea1d8cec4156bafbfdc3a5aa775648dfbe2be2f662fc0e3074dad1cff4"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.test.mjs",
+      "sha256": "cb637ebec50b142b1b6c39f8ff2b40c725ac781f2bc41eda08de7ea1ad6c1efa"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-event.types.mts",
+      "sha256": "9741468934133f4e5ad1f996a305d3ecebbd8a3e430046f7f623b9cb0dac3304"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-signature.d.mts",
+      "sha256": "58cc6c2b91d8dd686797ffddf3706069841c5c0f47d673824b240c9b3055baa5"
+    },
+    {
+      "path": "backend/sdk/typescript/webhook-signature.mjs",
+      "sha256": "1a7f03e648d91843b65263ca1f0dac0df96895a798a32c7ece0f9b33bc8c5449"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/event.go",
+      "sha256": "bb343ac5ff0b03c109461a15e964f16b98480ce2f1d5d68b2cd5f89b53c0c841"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/json.go",
+      "sha256": "96240d30b46aa4fa287b08f49024ace073257e1f504634394c88bb7c7de613fe"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/sdk_conformance_test.go",
+      "sha256": "0478adb3ebc4fd225aec97a9d869f132a30203acaaa5779ddc6afe94f943997e"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/signing/signature.go",
+      "sha256": "1ee8658f774afcd778a642302b3fd8ff529499366ae9f18b72268e20f3e4cb99"
+    }
+  ],
+  "base_commit": "750da6f5595bae03dde8d63bd2084d51501c9b92",
+  "not_verified": [
+    "Full event schema/subscription/object authorization",
+    "Durable receiver ledger and HTTP runtime",
+    "Cloud integrations and independent security acceptance",
+    "Full frontend/media build and complete repository regression",
+    "Production SDK distribution and deployment"
+  ]
+}
