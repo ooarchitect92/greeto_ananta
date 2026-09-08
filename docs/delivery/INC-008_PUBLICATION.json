@@ -1,0 +1,101 @@
+{
+  "increment": "INC-008",
+  "date": "2026-09-08",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "7891cd116bbefaf5017c8e11b24c5d35efbae1b6",
+  "source_commit": "dc49cf528f4e47fc2fbaede7efb20f33475759f8",
+  "source_tree": "a423acd7d113e494f3748c0d61f6502b36703a5f",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/services/webhook-dispatcher/egress/client.go",
+      "bytes": 13932,
+      "sha": "7f10f1587f4cf5aa80f879013bbb0e73bc9341f9",
+      "sha256": "af79f404201d1901db88daf69114a47ba513a04f675f4f91397867f62a912d6f"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/egress/egress_test.go",
+      "bytes": 22730,
+      "sha": "ecc9360aa8bf8d3dec5eb0cf2c441c96a33b789d",
+      "sha256": "210b3f10990e45923888b31c28dd97ed1bda22cb2fa24c6709242544f46778d0"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/egress/policy.go",
+      "bytes": 5049,
+      "sha": "7910a851b1bcbb47f97fbb0f98942a7714ae2231",
+      "sha256": "f7dc79803f6dbab9f75d9cb7cd38e5aa408ec063703b6c4f083409252164819d"
+    },
+    {
+      "path": "docs/delivery/INC-008_VERIFICATION.json",
+      "bytes": 831,
+      "sha": "43c5d71e5cd9a7fd975e6b44d93fd078b96b787d",
+      "sha256": "b2a9f17ef7baca00a795700dc61bdc0652972b3977073d19535243914e0a8ad5"
+    },
+    {
+      "path": "docs/delivery/INC-008_WEBHOOK_EGRESS.md",
+      "bytes": 12453,
+      "sha": "e5af8e005712fd7b6b0cdafceb2ec865ade0eda9",
+      "sha256": "95dfd7806df3df1a479fbb74876020b4cf4cf3075121a9cbf761770a48420441"
+    },
+    {
+      "path": "front end/src/features/implementation/EgressBoundaryPanel.jsx",
+      "bytes": 3251,
+      "sha": "0404054709a1b058361dfc32f1f6c68f3f878df5",
+      "sha256": "6647b1c878eee344c4b5d7619f07089f8812532180c6a808a491317b1a5f51ef"
+    },
+    {
+      "path": "front end/src/features/implementation/ImplementationCenter.jsx",
+      "bytes": 10424,
+      "sha": "c7acf51a72edcd29e014cb41e9ebb6867a1ba3de",
+      "sha256": "51930d682b469fcdc2c89ddc91fde98daeca18fb710c995c26fd4fb9c9f5b7e8"
+    },
+    {
+      "path": "front end/src/features/implementation/egress-view.mjs",
+      "bytes": 4501,
+      "sha": "93ebfc2cbb4a17b1767a30c19c8e23862f24841b",
+      "sha256": "473965847e00e3e1670921a1e57d983690ae01b5f19d4de0f324e08fd74d0ac5"
+    },
+    {
+      "path": "front end/tests/egress-view.test.mjs",
+      "bytes": 3394,
+      "sha": "78dbbafd0d9c22b01f7d1a4fb725d10ba2dbfd6f",
+      "sha256": "5764aef9637d25451d420d3a3524fd8c7abb25b1f4e65645198e1131f79135a0"
+    },
+    {
+      "path": "tools/check_webhook_egress.py",
+      "bytes": 4842,
+      "sha": "597cee59578f7f4d085d75762e37c53b75c11ff7",
+      "sha256": "6d8cec2a127cbafbb9b806c763bf6423f063816b9d00fdacdd9c92354da8852f"
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 10,
+    "unexpected_changed_paths": 0,
+    "local_tests": {
+      "go_leaf_tests": 159,
+      "frontend_tests": 25,
+      "total": 184,
+      "failed": 0,
+      "go_race": "passed",
+      "go_vet": "passed",
+      "jsx_syntax_files": 2,
+      "scope": "Targeted real TLS/HTTP over in-memory sockets with synthetic DNS/authority/dial, plus presentation checks; not deployed proxy or full regression."
+    },
+    "new_go_package_coverage_percent": 95.8,
+    "pipeline_order_change": false,
+    "database_schema_change": false,
+    "dependency_change": false,
+    "public_api_change": false,
+    "production_deployment": false,
+    "certified_parent_tasks": 0
+  },
+  "remaining": [
+    "Authenticated proxy host and current Action Gateway/ownership permit binding",
+    "Durable attempt/result/replay ledger, scheduler/fairness, vault/rotation and Kafka integration",
+    "Deployed DNS/egress/firewall policy and independent adversarial acceptance",
+    "Full frontend/media import, React build, browser/accessibility and full regression",
+    "Production toolchain, backups/restore, security and release gates"
+  ]
+}

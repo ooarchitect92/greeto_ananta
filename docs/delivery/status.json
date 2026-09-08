@@ -6,8 +6,8 @@
   "branch": "main",
   "baseline_count": 262,
   "certified_done": 0,
-  "summary": "INC-007 F07 customer-webhook signing and receiver helpers published on main. Go, Node/TypeScript and Python implement the unchanged exact-byte v1 formula with bounded timestamps, duplicate-header checks and key rotation. 181 local conformance tests passed. Event-body binding, durable replay receipts, live keys/HTTPS delivery and full frontend/media remain incomplete; no parent gate is certified Done.",
-  "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
+  "summary": "INC-008 F07 proxy-side HTTPS egress and existing-design inspection panel published on main. Local tests cover destination/DNS/peer/TLS restrictions, one-attempt transport, bounded response collection and endpoint-ack preservation. Authenticated proxy/Action Gateway/attempt ledger and network policy are not deployed; full frontend/media and parent acceptance remain incomplete.",
+  "evidence_commit": "dc49cf528f4e47fc2fbaede7efb20f33475759f8",
   "items": [
     {
       "id": "GOV-001",
@@ -135,9 +135,9 @@
     {
       "id": "UX-003",
       "status": "Blocked",
-      "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit. INC-006: Existing Readiness & evidence view now also mounts OutboxStatusPanel. Fifteen presentation tests withhold malformed, cross-scope and expired page counters; no diagnostic execution is enabled. INC-007: Existing data-driven development/security tables now include customer-webhook signing and receiver-helper evidence; no new theme or browser secret handling.",
-      "remaining": "PLT-001; full frontend/media import, dependencies, React build/browser/accessibility and real authenticated diagnostic API. Source evidence is not live endpoint, backup or production health.",
-      "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
+      "contribution": "INC-008 adds EgressBoundaryPanel to existing Readiness & evidence using shared design components; 25 presentation/source tests. Missing, stale or cross-scope results remain withheld; diagnostics are disabled.",
+      "remaining": "PLT-001; full frontend/media import, complete React build, browser/accessibility tests and authenticated observation/diagnostic host. A single endpoint observation is not production health.",
+      "evidence_commit": "dc49cf528f4e47fc2fbaede7efb20f33475759f8",
       "previous_contributions": [
         {
           "status": "Blocked",
@@ -150,6 +150,12 @@
           "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit. INC-006: Existing Readiness & evidence view now also mounts OutboxStatusPanel. Fifteen presentation tests withhold malformed, cross-scope and expired page counters; no diagnostic execution is enabled.",
           "remaining": "PLT-001; full frontend/media import, dependencies, React build/browser/accessibility and real authenticated diagnostic API. One scan-page observation is not total backlog or production health.",
           "evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097"
+        },
+        {
+          "status": "Blocked",
+          "contribution": "Existing Implementation Center includes TenantScopePanel and synchronized source-evidence projection; inactive/missing/stale scope remains explicit. INC-006: Existing Readiness & evidence view now also mounts OutboxStatusPanel. Fifteen presentation tests withhold malformed, cross-scope and expired page counters; no diagnostic execution is enabled. INC-007: Existing data-driven development/security tables now include customer-webhook signing and receiver-helper evidence; no new theme or browser secret handling.",
+          "remaining": "PLT-001; full frontend/media import, dependencies, React build/browser/accessibility and real authenticated diagnostic API. Source evidence is not live endpoint, backup or production health.",
+          "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
         }
       ]
     },
@@ -173,6 +179,20 @@
       "contribution": "Server-side Node helper with TypeScript declarations and Python helper; conformance against the Go dispatcher. 181 targeted local tests, Go race/vet and strict TypeScript consumer checks passed.",
       "remaining": "PLT-003, EVT-002; full contract-generated SDKs, authenticated HTTP integration, durable receiver examples, package distribution and compatibility/security acceptance. Go here is backend code, not an additional public SDK.",
       "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
+    },
+    {
+      "id": "WHK-007",
+      "status": "Blocked",
+      "contribution": "Proxy-side Go transport enforces HTTPS destination profile, all-answer DNS validation, pinned peer, verified TLS, exact signed bytes, bounded responses and no redirects/retries. 159 Go leaf tests passed with real TLS/HTTP over in-memory fixtures.",
+      "remaining": "EVT-002, PLT-008; authenticated proxy/Action Gateway permit, durable attempt ledger, actual network policy/DNS routing and independent adversarial acceptance. No proxy or endpoint deployed.",
+      "evidence_commit": "dc49cf528f4e47fc2fbaede7efb20f33475759f8"
+    },
+    {
+      "id": "SEC-009",
+      "status": "Blocked",
+      "contribution": "Public IPv4/IPv6 special-range checks, rebinding-resistant pinning, secret-free observations and bounded TLS/HTTP handling implemented inside the required proxy boundary.",
+      "remaining": "GOV-004; threat sign-off, deployed workload/network isolation, current policy/permit integration, production version qualification and independent penetration tests.",
+      "evidence_commit": "dc49cf528f4e47fc2fbaede7efb20f33475759f8"
     }
   ],
   "ingress_stages": [
@@ -277,37 +297,31 @@
       "name": "Production release",
       "state": "Not deployed",
       "evidence_required": "Unchanged release/security/provider gates; main source push is not release approval."
+    },
+    {
+      "id": "webhook_egress",
+      "name": "F07 proxy-side outbound network boundary",
+      "state": "Source tested; proxy not deployed",
+      "evidence_required": "Authenticated workload/Action Gateway permit, durable attempt/result ledger, actual proxy deployment and deny-by-default network routing, live DNS/TLS/isolation tests and independent security review. No direct-dispatcher egress is authorized."
     }
   ],
-  "previous_evidence_commit": "51e9ce610437302019f8e1c74cb2016b4a178097",
-  "increment_id": "INC-007-webhook-signatures",
+  "previous_evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
+  "increment_id": "INC-008-webhook-egress",
   "local_tests": {
-    "increment": "INC-007",
-    "go_leaf_tests": 60,
-    "node_tests": 65,
-    "python_tests": 56,
-    "total": 181,
+    "go_leaf_tests": 159,
+    "frontend_tests": 25,
+    "total": 184,
     "failed": 0,
-    "skipped": 0,
-    "cancelled": 0,
     "go_race": "passed",
     "go_vet": "passed",
-    "typescript_consumer": "passed",
-    "shared_independent_vectors": 6,
-    "scope": "Real stdlib HMAC conformance, not a running delivery/receiver service or replay ledger.",
-    "not_run": [
-      "full repository regression",
-      "React build/browser",
-      "KMS/DB/Kafka/HTTPS delivery",
-      "durable receiver ledger",
-      "production or provider qualification"
-    ]
+    "jsx_syntax_files": 2,
+    "scope": "Targeted real TLS/HTTP over in-memory sockets with synthetic DNS/authority/dial, plus presentation checks; not deployed proxy or full regression."
   },
   "publication": {
-    "source_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2",
+    "source_commit": "dc49cf528f4e47fc2fbaede7efb20f33475759f8",
     "branch": "main",
-    "changed_source_files": 12,
-    "verified_source_hashes": 12,
+    "changed_source_files": 10,
+    "verified_source_hashes": 10,
     "deployment": "not_performed"
   }
 }
