@@ -1,0 +1,71 @@
+{
+  "increment": "INC-011",
+  "date": "2026-09-08",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "3a38a192cac4926c403691f88977e2db9d6296bd",
+  "source_commit": "9c42fa42c4777fcab0c4e14dcbbf79856fba0385",
+  "source_tree": "513958eb96e7d21b85c842a57ae8d16783d532d4",
+  "publication": "verified_remote",
+  "source_files": [
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/event.go",
+      "bytes": 5001,
+      "sha": "da35e06e7864883ef63aa26b8a6a0ec478e787cf",
+      "sha256": "bb343ac5ff0b03c109461a15e964f16b98480ce2f1d5d68b2cd5f89b53c0c841"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/event_test.go",
+      "bytes": 11682,
+      "sha": "7c51782edecf4d6123db2fc728a66ef26f004b6c",
+      "sha256": "ef1e53cfd9071a4e5ee2cf7fe714a44339c109165d87c06901502dc3480413ac"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/json.go",
+      "bytes": 3480,
+      "sha": "695e7575d7bea5d3835749166b78faf0c99f6144",
+      "sha256": "96240d30b46aa4fa287b08f49024ace073257e1f504634394c88bb7c7de613fe"
+    },
+    {
+      "path": "docs/delivery/INC-011_EVENT_BODY_BINDING.md",
+      "bytes": 8450,
+      "sha": "a247178be89e87a7573a6fc9538e2ed5375b01a1",
+      "sha256": "a890b9ba17de99aee55d77f6c020176581d4b23099aa38046922e79dace0f362"
+    },
+    {
+      "path": "docs/delivery/INC-011_VERIFICATION.json",
+      "bytes": 1283,
+      "sha": "290b753190a9b251c2a4ae375199c82e1cd25d4f",
+      "sha256": "20ca0b2e994f7a8e65c9048913c2c11b174150875a485ff2197d9d8c74e557fa"
+    },
+    {
+      "path": "tools/check_webhook_receiving.py",
+      "bytes": 4031,
+      "sha": "a65b6b84e3a784f195ef95ecde2420331045af34",
+      "sha256": "7f9e2837d98cdc98aa1a6f8acbe2eb8d8876c304e4bc925fc8fc2302be78624c"
+    }
+  ],
+  "verification": {
+    "source_ref_readback": true,
+    "changed_file_hashes_matched": 6,
+    "unexpected_paths": 0,
+    "go_named_tests": 66,
+    "fuzz_seeds_separate": 4,
+    "failed": 0,
+    "race": "passed",
+    "vet": "passed",
+    "formatting": "passed",
+    "coverage": "98.3%",
+    "pipeline_order_changed": false,
+    "runtime_deployed": false,
+    "parent_tasks_certified": 0
+  },
+  "pending_inc010": "Still unpublished. Test-file upload blocked. No blocked source was included in this independent increment.",
+  "remaining": [
+    "complete schema/subscription/tenant receiver validation",
+    "receiver durable replay ledger and host",
+    "Node/Python body-binding helpers",
+    "full original frontend/media import and React/browser tests",
+    "actual database/Kafka/KMS/backups/security/deployment gates"
+  ]
+}

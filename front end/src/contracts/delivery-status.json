@@ -6,8 +6,8 @@
   "branch": "main",
   "baseline_count": 262,
   "certified_done": 0,
-  "summary": "INC-009 F07 retry/outcome planning, conditional receipt-recording orchestration and existing-design delivery panel published on main. Deterministic delays/jitter and Retry-After preserve endpoint acceptance and UNKNOWN outcomes. Real WebhookDelivery persistence, authenticated worker/scheduler and full frontend/media remain incomplete; no parent gate is certified Done.",
-  "evidence_commit": "7ab3bbeba92cddd8ff30f9fd7208cd0f520aefcb",
+  "summary": "INC-011 opt-in Go F07 receiver binds the separate event header to the exact top-level event_id in authenticated JSON. Bounded parsing, duplicate/Unicode checks and defensive body copies passed 66 named local tests. INC-010 DynamoDB ledger is still unpublished after a blocked test-file upload. Runtime receiver/schema/replay integration and full frontend remain incomplete; no parent gate is certified Done.",
+  "evidence_commit": "9c42fa42c4777fcab0c4e14dcbbf79856fba0385",
   "items": [
     {
       "id": "GOV-001",
@@ -168,16 +168,34 @@
     {
       "id": "WHK-003",
       "status": "Blocked",
-      "contribution": "Go dispatcher signing and server-side Node/Python verifiers preserve the exact F07 v1 formula; bounded key rotation/revocation, timestamp and raw-byte checks tested across three languages.",
-      "remaining": "EVT-002, PLT-008; real endpoint/key lifecycle, approved receiver bounds, canonical event ID binding inside signed body, HTTPS integration and independent security review. The event-ID header is not independently signed by v1.",
-      "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
+      "contribution": "Go dispatcher signing and server-side Node/Python verifiers preserve the exact F07 v1 formula; bounded key rotation/revocation, timestamp and raw-byte checks tested across three languages. INC-011: Published opt-in Go VerifyEvent helper, exact signed-body event/header identity, bounded duplicate-aware JSON/Unicode checks, immutable body snapshot and redacted formatting; 66 local named tests.",
+      "remaining": "Original prerequisites and independent review; complete event schema and tenant/purpose authorization, durable receiver replay ledger, real runtime, and equivalent Node/Python body-binding helpers. INC-010 ledger publication remains blocked.",
+      "evidence_commit": "9c42fa42c4777fcab0c4e14dcbbf79856fba0385",
+      "previous_contributions": [
+        {
+          "id": "WHK-003",
+          "status": "Blocked",
+          "contribution": "Go dispatcher signing and server-side Node/Python verifiers preserve the exact F07 v1 formula; bounded key rotation/revocation, timestamp and raw-byte checks tested across three languages.",
+          "remaining": "EVT-002, PLT-008; real endpoint/key lifecycle, approved receiver bounds, canonical event ID binding inside signed body, HTTPS integration and independent security review. The event-ID header is not independently signed by v1.",
+          "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
+        }
+      ]
     },
     {
       "id": "WHK-009",
       "status": "Blocked",
-      "contribution": "TypeScript/Node and Python receiver helpers with six shared independent vectors and negative signature/clock/header tests. Proof intentionally excludes unsigned event-ID authority.",
-      "remaining": "EVT-002, PLT-008; durable endpoint-scoped delivery ledger and atomic effect/queue, repeated-delivery rejection, same-ID/different-body conflicts and full HTTP sandbox. A stateless valid signature is not replay protection.",
-      "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
+      "contribution": "TypeScript/Node and Python receiver helpers with six shared independent vectors and negative signature/clock/header tests. Proof intentionally excludes unsigned event-ID authority. INC-011: Published opt-in Go VerifyEvent helper, exact signed-body event/header identity, bounded duplicate-aware JSON/Unicode checks, immutable body snapshot and redacted formatting; 66 local named tests.",
+      "remaining": "Original prerequisites and independent review; complete event schema and tenant/purpose authorization, durable receiver replay ledger, real runtime, and equivalent Node/Python body-binding helpers. INC-010 ledger publication remains blocked.",
+      "evidence_commit": "9c42fa42c4777fcab0c4e14dcbbf79856fba0385",
+      "previous_contributions": [
+        {
+          "id": "WHK-009",
+          "status": "Blocked",
+          "contribution": "TypeScript/Node and Python receiver helpers with six shared independent vectors and negative signature/clock/header tests. Proof intentionally excludes unsigned event-ID authority.",
+          "remaining": "EVT-002, PLT-008; durable endpoint-scoped delivery ledger and atomic effect/queue, repeated-delivery rejection, same-ID/different-body conflicts and full HTTP sandbox. A stateless valid signature is not replay protection.",
+          "evidence_commit": "18eb09a510518bd55268e2d9e4650f9c4dfad3f2"
+        }
+      ]
     },
     {
       "id": "DEV-006",
@@ -329,27 +347,38 @@
       "name": "F07 retry decisions and outcome receipt recording",
       "state": "Source tested; ledger and scheduler not configured",
       "evidence_required": "Actual scoped WebhookDelivery atomic persistence, approved retry profile, authenticated worker/Action Gateway, sharded due scheduling and reconciliation. A transport observation is not a durable receipt; UNKNOWN does not authorize resending."
+    },
+    {
+      "id": "webhook_event_binding",
+      "name": "F07 authenticated event-body identity",
+      "state": "Go helper tested; receiver runtime not connected",
+      "evidence_required": "Full event schema/subscription/scope checks, durable endpoint-scoped replay acceptance, SDK interoperability and independent security review. A valid Event is not an HTTP acknowledgement, permission grant or business result."
     }
   ],
-  "previous_evidence_commit": "dc49cf528f4e47fc2fbaede7efb20f33475759f8",
-  "increment_id": "INC-009-webhook-lifecycle",
+  "previous_evidence_commit": "7ab3bbeba92cddd8ff30f9fd7208cd0f520aefcb",
+  "increment_id": "INC-011-event-body-binding",
   "local_tests": {
-    "go_leaf_tests": 104,
-    "frontend_tests": 26,
-    "total": 130,
+    "named_leaf_tests": 66,
+    "fuzz_seed_tests_separate": 4,
     "failed": 0,
-    "go_race": "passed",
-    "go_vet": "passed",
-    "jsx_syntax_files": 2,
-    "projection_checks": "passed",
-    "coverage": "total:\t\t\t\t\t\t\t\t\t\t\t\t\t(statements)\t96.9%",
-    "scope": "Local deterministic planner, scripted receipt ledger and presentation checks; not live DynamoDB or full regression."
+    "race": "passed",
+    "vet": "passed",
+    "formatting": "passed",
+    "coverage": "98.3%",
+    "scope": "Local receiver/signing composition, not live receiver/cloud or full repository regression"
   },
   "publication": {
-    "source_commit": "7ab3bbeba92cddd8ff30f9fd7208cd0f520aefcb",
+    "source_commit": "9c42fa42c4777fcab0c4e14dcbbf79856fba0385",
     "branch": "main",
-    "changed_source_files": 11,
-    "verified_source_hashes": 11,
+    "changed_source_files": 6,
+    "verified_source_hashes": 6,
     "deployment": "not_performed"
-  }
+  },
+  "unpublished_candidates": [
+    {
+      "increment": "INC-010",
+      "status": "local_candidate",
+      "reason": "Tool safety status of model_test.go upload could not be determined; not uploaded through another route. Separate 79 tests rerun. No INC-010 source committed."
+    }
+  ]
 }
