@@ -1,0 +1,38 @@
+{
+  "increment": "INC-011",
+  "passed": true,
+  "production_verified": false,
+  "publication": "not_determined_by_tests",
+  "go": "go version go1.23.2 linux/amd64",
+  "named_leaf_tests": 66,
+  "failed": 0,
+  "skipped": 0,
+  "race": "passed",
+  "vet": "passed",
+  "formatting": "passed",
+  "coverage": "98.3%",
+  "fuzz_seed_tests": 4,
+  "scope": "Local Go cryptographic/parser/immutability checks; no replay store or HTTP host",
+  "files": [
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/event.go",
+      "sha256": "bb343ac5ff0b03c109461a15e964f16b98480ce2f1d5d68b2cd5f89b53c0c841"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/event_test.go",
+      "sha256": "ef1e53cfd9071a4e5ee2cf7fe714a44339c109165d87c06901502dc3480413ac"
+    },
+    {
+      "path": "backend/services/webhook-dispatcher/receiving/json.go",
+      "sha256": "96240d30b46aa4fa287b08f49024ace073257e1f504634394c88bb7c7de613fe"
+    }
+  ],
+  "base_commit": "3a38a192cac4926c403691f88977e2db9d6296bd",
+  "not_verified": [
+    "complete event schema/tenant authorization",
+    "durable receiver replay ledger",
+    "Node/Python body-binding SDKs",
+    "full frontend/media build and browser checks",
+    "cloud infrastructure, production security/backup/deployment"
+  ]
+}
