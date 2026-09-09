@@ -1,0 +1,109 @@
+{
+  "increment": "INC-018",
+  "date": "2026-09-09",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "ffad77266c27ea65965f7f220887ff7ce60073fb",
+  "source_commit": "57b305a5edebecc9bb39e038d82f9fc5d95273e3",
+  "source_tree": "01e812fa1068d23c8d8ec65fcd14f8ae7e757a96",
+  "publication": "verified_remote",
+  "verified_file_hashes": 12,
+  "source_files": [
+    {
+      "path": "front end/src/features/channels/meta/signup-callback-parser.mjs",
+      "bytes": 8427,
+      "sha": "a31363c63166247f995517583c9c5477785fe0e7",
+      "sha256": "b65e0b83c97554a9043374ed5af8371c46083ff91a32589e168ea6ba0a045097"
+    },
+    {
+      "path": "front end/src/features/channels/meta/signup-callback-bridge.mjs",
+      "bytes": 13583,
+      "sha": "b74e9a827ac7d981d04156d51c122bdae3f6b1a2",
+      "sha256": "4858562939c7169be51788fe6492ba165fd913feaae3bcfadfa7a6aa4a916bb9"
+    },
+    {
+      "path": "front end/src/features/channels/meta/signup-callback-bridge.d.mts",
+      "bytes": 2961,
+      "sha": "673117013f49e95c3e6a89707ad6479ebd033399",
+      "sha256": "e8cdd3d8efa545323454a4c367975143ffc9e2dd624a5361c8945945ceaa422b"
+    },
+    {
+      "path": "front end/src/features/channels/meta/signup-callback-view.mjs",
+      "bytes": 4066,
+      "sha": "d2985d102397bb6e6da95c9829eab94cc994c0dd",
+      "sha256": "697027d676c006d96b8a8a564718bbbb26dbc3ab00364bbf6afdfab52d42875d"
+    },
+    {
+      "path": "front end/src/features/channels/meta/MetaSignupSetupPanel.jsx",
+      "bytes": 5833,
+      "sha": "5068974f36d628a117bd20a42b50f2813b3bc40c",
+      "sha256": "90f1544bc93e6e16a70741bb87e65d9d8d44c8e33a331e65814f1c8facff2451"
+    },
+    {
+      "path": "front end/tests/meta-signup-callback-parser.test.mjs",
+      "bytes": 6726,
+      "sha": "1ce9928b41d12c32e29957813f630601871a9190",
+      "sha256": "6107310b30e6886e50622039a145f6bdfd223f915df4be750e66be5782a3a290"
+    },
+    {
+      "path": "front end/tests/meta-signup-callback-bridge.test.mjs",
+      "bytes": 14203,
+      "sha": "4ecc4554f90b066aa7954289cd96e8a38d3a848a",
+      "sha256": "59c9f1fdc6dddbba0959673822e441cc297f045c0f91cbacf4dbc696e89a1d19"
+    },
+    {
+      "path": "front end/tests/meta-signup-callback-view.test.mjs",
+      "bytes": 3090,
+      "sha": "c2e3eecc2eb8e7c21fa5e6631d4192d887f6086c",
+      "sha256": "f764e5fff9cc3a2de3a0ffe992ca0e4ffa180bfa27f842f0ea364ab17f1fd78b"
+    },
+    {
+      "path": "front end/tests/meta-signup-callback-bridge.types.mts",
+      "bytes": 878,
+      "sha": "0dc1520bdf845040b4b40e912a9dc9cd3832a53f",
+      "sha256": "c24eb609a2707d1556db5e5ef39beaf0a156918c2740e7c00d69716c3675cdee"
+    },
+    {
+      "path": "tools/check_meta_signup_callback_bridge.py",
+      "bytes": 4649,
+      "sha": "5d2f32746355ae983e3b0de474176f6acbbe6e97",
+      "sha256": "57a0617790bdc74aa9d42056a5eb43efad638b83174b657b1a18a6079d5c5c13"
+    },
+    {
+      "path": "docs/delivery/INC-018_META_CALLBACK_BRIDGE.md",
+      "bytes": 15312,
+      "sha": "5b26cb284bf7d0397d34bd14c116c1c44b193a90",
+      "sha256": "9975611ba05de6c817ffb477155d61737f96ac0d09d20a73712de95b225b3650"
+    },
+    {
+      "path": "docs/delivery/INC-018_VERIFICATION.json",
+      "bytes": 1661,
+      "sha": "60e9be5104c83a847ee5f2cac71c03f02a625cca",
+      "sha256": "eb219c7d1342abd31da3735cc095bf67bc029b9af74e94c531c370b3ab2ea991"
+    }
+  ],
+  "local_tests": {
+    "named_tests": 162,
+    "new_tests": 134,
+    "unchanged_frontend_regressions": 28,
+    "failed": 0,
+    "skipped": 0,
+    "js_syntax_files": 3,
+    "jsx_syntax_files": 1,
+    "typescript_consumer": "passed; declarations only",
+    "scope": "Synthetic native-message/source/host receipts plus real WebCrypto. Not real browser/SDK, HTTP/backend, DB/KMS or full-repository acceptance."
+  },
+  "pipeline_changed": false,
+  "public_api_changed": false,
+  "dependencies_changed": false,
+  "runtime_connected": false,
+  "parent_tasks_certified": 0,
+  "remaining": [
+    "Qualified source-window/SDK event profile",
+    "Authenticated same-origin HTTP host and CSRF/session mapping",
+    "Actual scoped attempt/history/outbox repository and encrypted custody",
+    "Provider code exchange/grants/binding and subsequent F02 gates",
+    "Existing browser correction approval, full browser/security/recovery/release acceptance",
+    "INC-010 sender ledger remains unpublished"
+  ]
+}
