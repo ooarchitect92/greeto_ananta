@@ -1,0 +1,42 @@
+{
+  "increment": "INC-017",
+  "passed": true,
+  "production_verified": false,
+  "publication": "not_determined_by_tests",
+  "node": "v22.16.0",
+  "typescript": "Version 5.8.3",
+  "tests": {
+    "backend": {
+      "tests": 65,
+      "pass": 65,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "frontend": {
+      "tests": 28,
+      "pass": 28,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    }
+  },
+  "total_named_tests": 93,
+  "strict_types": "passed",
+  "jsx_syntax_files": 1,
+  "runtime_bindings": "synthetic authority/repository/vault, no HTTP/SDK/provider/DB/KMS connection",
+  "unchanged_setup_sha256": "84648b03d797c48a4636e5cdaa03e2d20302f033d32e8acda1fb5184441c8a75",
+  "source_hashes": {
+    "backend/services/core/src/channels/meta/signup-attempt.ts": "b7d013bed34efdaa24397a05fce13698f0f169ee804af23f6ef99fc4afd4c51c",
+    "backend/services/core/tests/meta-signup-attempt.test.mjs": "5259f2632ebc49da99da1cd156811376350213ef8806db48b9ff4d4a6fac7c9c",
+    "backend/services/core/tests/meta-signup-attempt.types.ts": "312f6b96bf19f68fdc07126b69fb99b7eae8a7d79ed7e1703f8d6f509e02e944",
+    "front end/src/features/channels/meta/MetaSignupSetupPanel.jsx": "dcecf712a4bd6db43eb3a05f7c8513bff6553cb1e3482661041c3df43c2cf56a",
+    "front end/src/features/channels/meta/signup-attempt-model.mjs": "64598ef0b2629d78ead1f705a69bdb883398a7d2e97af9b4e9bcc3aad262d2b6",
+    "front end/tests/meta-signup-attempt.test.mjs": "f24f0172b43522e848acad6e3c71b153c2f085e5c4102b1341c1072331e476e8"
+  },
+  "base_commit": "ceb12503a624939eb82d17771b4539abaa7ec25d",
+  "pipeline_changed": false,
+  "public_api_changed": false,
+  "dependencies_changed": false,
+  "production_bindings": false
+}
