@@ -1,0 +1,94 @@
+{
+  "increment": "INC-017",
+  "date": "2026-09-09",
+  "repository": "ooarchitect92/greeto_ananta",
+  "branch": "main",
+  "base_commit": "ceb12503a624939eb82d17771b4539abaa7ec25d",
+  "source_commit": "0b77d06f9a5f58f2d8ad1dfed263ca2383c842c0",
+  "source_tree": "39c093d09efeb670efeb8209f894b516a5a4bf92",
+  "publication": "verified_remote",
+  "verified_file_hashes": 9,
+  "source_files": [
+    {
+      "path": "backend/services/core/src/channels/meta/signup-attempt.ts",
+      "sha": "afe4f750eaf46b5613d973bbf167c0e78bb89960",
+      "sha256": "b7d013bed34efdaa24397a05fce13698f0f169ee804af23f6ef99fc4afd4c51c",
+      "bytes": 23918
+    },
+    {
+      "path": "backend/services/core/tests/meta-signup-attempt.test.mjs",
+      "sha": "eac63f8e7af65b02d351b006afabda1f3d3eda07",
+      "sha256": "5259f2632ebc49da99da1cd156811376350213ef8806db48b9ff4d4a6fac7c9c",
+      "bytes": 21026
+    },
+    {
+      "path": "backend/services/core/tests/meta-signup-attempt.types.ts",
+      "sha": "bc8d161a1271d35b2d64fbe027a73cf4e1fec608",
+      "sha256": "312f6b96bf19f68fdc07126b69fb99b7eae8a7d79ed7e1703f8d6f509e02e944",
+      "bytes": 616
+    },
+    {
+      "path": "docs/delivery/INC-017_META_SIGNUP_ATTEMPTS.md",
+      "sha": "c3e33a34099f98baa1b85ad1b8d091751bbbc352",
+      "sha256": "77e6dcfee6d56bb075a6d3d242f72654fd29b2c243893356b2cc53c2068ce844",
+      "bytes": 15688
+    },
+    {
+      "path": "docs/delivery/INC-017_VERIFICATION.json",
+      "sha": "bc11d91b2a40dafb7cc08f668eca67aa29b65ea8",
+      "sha256": "e201d1ab830413a4d2c4ee2becb83fea361c1195bfe9ec1c486a7b13f7c0fcda",
+      "bytes": 1714
+    },
+    {
+      "path": "front end/src/features/channels/meta/MetaSignupSetupPanel.jsx",
+      "sha": "8d3cf28bd3ae6479e427dd78e35fc778ba3e23eb",
+      "sha256": "dcecf712a4bd6db43eb3a05f7c8513bff6553cb1e3482661041c3df43c2cf56a",
+      "bytes": 4437
+    },
+    {
+      "path": "front end/src/features/channels/meta/signup-attempt-model.mjs",
+      "sha": "edbb896bba4a0d22891aecb6ecbbbc902d2589c7",
+      "sha256": "64598ef0b2629d78ead1f705a69bdb883398a7d2e97af9b4e9bcc3aad262d2b6",
+      "bytes": 4278
+    },
+    {
+      "path": "front end/tests/meta-signup-attempt.test.mjs",
+      "sha": "e25494723848b7f6ff75c7416e0b4ea6dc98c029",
+      "sha256": "f24f0172b43522e848acad6e3c71b153c2f085e5c4102b1341c1072331e476e8",
+      "bytes": 4291
+    },
+    {
+      "path": "tools/check_meta_signup_attempts.py",
+      "sha": "9d12df4ada8ee256aa23cc85857fc069779887c8",
+      "sha256": "64afa026f46d1912a05ead2be9e6f65d95fc906ade6b5cfca74fff64a5f0084f",
+      "bytes": 4527
+    }
+  ],
+  "local_tests": {
+    "backend": 65,
+    "frontend": 28,
+    "total": 93,
+    "failed": 0,
+    "skipped": 0,
+    "strict_types": "passed",
+    "jsx_syntax_files": 1
+  },
+  "pipeline_changed": false,
+  "parent_tasks_certified": 0,
+  "runtime_connected": false,
+  "remaining": [
+    "actual authenticated authority and configuration registry",
+    "scoped transactional attempt/history/outbox storage",
+    "encrypted idempotent code custody and cleanup",
+    "reviewed Meta SDK/HTTP callback bridge and current contract evidence",
+    "exchange/grant/binding/subscription/readiness sequence",
+    "existing browser approval and independent security/recovery/release gates"
+  ],
+  "preserved": [
+    "INC-016 preparation source",
+    "all prior status items and F03 stage order",
+    "INC-014 frontend restoration evidence",
+    "pending INC-015 test approval",
+    "unpublished INC-010 candidate"
+  ]
+}
