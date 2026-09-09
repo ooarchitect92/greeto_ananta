@@ -1,0 +1,40 @@
+{
+  "increment": "INC-018",
+  "passed": true,
+  "runtime_connected": false,
+  "publication": "not_determined_by_tests",
+  "node": "v22.16.0",
+  "typescript": "Version 5.8.3",
+  "tests": {
+    "tests": 162,
+    "pass": 162,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "js_syntax_files": 3,
+  "jsx_syntax_files": 1,
+  "typescript_consumer": "passed; declarations only",
+  "source_hashes": {
+    "front end/src/features/channels/meta/signup-callback-parser.mjs": "b65e0b83c97554a9043374ed5af8371c46083ff91a32589e168ea6ba0a045097",
+    "front end/src/features/channels/meta/signup-callback-bridge.mjs": "4858562939c7169be51788fe6492ba165fd913feaae3bcfadfa7a6aa4a916bb9",
+    "front end/src/features/channels/meta/signup-callback-view.mjs": "697027d676c006d96b8a8a564718bbbb26dbc3ab00364bbf6afdfab52d42875d"
+  },
+  "scope": "Synthetic native-message/source/transport fixtures and real WebCrypto; no live SDK/HTTP/server/DB/browser acceptance",
+  "base_commit": "ffad77266c27ea65965f7f220887ff7ce60073fb",
+  "new_tests": 134,
+  "unchanged_frontend_regressions": 28,
+  "source_window_qualification": false,
+  "meta_account_test": false,
+  "backend_domain_rerun": false,
+  "full_react_build": false,
+  "pipeline_changed": false,
+  "public_api_changed": false,
+  "dependencies_changed": false,
+  "current_meta_docs": "Retrieval failed on 2026-09-09; no current provider wire/eligibility certification",
+  "unchanged_blobs": {
+    "front end/src/features/channels/meta/signup-attempt-model.mjs": "edbb896bba4a0d22891aecb6ecbbbc902d2589c7",
+    "front end/tests/meta-signup-attempt.test.mjs": "e25494723848b7f6ff75c7416e0b4ea6dc98c029"
+  }
+}

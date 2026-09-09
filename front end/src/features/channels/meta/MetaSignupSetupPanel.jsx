@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { inspectSignupCallbackBridge } from './signup-callback-view.mjs';
 import { inspectSignupAttempt } from './signup-attempt-model.mjs';
 import { Notice } from '../../../shared/ui/PageLayout.jsx';
 import { inspectSignupSetup, META_CONNECTION_STEPS } from './signup-setup-model.mjs';
@@ -10,20 +11,22 @@ import { inspectSignupSetup, META_CONNECTION_STEPS } from './signup-setup-model.
  *   host. The current studio supplies none: a form draft cannot impersonate the host.
  * @param {object|null} props.expectedScope Exact server-owned ID tuple (not UI labels).
  * @param {object|null} props.attempt Minimized durable attempt observation; no code or secret.
+ * @param {object|null} props.callbackObservation Local, minimized bridge report; NOT provider readiness.
  * @returns {React.ReactElement} Stepwise review and fixed disabled launch control.
  * No keys, arbitrary JSON editor, session storage, SDK or provider request is used.
  * The bounded local freshness tick cannot establish server authority or readiness.
  */
-export default function MetaSignupSetupPanel({setup = null, expectedScope = null, attempt = null}) {
+export default function MetaSignupSetupPanel({setup = null, expectedScope = null, attempt = null, callbackObservation = null}) {
   const [nowMs, setNowMs] = useState(() => Date.now());
   useEffect(() => {
-    if (!setup && !attempt) return undefined;
+    if (!setup && !attempt && !callbackObservation) return undefined;
     setNowMs(Date.now());
     const timer = window.setInterval(() => setNowMs(Date.now()), 1000);
     return () => window.clearInterval(timer);
-  }, [setup, attempt]);
+  }, [setup, attempt, callbackObservation]);
   const view = inspectSignupSetup(setup, expectedScope, nowMs);
   const attemptView = inspectSignupAttempt(attempt, expectedScope, nowMs);
+  const callbackView = inspectSignupCallbackBridge(callbackObservation, expectedScope, nowMs);
   return <section className="greeto-card" aria-labelledby="meta-setup-title">
     <div className="greeto-card-heading">
       <h2 id="meta-setup-title">Meta onboarding — configuration preparation</h2>
@@ -46,6 +49,18 @@ export default function MetaSignupSetupPanel({setup = null, expectedScope = null
         <dt>Code custody</dt><dd>{attemptView.progress.codeReceived ? 'Acknowledged' : 'Not recorded'}</dd>
         <dt>Session claims</dt><dd>{attemptView.progress.sessionReceived ? 'Recorded; grants unverified' : 'Not recorded'}</dd>
         <dt>Token exchange</dt><dd>Not requested</dd>
+      </dl>}
+    </div>
+    <div aria-labelledby="meta-callback-heading">
+      <h3 id="meta-callback-heading">Step 3 — attempt-local SDK callback bridge</h3>
+      <Notice kind="info">{callbackView.message}</Notice>
+      <p className="greeto-muted">Exact origin and owned window checks precede parsing. Browser observations do not establish server authorization or channel readiness. The live bridge is not attached by this preview.</p>
+      {callbackView.details && <dl className="greeto-details">
+        <dt>Code host receipt</dt><dd>{callbackView.details.codeAcknowledged ? 'Observed by browser' : 'Not observed'}</dd>
+        <dt>Session host receipt</dt><dd>{callbackView.details.sessionAcknowledged ? 'Observed by browser' : 'Not observed'}</dd>
+        <dt>Last adapter stage / result</dt><dd>{callbackView.details.stage} / {callbackView.details.result}</dd>
+        <dt>Stage elapsed</dt><dd>{callbackView.details.elapsedMs} ms</dd>
+        <dt>Server request reference</dt><dd>{callbackView.details.requestId || 'Not observed'}</dd>
       </dl>}
     </div>
     <details><summary>Parameter ownership and next implementation steps</summary>
